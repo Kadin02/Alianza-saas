@@ -22,8 +22,23 @@ org_type_enum = sa.Enum(
 
 def upgrade() -> None:
     # En Postgres, a diferencia de SQLite, un tipo Enum nuevo debe crearse
-    # explícitamente antes de poder usarlo en un ADD COLUMN.
-    org_type_enum.create(op.get_bind(), checkfirst=True)
+    # explícitamente antes de poder usarlo en un ADD COLUMN. Se usa un DO
+    # block en vez de Enum.create(checkfirst=True) porque Railway puede
+    # reiniciar el contenedor varias veces si el arranque falla, y dos
+    # intentos de esta migración pueden solaparse — checkfirst no es a
+    # prueba de esa carrera, pero CREATE TYPE ... EXCEPTION WHEN
+    # duplicate_object sí.
+    if op.get_bind().dialect.name == "postgresql":
+        op.execute(
+            """
+            DO $$ BEGIN
+                CREATE TYPE organizationtype AS ENUM
+                    ('RESIDENCIAL', 'CORPORATIVO', 'PARCELAS', 'ADMINISTRADORA');
+            EXCEPTION
+                WHEN duplicate_object THEN null;
+            END $$;
+            """
+        )
     op.add_column('organizations', sa.Column('org_type', org_type_enum, nullable=True))
     op.add_column('organizations', sa.Column('tax_id', sa.String(), nullable=True))
     op.add_column('organizations', sa.Column('contact_email', sa.String(), nullable=True))

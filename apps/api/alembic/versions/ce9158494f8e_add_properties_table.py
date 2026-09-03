@@ -15,11 +15,15 @@ down_revision = '7b1bf7e3c5ac'
 branch_labels = None
 depends_on = None
 
+# NOTA: a diferencia de un ADD COLUMN sobre una tabla existente (ver la
+# migración anterior), un CREATE TABLE con una columna Enum sí crea el tipo
+# automáticamente — no hace falta (ni conviene) crearlo a mano aquí: hacerlo
+# duplica el CREATE TYPE dentro de la misma transacción y falla con
+# "already exists".
 property_type_enum = sa.Enum('PH', 'CASA', 'LOCAL', name='propertytype')
 
 
 def upgrade() -> None:
-    property_type_enum.create(op.get_bind(), checkfirst=True)
     op.create_table('properties',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('organization_id', sa.Integer(), nullable=False),
