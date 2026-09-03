@@ -1,0 +1,8 @@
+apps/api/venv/
+apps/api/__pycache__/
+apps/api/**/__pycache__/
+apps/api/.env
+apps/api/*.db
+apps/web/node_modules/
+apps/web/dist/
+.DS_Store

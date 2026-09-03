@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>UrbanaPro</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-fixed":"#001b3f","primary":"#15243e","primary-fixed":"#d7e3ff","secondary":"#005cbb","on-error-container":"#93000a","secondary-fixed-dim":"#abc7ff","inverse-primary":"#b7c7e8","on-secondary-container":"#002f66","surface-tint":"#505f7c","on-secondary-fixed-variant":"#00458f","primary-fixed-dim":"#b7c7e8","on-tertiary-fixed-variant":"#004f58","surface-container-lowest":"#ffffff","background":"#f7f9fc","on-error":"#ffffff","outline":"#75777e","on-primary-fixed":"#0b1b35","on-primary":"#ffffff","surface-bright":"#f7f9fc","error-container":"#ffdad6","surface-container":"#eceef1","surface-variant":"#e0e3e6","on-primary-container":"#95a4c4","secondary-container":"#5798ff","tertiary-container":"#004149","primary-container":"#2b3a55","tertiary":"#00292f","outline-variant":"#c5c6ce","on-surface":"#191c1e","on-primary-fixed-variant":"#384763","secondary-fixed":"#d7e3ff","on-secondary":"#ffffff","surface-dim":"#d8dadd","on-tertiary":"#ffffff","inverse-on-surface":"#eff1f4","tertiary-fixed":"#98f0ff","inverse-surface":"#2d3133","on-tertiary-container":"#09b5c8","surface":"#f7f9fc","surface-container-high":"#e6e8eb","tertiary-fixed-dim":"#4ed8eb","error":"#ba1a1a","surface-container-highest":"#e0e3e6","on-background":"#191c1e","on-tertiary-fixed":"#001f24","on-surface-variant":"#44474d","surface-container-low":"#f2f4f7"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"sidebar-collapsed-width":"4.5rem","table-row-dense":"2.25rem","space-lg":"1.5rem","space-md":"1rem","space-sm":"0.75rem","space-2xl":"3rem","space-xs":"0.5rem","container-padding":"1.5rem","table-row-regular":"3rem","space-xl":"2rem","space-xxs":"0.25rem","sidebar-width":"16.25rem"},"fontFamily":{"body-md":["Inter"],"numeric-data":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"title-sm":["Inter"],"headline-md":["Inter"],"display-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"numeric-data":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"title-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 bottom-0 w-sidebar-width bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-space-md flex items-center justify-between flex-shrink-0"><div class="flex items-center gap-space-xs"><img alt="UrbanaPro Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V9SRGsY_8CdlmxCo7bXClGge17_gJwGPNNDhShmF9Csl0akUXgrIqg5d0tcJlYhjcr4dPgkR6Oi8vmvqx53O1rL1CPGo1rycwSRXt_sDXxvDUDaSvOGLyCJIfjjj3LPWL5mYBJj5m98Leuc6hVkw02_KAXQ_WxaHM8x0yIht--aw-DSFqRvaMgM8ZA517ds7TnFX8RRnIsvAqm2JEjAfylw-0PzKS3klQhT9KtIpB0B51IUK9AdOBePTA"/><span class="font-title-sm text-title-sm text-primary tracking-tight">UrbanaPro</span></div><span class="px-space-xxs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase">SaaS</span></div><div class="flex-1 overflow-y-auto px-space-xs py-space-xs"><nav class="space-y-0.5" data-active-classes="bg-secondary-fixed text-on-secondary-fixed font-semibold"><a aria-current="page" class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg transition-colors bg-secondary-fixed text-on-secondary-fixed font-semibold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md truncate">Dashboard</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="propiedades" href="#"><span class="material-symbols-outlined text-[20px]">apartment</span><span class="font-body-md text-body-md truncate">Propiedades</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="unidades" href="#"><span class="material-symbols-outlined text-[20px]">meeting_room</span><span class="font-body-md text-body-md truncate">Unidades</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="propietarios" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span class="font-body-md text-body-md truncate">Propietarios</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="finanzas" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-body-md text-body-md truncate">Finanzas</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="proveedores" href="#"><span class="material-symbols-outlined text-[20px]">handshake</span><span class="font-body-md text-body-md truncate">Proveedores</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="agenda" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-body-md text-body-md truncate">Agenda</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="garita" href="#"><span class="material-symbols-outlined text-[20px]">local_police</span><span class="font-body-md text-body-md truncate">Garita</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span class="font-body-md text-body-md truncate">Reportes</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="administracion" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md truncate">Administración</span></a></nav></div><div class="p-space-sm space-y-space-sm bg-surface-container-lowest flex-shrink-0"><div class="bg-surface-container-low p-space-xs rounded-lg space-y-1.5"><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Almacenamiento</span><span class="font-numeric-data text-numeric-data">84% de 50GB</span></div><div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-secondary rounded-full w-[84%]"></div></div></div><div class="flex items-center justify-between px-1"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-body-sm text-body-sm text-on-surface-variant">En línea - Sincronizado</span></div><button aria-label="Colapsar menú lateral" class="p-1 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span></button></div></div></aside><div class="pl-sidebar-width min-h-screen flex flex-col"><header class="fixed top-0 left-sidebar-width right-0 h-14 bg-surface-container-lowest z-40 px-space-md flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-xs py-1.5 rounded-lg hover:bg-surface-container transition-colors text-left" type="button"><div class="w-7 h-7 rounded bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed"><span class="material-symbols-outlined text-[18px]">domain</span></div><div><div class="font-label-md text-label-md text-on-surface leading-none font-semibold">Residencial Las Palmas Torre A &amp; B</div><div class="font-body-sm text-body-sm text-on-surface-variant leading-none mt-0.5">Cambiar condominio</div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></button></div><div class="flex-1 max-w-xl mx-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-16 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary" placeholder="Buscar por unidad, residente, ticket o pago..." type="text"/><div class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant pointer-events-none">Ctrl+K</div></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1"><button aria-label="Notificaciones" class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] flex items-center justify-center font-bold">3</span></button><button aria-label="Centro de ayuda" class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help</span></button></div><button class="flex items-center gap-1.5 px-space-sm h-8 bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container font-label-md text-label-md rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nuevo registro</span><span class="material-symbols-outlined text-[16px]">arrow_drop_down</span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvRPg8xm7EhDwh0Atg5GAJFro9CS9LByKTptnKJtcH0LRAyvJSMx6F3H_DrTZi24GM_M1mPlgC9O9NMrPeWRUhKrGn9MCNb697FIIfPPVbBAiaih3VflUVG006kAIAfq85cSdJS1vfE-IejQmJ2DMu_ZuL5gDBi6PUh_8p1aBjHGg4rKceGK6t4ZXQIbNOGyuW6ZGkljM-0Dw46rxhGrEg6D621u50nbzkLZmcLniDBniH4RUxI3mW"/><div class="text-left"><div class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Lic. Mariana Soto</div><div class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Administradora General</div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="w-full pt-14 px-container-padding flex-1 bg-background"><div class="flex flex-col w-full pb-12">
+<!-- Top Meta / Navigation Anchor & Status Header -->
+<header class="flex flex-col gap-3 mb-6">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-secondary flex items-center gap-1 transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+<span>Propietarios</span>
+</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span>Detalle de Copropietario</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="font-semibold text-on-surface">Carlos Mendoza Valenzuela</span>
+</nav>
+<!-- Header Action Bar -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-wrap items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold">
+          Carlos Mendoza Valenzuela
+        </h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-700 font-label-sm text-label-sm font-semibold tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          PROPIETARIO ACTIVO
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase tracking-wide">
+<span class="material-symbols-outlined text-[14px]">home_pin</span>
+          Residente Habitual
+        </span>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 h-9 bg-surface-container-lowest hover:bg-surface-container-low text-primary font-label-md text-label-md rounded-lg shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">edit</span>
+<span>Editar Datos</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 h-9 bg-surface-container-lowest hover:bg-surface-container-low text-primary font-label-md text-label-md rounded-lg shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">download</span>
+<span>Descargar Ficha PDF</span>
+</button>
+<div class="relative">
+<button aria-label="Más opciones" class="flex items-center justify-center w-9 h-9 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-on-surface-variant shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Two-Column Primary Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: Profile & Identity Card (~380px on 12-col) -->
+<section class="xl:col-span-4 flex flex-col gap-5">
+<!-- Profile Card Container -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-6 flex flex-col gap-6">
+<!-- Persona Header -->
+<div class="flex items-start gap-4">
+<div class="relative flex-shrink-0">
+<img class="w-20 h-20 rounded-2xl object-cover shadow-sm" data-alt="Portrait of Carlos Mendoza Valenzuela, a sharp Chilean civil engineer and property investor in his late forties wearing a tailored navy blazer in an architectural office setting with ambient natural daylight, clean corporate aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF6h-kbfMQwu01JDgQqQAD-lMhungBTyBuMuFui5N0qTWyg46HM0M0ImuCgfSxs0Xon_4qvXAsoamS3LNw9trbwDWqjGwmeywNsyeUml9QkhJyj59xORmgROvEoT5_4oWwApZ1QdugVKRH0-CGScUFg1iiTRhM1lKTQuqkaZRbErX9nV8RpVYGpzA-FYTXMbpswAoHMN9HrC8tLoG2GEnQG9MnijeEcEJpDaxnx2opPfLAPK5vn-6b"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full ring-4 ring-surface-container-lowest" title="En línea / Activo en plataforma"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Copropietario Titular</span>
+<h2 class="font-title-sm text-title-sm text-primary font-bold truncate">Carlos Mendoza V.</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">Ingeniero Civil · Inversionista</p>
+<div class="mt-2 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-numeric-data text-body-sm">ID: #PROP-1082</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">· Desde 2018</span>
+</div>
+</div>
+</div>
+<!-- Quick Balance Alert Strip -->
+<div class="rounded-xl bg-amber-500/10 p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-800 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-amber-900 uppercase font-semibold">Deuda Consolidada</span>
+<span class="font-body-sm text-body-sm text-amber-800 truncate">1 cargo pendiente (Oct)</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-headline-md text-headline-md font-bold text-amber-900 leading-none">$245.000</span>
+<div class="font-label-sm text-label-sm text-amber-800 mt-1">Vence: 05 Nov 2024</div>
+</div>
+</div>
+<!-- Legal & Fiscal Identification -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h3 class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Identificación &amp; Legal</h3>
+<span class="material-symbols-outlined text-[16px] text-outline">verified_user</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-3 space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">RUT / Identificador:</span>
+<div class="flex items-center gap-1">
+<span class="font-numeric-data text-numeric-data font-semibold text-on-surface">14.892.410-K</span>
+<button class="p-1 rounded hover:bg-surface-container text-outline hover:text-secondary transition-colors" onclick="navigator.clipboard.writeText('14.892.410-K')" title="Copiar RUT" type="button">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nacionalidad:</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Chilena</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Régimen Conyugal:</span>
+<span class="font-body-sm text-body-sm text-on-surface text-right font-medium">Sociedad Conyugal</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Poder de Votación:</span>
+<span class="inline-flex items-center gap-1 text-emerald-700 font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">how_to_reg</span> Habilitado
+              </span>
+</div>
+</div>
+</div>
+<!-- Contact Data Section -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h3 class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Datos de Contacto</h3>
+<button class="text-secondary font-label-sm text-label-sm font-semibold hover:underline" type="button">Actualizar</button>
+</div>
+<div class="space-y-2.5">
+<!-- Email -->
+<div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">cmendoza@invercorp.cl</span>
+<span class="material-symbols-outlined text-secondary text-[16px]" title="Correo validado institucionalmente">check_circle</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Facturación &amp; Notificaciones</span>
+</div>
+</div>
+<!-- Mobile Phone -->
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">smartphone</span>
+</div>
+<div class="min-w-0">
+<div class="font-numeric-data text-numeric-data font-semibold text-on-surface truncate">+56 9 8452 9102</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Móvil Principal</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<a class="p-1.5 rounded text-emerald-600 hover:bg-emerald-50 transition-colors" href="https://wa.me/56984529102" rel="noopener noreferrer" target="_blank" title="Abrir WhatsApp">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<a class="p-1.5 rounded text-secondary hover:bg-secondary-fixed transition-colors" href="tel:+56984529102" title="Llamar">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+</div>
+<!-- Landline / Alt -->
+<div class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">call</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-numeric-data text-numeric-data text-on-surface">+56 2 2450 1190</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oficina Comercial</span>
+</div>
+</div>
+<!-- Physical Postal Address -->
+<div class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">business</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">Av. Apoquindo 4800, Of. 802</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Las Condes, Santiago · Domicilio Legal</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Resident Portal Access Card -->
+<div class="bg-amber-500/5 rounded-xl p-4 space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-amber-900 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-amber-600">lock_reset</span>
+              Portal de Residentes
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-900 font-label-sm text-label-sm font-bold">
+              PENDIENTE
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-amber-900/90 leading-relaxed">
+            El propietario aún no activa sus credenciales para votar en asambleas y pagar en línea.
+          </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 inline-flex items-center justify-center gap-1.5 h-8 bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container font-label-md text-label-md rounded-lg shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Invitar al portal</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-primary flex items-center justify-center transition-colors" title="Compartir enlace de activación" type="button">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+<!-- Administrative Notes -->
+<div class="flex flex-col gap-2 pt-2">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">sticky_note_2</span>
+            Bitácora Interna de Administración
+          </span>
+<div class="bg-surface-container-low rounded-xl p-3 text-on-surface font-body-sm text-body-sm leading-relaxed">
+            «Propietario original desde entrega matriz en 2018. Requiere factura exenta para Depto B-1104. Contactar a secretaria ejecutiva en caso de cobros.»
+          </div>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN: Multi-tab Operations Canvas (~8 cols) -->
+<main class="xl:col-span-8 flex flex-col gap-6">
+<!-- Primary Tab Navigation Strip -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-1.5 flex items-center gap-1.5">
+<button class="tab-button active flex-1 py-2.5 px-4 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 bg-secondary text-on-secondary font-semibold transition-all" id="tab-btn-unidades" onclick="switchTab('unidades')" type="button">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+<span>Unidades Asignadas &amp; Histórico</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/20 font-numeric-data text-label-sm">2 Activas · 1 Histórica</span>
+</button>
+<button class="tab-button flex-1 py-2.5 px-4 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 bg-transparent text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium transition-all" id="tab-btn-finanzas" onclick="switchTab('finanzas')" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Estado de Cuenta &amp; Finanzas</span>
+<span class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-800 font-numeric-data text-label-sm font-bold">1 Pendiente</span>
+</button>
+<button class="tab-button flex-1 py-2.5 px-4 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 bg-transparent text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium transition-all" id="tab-btn-pagos" onclick="switchTab('pagos')" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Comprobantes &amp; Pagos</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-numeric-data text-label-sm">2024</span>
+</button>
+</div>
+<!-- TAB 1 CONTENT: UNIDADES ASIGNADAS -->
+<div class="flex flex-col gap-6" id="tab-panel-unidades">
+<!-- Summary KPI Row for Units -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface-variant">Alícuota Total Activa</span>
+<span class="font-display-lg text-display-lg font-bold text-primary mt-1">1.60%</span>
+<span class="font-body-sm text-body-sm text-emerald-700 font-medium">Depto B-1104 + Est. E-42</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">pie_chart</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface-variant">Cuota Mensual Base</span>
+<span class="font-display-lg text-display-lg font-bold text-primary mt-1">$270.000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gasto común ordinario</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface-variant">Superficie Total</span>
+<span class="font-display-lg text-display-lg font-bold text-primary mt-1">142.5 <span class="font-title-sm text-title-sm font-normal text-on-surface-variant">m²</span></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">128 m² útil + 14.5 m² estac.</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[24px]">square_foot</span>
+</div>
+</div>
+</div>
+<!-- Section Header -->
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-title-sm text-title-sm text-primary font-bold">Registro Notarial y Catastro de Unidades</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Propiedades matrices activas y enajenaciones históricas en Residencial Las Palmas.</p>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 h-8 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add_link</span>
+<span>Asignar Nueva Unidad</span>
+</button>
+</div>
+<!-- Unit Cards Stack -->
+<div class="space-y-4">
+<!-- UNIT 1: Depto B-1104 (Principal) -->
+<article class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row md:items-center justify-between gap-5">
+<div class="flex items-start gap-4 min-w-0">
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">apartment</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<h4 class="font-title-sm text-title-sm font-bold text-primary">Depto B-1104</h4>
+<span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-800 font-label-sm text-label-sm font-bold">Activo</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Habitacional Principal</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Piso 11 · Torre B · Residencial Las Palmas · Rol SII: 4501-114
+                </div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2.5 text-on-surface font-body-sm text-body-sm">
+<div class="flex items-center gap-1">
+<span class="text-outline">Alícuota:</span>
+<span class="font-numeric-data text-numeric-data font-bold text-secondary">1.450%</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-outline">Régimen:</span>
+<span class="font-medium">Propietario / Residente</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-outline">Vigencia:</span>
+<span class="font-medium">15 Mar 2018 - En vigencia</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex md:flex-col items-end justify-between md:justify-center gap-2 pt-3 md:pt-0 border-t md:border-t-0 border-surface-container-high flex-shrink-0">
+<div class="text-left md:text-right">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Cuota Base Mensual</span>
+<span class="font-headline-md text-headline-md font-bold text-primary leading-tight">$245.000</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors" type="button">
+                  Ver Unidad
+                </button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors" title="Historial notarial" type="button">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</button>
+</div>
+</div>
+</article>
+<!-- UNIT 2: Estacionamiento E-42 -->
+<article class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row md:items-center justify-between gap-5">
+<div class="flex items-start gap-4 min-w-0">
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">directions_car</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<h4 class="font-title-sm text-title-sm font-bold text-primary">Estacionamiento E-42</h4>
+<span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-800 font-label-sm text-label-sm font-bold">Activo</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Vehicular Cubierto</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Subterráneo -2 · Sector B · Rol SII: 4501-842
+                </div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2.5 text-on-surface font-body-sm text-body-sm">
+<div class="flex items-center gap-1">
+<span class="text-outline">Alícuota:</span>
+<span class="font-numeric-data text-numeric-data font-bold text-secondary">0.150%</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-outline">Régimen:</span>
+<span class="font-medium">Propietario Titular</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-outline">Vigencia:</span>
+<span class="font-medium">15 Mar 2018 - En vigencia</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex md:flex-col items-end justify-between md:justify-center gap-2 pt-3 md:pt-0 border-t md:border-t-0 border-surface-container-high flex-shrink-0">
+<div class="text-left md:text-right">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Cuota Base Mensual</span>
+<span class="font-headline-md text-headline-md font-bold text-primary leading-tight">$25.000</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors" type="button">
+                  Ver Unidad
+                </button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors" title="Historial notarial" type="button">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</button>
+</div>
+</div>
+</article>
+<!-- UNIT 3: Depto A-302 (Histórica / Transferida) -->
+<article class="bg-surface-container-low/70 rounded-2xl p-5 shadow-none flex flex-col md:flex-row md:items-center justify-between gap-5 opacity-90">
+<div class="flex items-start gap-4 min-w-0">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">domain_disabled</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<h4 class="font-title-sm text-title-sm font-bold text-on-surface-variant">Depto A-302</h4>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">Histórica · Enajenada</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm text-outline">Ex-Propietario</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Piso 3 · Torre A · Enajenado a: Inversiones Sur SpA (CBR Fs. 1204 #8821)
+                </div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2.5 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1">
+<span class="text-outline">Alícuota previa:</span>
+<span class="font-numeric-data text-numeric-data">1.100%</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-outline">Periodo de Tenencia:</span>
+<span class="font-medium text-on-surface">10 Ene 2015 – 28 Feb 2018</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex md:flex-col items-end justify-between md:justify-center gap-2 pt-3 md:pt-0 flex-shrink-0">
+<div class="text-left md:text-right">
+<span class="font-label-sm text-label-sm uppercase text-outline block">Última Cuota Registrada</span>
+<span class="font-title-sm text-title-sm font-semibold text-on-surface-variant leading-tight">$180.000</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="inline-flex items-center gap-1 px-3 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span>Ver Escritura</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- TAB 2 / INTEGRATED SECTION: ESTADO DE CUENTA & FINANZAS -->
+<div class="flex flex-col gap-6" id="tab-panel-finanzas">
+<!-- Financial KPI Dashboard Matrix -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface-variant">Cargos del Mes</span>
+<span class="material-symbols-outlined text-[18px] text-outline">calendar_month</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">$270.000</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Octubre 2024 (2 unidades)</div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-amber-800">Saldo Pendiente / Mora</span>
+<span class="material-symbols-outlined text-[18px] text-amber-600">warning</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-lg text-headline-lg font-bold text-amber-900">$245.000</span>
+<div class="font-body-sm text-body-sm text-amber-800 font-medium mt-0.5">1 cargo vencido al 05/10</div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface-variant">Total Pagado 2024</span>
+<span class="material-symbols-outlined text-[18px] text-emerald-600">trending_up</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">$2.695.000</span>
+<div class="font-body-sm text-body-sm text-emerald-700 font-medium mt-0.5">10 pagos registrados</div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface-variant">Fondo de Reserva Acum.</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">savings</span>
+</div>
+<div class="mt-3">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">$350.000</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Aporte acumulado histórico</div>
+</div>
+</div>
+</div>
+<!-- Filter & Operations Action Toolbar -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-wrap items-center gap-3">
+<!-- Period Filter -->
+<div class="relative">
+<select class="h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm appearance-none focus:outline-none focus:ring-1 focus:ring-secondary cursor-pointer">
+<option selected="">Año Fiscal 2024</option>
+<option>Últimos 6 meses</option>
+<option>Año Fiscal 2023</option>
+<option>Histórico Completo</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Unit Filter -->
+<div class="relative">
+<select class="h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm appearance-none focus:outline-none focus:ring-1 focus:ring-secondary cursor-pointer">
+<option selected="">Todas las Unidades Activas</option>
+<option>Depto B-1104 (Ppal)</option>
+<option>Estacionamiento E-42</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<div class="h-6 w-px bg-surface-container-high hidden md:block"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">5 registros encontrados</span>
+</div>
+<!-- Quick Actions -->
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 h-9 bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md rounded-lg shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Registrar Pago Manual</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 h-9 bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md rounded-lg transition-colors" title="Exportar cartola completa" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Cartola (PDF/Excel)</span>
+</button>
+</div>
+</div>
+<!-- Financial Ledger Table -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low/70 h-9 font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">
+<th class="px-4 py-2 font-semibold">Folio / Periodo</th>
+<th class="px-4 py-2 font-semibold">Concepto Detallado</th>
+<th class="px-4 py-2 font-semibold">Unidad</th>
+<th class="px-4 py-2 font-semibold text-center">Vencimiento</th>
+<th class="px-4 py-2 font-semibold text-right">Cargo</th>
+<th class="px-4 py-2 font-semibold text-right">Pagado</th>
+<th class="px-4 py-2 font-semibold text-right">Saldo</th>
+<th class="px-4 py-2 font-semibold text-center">Estado</th>
+<th class="px-4 py-2 font-semibold text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Vencido Octubre -->
+<tr class="hover:bg-surface-container-low/40 transition-colors bg-amber-500/[0.02]">
+<td class="px-4 py-3 font-numeric-data text-numeric-data font-semibold text-primary">
+                    #GC-2024-10
+                  </td>
+<td class="px-4 py-3">
+<div class="font-medium text-on-surface">Gasto Común Ordinario + Fondo Reserva</div>
+<div class="font-body-sm text-body-sm text-outline">Incluye mantención ascensores y seguridad</div>
+</td>
+<td class="px-4 py-3">
+<span class="px-2 py-0.5 rounded bg-surface-container font-medium text-primary">Depto B-1104</span>
+</td>
+<td class="px-4 py-3 text-center font-numeric-data text-numeric-data text-amber-900 font-semibold">
+                    05/10/2024
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data font-semibold text-on-surface">
+                    $245.000
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data text-on-surface-variant">
+                    $0
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data font-bold text-amber-900">
+                    $245.000
+                  </td>
+<td class="px-4 py-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                      VENCIDO
+                    </span>
+</td>
+<td class="px-4 py-3 text-right">
+<div class="inline-flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container font-label-sm text-label-sm transition-colors" title="Enviar recordatorio de cobro" type="button">
+                        Cobrar
+                      </button>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container transition-colors" title="Descargar Boleta PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Pagado Septiembre Depto -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="px-4 py-3 font-numeric-data text-numeric-data font-semibold text-primary">
+                    #GC-2024-09
+                  </td>
+<td class="px-4 py-3">
+<div class="font-medium text-on-surface">Gasto Común Ordinario</div>
+<div class="font-body-sm text-body-sm text-outline">Transf. Santander #889102 · Aprobado</div>
+</td>
+<td class="px-4 py-3">
+<span class="px-2 py-0.5 rounded bg-surface-container font-medium text-primary">Depto B-1104</span>
+</td>
+<td class="px-4 py-3 text-center font-numeric-data text-numeric-data text-on-surface-variant">
+                    05/09/2024
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data text-on-surface">
+                    $245.000
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data font-semibold text-emerald-700">
+                    $245.000
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data text-on-surface-variant">
+                    $0
+                  </td>
+<td class="px-4 py-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-800 font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                      PAGADO
+                    </span>
+</td>
+<td class="px-4 py-3 text-right">
+<div class="inline-flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container transition-colors" title="Ver Recibo de Pago" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container transition-colors" title="Descargar Boleta PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Pagado Septiembre Estacionamiento -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="px-4 py-3 font-numeric-data text-numeric-data font-semibold text-primary">
+                    #GC-2024-09-E
+                  </td>
+<td class="px-4 py-3">
+<div class="font-medium text-on-surface">Cuota Mantenimiento Estacionamiento</div>
+<div class="font-body-sm text-body-sm text-outline">Transf. Santander #889102 · Aprobado</div>
+</td>
+<td class="px-4 py-3">
+<span class="px-2 py-0.5 rounded bg-surface-container font-medium text-primary">Estac. E-42</span>
+</td>
+<td class="px-4 py-3 text-center font-numeric-data text-numeric-data text-on-surface-variant">
+                    05/09/2024
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data text-on-surface">
+                    $25.000
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data font-semibold text-emerald-700">
+                    $25.000
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data text-on-surface-variant">
+                    $0
+                  </td>
+<td class="px-4 py-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-800 font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                      PAGADO
+                    </span>
+</td>
+<td class="px-4 py-3 text-right">
+<div class="inline-flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container transition-colors" title="Ver Recibo de Pago" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container transition-colors" title="Descargar Boleta PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Pagado Agosto Depto -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="px-4 py-3 font-numeric-data text-numeric-data font-semibold text-primary">
+                    #GC-2024-08
+                  </td>
+<td class="px-4 py-3">
+<div class="font-medium text-on-surface">Gasto Común Ordinario</div>
+<div class="font-body-sm text-body-sm text-outline">Webpay Plus #994012</div>
+</td>
+<td class="px-4 py-3">
+<span class="px-2 py-0.5 rounded bg-surface-container font-medium text-primary">Depto B-1104</span>
+</td>
+<td class="px-4 py-3 text-center font-numeric-data text-numeric-data text-on-surface-variant">
+                    05/08/2024
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data text-on-surface">
+                    $240.000
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data font-semibold text-emerald-700">
+                    $240.000
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data text-on-surface-variant">
+                    $0
+                  </td>
+<td class="px-4 py-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-800 font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                      PAGADO
+                    </span>
+</td>
+<td class="px-4 py-3 text-right">
+<div class="inline-flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container transition-colors" title="Ver Recibo de Pago" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container transition-colors" title="Descargar Boleta PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Cuota Extraordinaria -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="px-4 py-3 font-numeric-data text-numeric-data font-semibold text-primary">
+                    #EXT-2024-02
+                  </td>
+<td class="px-4 py-3">
+<div class="font-medium text-on-surface">Cuota Extraordinaria Pintura Fachada (2/3)</div>
+<div class="font-body-sm text-body-sm text-outline">Aprobada en Asamblea Ordinaria Mayo 2024</div>
+</td>
+<td class="px-4 py-3">
+<span class="px-2 py-0.5 rounded bg-surface-container font-medium text-primary">Depto B-1104</span>
+</td>
+<td class="px-4 py-3 text-center font-numeric-data text-numeric-data text-on-surface-variant">
+                    15/07/2024
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data text-on-surface">
+                    $65.000
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data font-semibold text-emerald-700">
+                    $65.000
+                  </td>
+<td class="px-4 py-3 text-right font-numeric-data text-numeric-data text-on-surface-variant">
+                    $0
+                  </td>
+<td class="px-4 py-3 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-800 font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                      PAGADO
+                    </span>
+</td>
+<td class="px-4 py-3 text-right">
+<div class="inline-flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container transition-colors" title="Ver Recibo de Pago" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container transition-colors" title="Descargar Boleta PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="px-4 py-3 bg-surface-container-low/40 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Mostrando 1-5 de 24 registros fiscales</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded hover:bg-surface-container text-outline transition-colors disabled:opacity-50" disabled="" type="button">Anterior</button>
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-semibold font-numeric-data text-numeric-data" type="button">1</button>
+<button class="px-2.5 py-1 rounded hover:bg-surface-container text-on-surface transition-colors font-numeric-data text-numeric-data" type="button">2</button>
+<button class="px-2 py-1 rounded hover:bg-surface-container text-on-surface transition-colors" type="button">Siguiente</button>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 3 CONTENT: REGISTRO DE PAGOS & COMPROBANTES (Inicialmente oculto por JS) -->
+<div class="hidden flex-col gap-6" id="tab-panel-pagos">
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-title-sm text-title-sm text-primary font-bold">Comprobantes de Transferencia y Conciliación</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Archivos adjuntos, vouchers bancarios y certificados tributarios de Carlos Mendoza.</p>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 h-8 rounded-lg bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+<span>Cargar Voucher</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+<div class="p-4 rounded-xl bg-surface-container-low flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">description</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-body-md text-body-md font-bold text-on-surface truncate">Voucher_Banco_Santander_Sept2024.pdf</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">270.000 CLP · 04 Sep 2024 · Conciliado con Cartola</p>
+<div class="mt-2 flex items-center gap-2">
+<a class="text-secondary font-label-sm text-label-sm font-semibold hover:underline" href="#">Ver Comprobante</a>
+<span class="text-outline">·</span>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:underline" href="#">Descargar</a>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">description</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-body-md text-body-md font-bold text-on-surface truncate">Comprobante_Webpay_Agosto2024.pdf</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">240.000 CLP · 03 Ago 2024 · Transbank Aut. 994012</p>
+<div class="mt-2 flex items-center gap-2">
+<a class="text-secondary font-label-sm text-label-sm font-semibold hover:underline" href="#">Ver Comprobante</a>
+<span class="text-outline">·</span>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:underline" href="#">Descargar</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script>
+  (function initOwnerDetail() {
+    // 1. Activar el ítem 'Propietarios' en la barra lateral del App Shell
+    const navLinks = document.querySelectorAll('aside nav a[data-path]');
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-path') === 'propietarios') {
+        link.className = 'flex items-center gap-space-xs px-space-sm py-2 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-semibold transition-colors';
+      } else {
+        link.className = 'flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors';
+      }
+    });
+
+    // 2. Sistema de conmutación de Tabs en el perfil
+    window.switchTab = function(tabId) {
+      const tabs = ['unidades', 'finanzas', 'pagos'];
+      tabs.forEach(t => {
+        const panel = document.getElementById('tab-panel-' + t);
+        const btn = document.getElementById('tab-btn-' + t);
+        if (!panel || !btn) return;
+
+        if (t === tabId) {
+          panel.classList.remove('hidden');
+          panel.classList.add('flex');
+          btn.className = 'tab-button active flex-1 py-2.5 px-4 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 bg-secondary text-on-secondary font-semibold transition-all';
+        } else {
+          panel.classList.add('hidden');
+          panel.classList.remove('flex');
+          btn.className = 'tab-button flex-1 py-2.5 px-4 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 bg-transparent text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-medium transition-all';
+        }
+      });
+    };
+  })();
+</script></main></div></body></html>

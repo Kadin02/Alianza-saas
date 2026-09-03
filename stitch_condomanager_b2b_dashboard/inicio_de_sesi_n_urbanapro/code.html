@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-slate-900" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Iniciar Sesión - UrbanaPro ERP</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#2b3a55',
+              blue: '#3a80e6',
+              cyan: '#00b3c6',
+              hoverBlue: '#2c6ec9',
+              dark: '#1e293b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Layout & Visual Styles -->
+<style data-purpose="custom-styling">
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .bg-cinema-overlay {
+      background: linear-gradient(135deg, rgba(43, 58, 85, 0.90) 0%, rgba(30, 41, 59, 0.85) 50%, rgba(58, 128, 230, 0.45) 100%);
+    }
+  </style>
+</head>
+<body class="h-full m-0 p-0 text-slate-700 antialiased selection:bg-brand-blue selection:text-white">
+<!-- BEGIN: MainContainer -->
+<!-- Contenedor principal a pantalla completa sin header, navbar ni sidebars -->
+<main class="relative min-h-screen w-full flex flex-col justify-between items-center px-4 py-8 overflow-y-auto">
+<!-- BEGIN: BackgroundLayer -->
+<!-- Imagen de fondo arquitectónica de edificios con blend cinematográfico -->
+<div class="fixed inset-0 -z-10 w-full h-full overflow-hidden" data-purpose="background-container">
+<img alt="Modern architectural abstract background, minimalist contemporary condominium and high-rise glass building facade" class="w-full h-full object-cover object-center filter scale-105 transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIJPZJYikG1A7f7ugm10m6RCBPJTeTcBNBnBDUvNIDxP8n5LEyXjk35FWZ-0LdhkFydRv14BR7lbSnbgL5NU1U_-hfnHMmtRFue0B6LB_BO156AC4sFhI_vp7ey1qIbOvzqdbxLCpr9yLr-mXwZCm6CRueT6BYidHN8ZW-ZjZP8eMTTb_c2UJcB8vtBWQLOmrH01Fo6MxLcuAcPDFS3ExGM056Mdl_5YXX7EjzEy36LZC8ZN2jLjk5"/>
+<!-- Capa de degradado corporativo y desenfoque sutil -->
+<div class="absolute inset-0 bg-cinema-overlay backdrop-blur-[2px]"></div>
+</div>
+<!-- END: BackgroundLayer -->
+<!-- Espaciador flexible superior -->
+<div class="w-full flex-1 flex items-center justify-center py-6">
+<!-- BEGIN: LoginCard -->
+<!-- Tarjeta blanca centrada y flotante -->
+<section aria-label="Formulario de Acceso" class="w-full max-w-[440px] bg-white rounded-2xl shadow-2xl border border-slate-100 p-8 sm:p-10 relative transition-all duration-300" data-purpose="login-card">
+<!-- Logo Corporativo -->
+<header class="flex flex-col items-center text-center mb-6">
+<div class="h-14 flex items-center justify-center mb-2" data-purpose="brand-logo">
+<img alt="UrbanaPro PROPERTY ERP" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V9SRGsY_8CdlmxCo7bXClGge17_gJwGPNNDhShmF9Csl0akUXgrIqg5d0tcJlYhjcr4dPgkR6Oi8vmvqx53O1rL1CPGo1rycwSRXt_sDXxvDUDaSvOGLyCJIfjjj3LPWL5mYBJj5m98Leuc6hVkw02_KAXQ_WxaHM8x0yIht--aw-DSFqRvaMgM8ZA517ds7TnFX8RRnIsvAqm2JEjAfylw-0PzKS3klQhT9KtIpB0B51IUK9AdOBePTA"/>
+</div>
+<!-- Badge B2B Multi-Organización -->
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-slate-100 text-brand-navy border border-slate-200/60 mb-3 mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
+            Plataforma Multi-Organización B2B
+          </span>
+<h1 class="text-2xl font-bold tracking-tight text-brand-navy">
+            Iniciar Sesión
+          </h1>
+<p class="text-sm text-slate-500 mt-1 max-w-[320px]">
+            Ingresa tus credenciales para acceder a la administración de tu comunidad
+          </p>
+</header>
+<!-- BEGIN: LoginForm -->
+<form action="#" class="space-y-5" method="POST" onsubmit="event.preventDefault();">
+<!-- Campo: Usuario / Email -->
+<div class="space-y-1.5">
+<label class="block text-xs font-semibold uppercase tracking-wider text-slate-600" for="username_or_email">
+              Usuario o Correo electrónico
+            </label>
+<div class="relative rounded-lg shadow-sm">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
+<!-- Icono Correo / Usuario -->
+<svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<input autocomplete="username" class="block w-full rounded-lg border-slate-300 pl-10 pr-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 transition-colors" id="username_or_email" name="username_or_email" placeholder="ej. admin@urbanapro.cl" required="" type="email"/>
+</div>
+</div>
+<!-- Campo: Contraseña -->
+<div class="space-y-1.5">
+<label class="block text-xs font-semibold uppercase tracking-wider text-slate-600" for="password">
+              Contraseña
+            </label>
+<div class="relative rounded-lg shadow-sm">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
+<!-- Icono Candado -->
+<svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<input autocomplete="current-password" class="block w-full rounded-lg border-slate-300 pl-10 pr-11 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 transition-colors" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<!-- Botón Ver / Ocultar Contraseña -->
+<button aria-label="Mostrar u ocultar contraseña" class="absolute inset-y-0 right-0 flex items-center pr-3.5 text-slate-400 hover:text-brand-blue transition-colors focus:outline-none" id="togglePassword" type="button">
+<!-- Icono Ojo -->
+<svg class="h-5 w-5" fill="none" id="eyeIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Opciones adicionales: Recordarme & Recuperación -->
+<div class="flex items-center justify-between text-xs sm:text-sm">
+<label class="inline-flex items-center cursor-pointer select-none">
+<input class="h-4 w-4 rounded border-slate-300 text-brand-blue focus:ring-brand-blue/30 transition duration-150 ease-in-out cursor-pointer" id="remember_me" name="remember_me" type="checkbox"/>
+<span class="ml-2 text-slate-600 font-medium">Recordarme</span>
+</label>
+<a class="font-medium text-brand-blue hover:text-brand-hoverBlue hover:underline transition-colors focus:outline-none focus:underline" href="#">
+              ¿Olvidaste tu contraseña?
+            </a>
+</div>
+<!-- Botón de Envío -->
+<button class="w-full flex justify-center items-center py-3.5 px-4 border border-transparent rounded-lg shadow-md text-sm font-semibold text-white bg-brand-blue hover:bg-brand-hoverBlue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue transition-all duration-150 transform active:scale-[0.99]" type="submit">
+            Iniciar sesión
+          </button>
+</form>
+<!-- END: LoginForm -->
+<!-- BEGIN: CardFooterMeta -->
+<footer class="mt-8 pt-6 border-t border-slate-100 flex flex-col items-center gap-3">
+<!-- Certificación de Seguridad -->
+<div class="flex items-center gap-1.5 text-xs text-slate-500 font-medium">
+<svg class="h-4 w-4 text-emerald-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Conexión segura SSL cifrada de extremo a extremo</span>
+</div>
+<!-- Selector de Idioma & Soporte -->
+<div class="flex items-center gap-4 text-xs text-slate-500">
+<div class="flex items-center gap-1 cursor-pointer hover:text-brand-blue transition-colors">
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Español (ES)</span>
+</div>
+<span class="text-slate-300">·</span>
+<a class="hover:text-brand-blue hover:underline transition-colors" href="#">
+              Contactar Soporte
+            </a>
+</div>
+</footer>
+<!-- END: CardFooterMeta -->
+</section>
+<!-- END: LoginCard -->
+</div>
+<!-- BEGIN: PageFooter -->
+<!-- Footer Legal al pie de la página -->
+<footer class="w-full text-center py-3 text-xs text-slate-300/80 font-normal">
+<p>
+        © 2024 UrbanaPro Technologies SpA. Todos los derechos reservados. 
+        <span class="mx-1.5 opacity-60">·</span>
+<a class="hover:text-white hover:underline transition-colors" href="#">Privacidad</a>
+<span class="mx-1.5 opacity-60">·</span>
+<a class="hover:text-white hover:underline transition-colors" href="#">Términos de Servicio</a>
+</p>
+</footer>
+<!-- END: PageFooter -->
+</main>
+<!-- END: MainContainer -->
+<!-- Interacción: Alternar visibilidad de contraseña -->
+<script data-purpose="toggle-password">
+    document.addEventListener('DOMContentLoaded', function () {
+      const togglePasswordBtn = document.getElementById('togglePassword');
+      const passwordInput = document.getElementById('password');
+      const eyeIcon = document.getElementById('eyeIcon');
+
+      if (togglePasswordBtn && passwordInput && eyeIcon) {
+        togglePasswordBtn.addEventListener('click', function () {
+          const isPassword = passwordInput.getAttribute('type') === 'password';
+          passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+          
+          // Alternar icono de ojo
+          if (isPassword) {
+            eyeIcon.innerHTML = `
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l18 18" />
+            `;
+          } else {
+            eyeIcon.innerHTML = `
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            `;
+          }
+        });
+      }
+    });
+  </script>
+</body></html>

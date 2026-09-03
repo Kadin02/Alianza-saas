@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>UrbanaPro</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-fixed":"#001b3f","primary":"#15243e","primary-fixed":"#d7e3ff","secondary":"#005cbb","on-error-container":"#93000a","secondary-fixed-dim":"#abc7ff","inverse-primary":"#b7c7e8","on-secondary-container":"#002f66","surface-tint":"#505f7c","on-secondary-fixed-variant":"#00458f","primary-fixed-dim":"#b7c7e8","on-tertiary-fixed-variant":"#004f58","surface-container-lowest":"#ffffff","background":"#f7f9fc","on-error":"#ffffff","outline":"#75777e","on-primary-fixed":"#0b1b35","on-primary":"#ffffff","surface-bright":"#f7f9fc","error-container":"#ffdad6","surface-container":"#eceef1","surface-variant":"#e0e3e6","on-primary-container":"#95a4c4","secondary-container":"#5798ff","tertiary-container":"#004149","primary-container":"#2b3a55","tertiary":"#00292f","outline-variant":"#c5c6ce","on-surface":"#191c1e","on-primary-fixed-variant":"#384763","secondary-fixed":"#d7e3ff","on-secondary":"#ffffff","surface-dim":"#d8dadd","on-tertiary":"#ffffff","inverse-on-surface":"#eff1f4","tertiary-fixed":"#98f0ff","inverse-surface":"#2d3133","on-tertiary-container":"#09b5c8","surface":"#f7f9fc","surface-container-high":"#e6e8eb","tertiary-fixed-dim":"#4ed8eb","error":"#ba1a1a","surface-container-highest":"#e0e3e6","on-background":"#191c1e","on-tertiary-fixed":"#001f24","on-surface-variant":"#44474d","surface-container-low":"#f2f4f7"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"sidebar-collapsed-width":"4.5rem","table-row-dense":"2.25rem","space-lg":"1.5rem","space-md":"1rem","space-sm":"0.75rem","space-2xl":"3rem","space-xs":"0.5rem","container-padding":"1.5rem","table-row-regular":"3rem","space-xl":"2rem","space-xxs":"0.25rem","sidebar-width":"16.25rem"},"fontFamily":{"body-md":["Inter"],"numeric-data":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"title-sm":["Inter"],"headline-md":["Inter"],"display-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"numeric-data":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"title-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 bottom-0 w-sidebar-width bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-space-md flex items-center justify-between flex-shrink-0"><div class="flex items-center gap-space-xs"><img alt="UrbanaPro Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V9SRGsY_8CdlmxCo7bXClGge17_gJwGPNNDhShmF9Csl0akUXgrIqg5d0tcJlYhjcr4dPgkR6Oi8vmvqx53O1rL1CPGo1rycwSRXt_sDXxvDUDaSvOGLyCJIfjjj3LPWL5mYBJj5m98Leuc6hVkw02_KAXQ_WxaHM8x0yIht--aw-DSFqRvaMgM8ZA517ds7TnFX8RRnIsvAqm2JEjAfylw-0PzKS3klQhT9KtIpB0B51IUK9AdOBePTA"/><span class="font-title-sm text-title-sm text-primary tracking-tight">UrbanaPro</span></div><span class="px-space-xxs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase">SaaS</span></div><div class="flex-1 overflow-y-auto px-space-xs py-space-xs"><nav class="space-y-0.5" data-active-classes="bg-secondary-fixed text-on-secondary-fixed font-semibold"><a aria-current="page" class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg transition-colors bg-secondary-fixed text-on-secondary-fixed font-semibold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md truncate">Dashboard</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="propiedades" href="#"><span class="material-symbols-outlined text-[20px]">apartment</span><span class="font-body-md text-body-md truncate">Propiedades</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="unidades" href="#"><span class="material-symbols-outlined text-[20px]">meeting_room</span><span class="font-body-md text-body-md truncate">Unidades</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="propietarios" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span class="font-body-md text-body-md truncate">Propietarios</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="finanzas" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-body-md text-body-md truncate">Finanzas</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="proveedores" href="#"><span class="material-symbols-outlined text-[20px]">handshake</span><span class="font-body-md text-body-md truncate">Proveedores</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="agenda" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-body-md text-body-md truncate">Agenda</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="garita" href="#"><span class="material-symbols-outlined text-[20px]">local_police</span><span class="font-body-md text-body-md truncate">Garita</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span class="font-body-md text-body-md truncate">Reportes</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="administracion" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md truncate">Administración</span></a></nav></div><div class="p-space-sm space-y-space-sm bg-surface-container-lowest flex-shrink-0"><div class="bg-surface-container-low p-space-xs rounded-lg space-y-1.5"><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Almacenamiento</span><span class="font-numeric-data text-numeric-data">84% de 50GB</span></div><div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-secondary rounded-full w-[84%]"></div></div></div><div class="flex items-center justify-between px-1"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-body-sm text-body-sm text-on-surface-variant">En línea - Sincronizado</span></div><button aria-label="Colapsar menú lateral" class="p-1 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span></button></div></div></aside><div class="pl-sidebar-width min-h-screen flex flex-col"><header class="fixed top-0 left-sidebar-width right-0 h-14 bg-surface-container-lowest z-40 px-space-md flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-xs py-1.5 rounded-lg hover:bg-surface-container transition-colors text-left" type="button"><div class="w-7 h-7 rounded bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed"><span class="material-symbols-outlined text-[18px]">domain</span></div><div><div class="font-label-md text-label-md text-on-surface leading-none font-semibold">Residencial Las Palmas Torre A &amp; B</div><div class="font-body-sm text-body-sm text-on-surface-variant leading-none mt-0.5">Cambiar condominio</div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></button></div><div class="flex-1 max-w-xl mx-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-16 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary" placeholder="Buscar por unidad, residente, ticket o pago..." type="text"/><div class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant pointer-events-none">Ctrl+K</div></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1"><button aria-label="Notificaciones" class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] flex items-center justify-center font-bold">3</span></button><button aria-label="Centro de ayuda" class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help</span></button></div><button class="flex items-center gap-1.5 px-space-sm h-8 bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container font-label-md text-label-md rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nuevo registro</span><span class="material-symbols-outlined text-[16px]">arrow_drop_down</span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvRPg8xm7EhDwh0Atg5GAJFro9CS9LByKTptnKJtcH0LRAyvJSMx6F3H_DrTZi24GM_M1mPlgC9O9NMrPeWRUhKrGn9MCNb697FIIfPPVbBAiaih3VflUVG006kAIAfq85cSdJS1vfE-IejQmJ2DMu_ZuL5gDBi6PUh_8p1aBjHGg4rKceGK6t4ZXQIbNOGyuW6ZGkljM-0Dw46rxhGrEg6D621u50nbzkLZmcLniDBniH4RUxI3mW"/><div class="text-left"><div class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Lic. Mariana Soto</div><div class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Administradora General</div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="w-full pt-14 px-container-padding flex-1 bg-background"><div class="flex flex-col w-full">
+<!-- Minimalist Setup Navigation Context Bar -->
+<header class="w-full flex items-center justify-between pb-space-lg mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">domain_add</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-primary">Alta de Nueva Organización</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm tracking-wide uppercase font-semibold">Setup Multi-Tenant</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configuración del entorno productivo y partición de datos para administración inmobiliaria</p>
+</div>
+</div>
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-1.5 rounded-xl shadow-sm">
+<img alt="Lic. Mariana Soto" class="w-7 h-7 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1ULv2TrNnCX5Iodg4QEdhcG-_HhU7tKSwzBLoaUOQeO_j2m9ievMGO76KBFPZlMepQxTeYleboPsY6wkkFA490VlChxx77irFVs6-jvVoMzVnBuyuM2uNiS57Jy_GgPbhiMD4en3MyT3b_VRrN8TSOr795zkBUNTZAYHWxl2Di8SONZE-m-vGtNJa69gM-7PENR47TKdTQ4MFa2ywVCdJrYEpfQmbgRjxOJwVD1OZZcS6-p1SdfxZtnYhk"/>
+<div class="text-left">
+<div class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Mariana Soto</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant leading-none">mariana.soto@urbanapro.cl</div>
+</div>
+</div>
+<button class="flex items-center gap-1.5 px-space-sm py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+<span>Cancelar y volver</span>
+</button>
+</div>
+</header>
+<!-- Interactive Horizontal Stepper Tracker -->
+<div class="w-full bg-surface-container-lowest rounded-2xl p-space-md mb-space-lg shadow-sm">
+<div class="grid grid-cols-12 items-center gap-space-md">
+<!-- Step 1 -->
+<button class="col-span-12 md:col-span-4 flex items-center gap-space-sm text-left p-2 rounded-xl transition-all hover:bg-surface-container-low group" id="step-btn-1" onclick="setWizardStep(1)" type="button">
+<div class="w-9 h-9 rounded-xl bg-secondary text-on-secondary flex items-center justify-center font-numeric-data text-numeric-data font-bold flex-shrink-0 shadow-sm" id="step-icon-1">
+<span class="material-symbols-outlined text-[20px]">domain</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase" id="step-tag-1">Paso 1</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-emerald-600 font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span> Listo
+            </span>
+</div>
+<p class="font-title-sm text-title-sm text-on-surface truncate">Datos de Organización</p>
+</div>
+</button>
+<!-- Step 2 -->
+<button class="col-span-12 md:col-span-4 flex items-center gap-space-sm text-left p-2 rounded-xl transition-all bg-secondary-fixed text-on-secondary-fixed group" id="step-btn-2" onclick="setWizardStep(2)" type="button">
+<div class="w-9 h-9 rounded-xl bg-secondary text-on-secondary flex items-center justify-center font-numeric-data text-numeric-data font-bold flex-shrink-0 shadow-sm" id="step-icon-2">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-secondary-fixed font-bold uppercase" id="step-tag-2">Paso 2 · Activo</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+</div>
+<p class="font-title-sm text-title-sm text-on-secondary-fixed font-semibold truncate">Marca &amp; Personalización</p>
+</div>
+</button>
+<!-- Step 3 -->
+<button class="col-span-12 md:col-span-4 flex items-center gap-space-sm text-left p-2 rounded-xl transition-all hover:bg-surface-container-low group" id="step-btn-3" onclick="setWizardStep(3)" type="button">
+<div class="w-9 h-9 rounded-xl bg-surface-container-high text-on-surface-variant flex items-center justify-center font-numeric-data text-numeric-data font-bold flex-shrink-0" id="step-icon-3">
+<span class="material-symbols-outlined text-[20px]">group_add</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase" id="step-tag-3">Paso 3</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">3 integrantes</span>
+</div>
+<p class="font-title-sm text-title-sm text-on-surface-variant truncate">Invitar Equipo Inicial</p>
+</div>
+</button>
+</div>
+<!-- Progress Line -->
+<div class="w-full h-1.5 bg-surface-container-high rounded-full mt-3 overflow-hidden">
+<div class="h-full bg-secondary transition-all duration-500 rounded-full w-2/3" id="step-progress-bar"></div>
+</div>
+</div>
+<!-- Main Multi-Column Content Area -->
+<div class="grid grid-cols-12 gap-space-lg items-start">
+<!-- Left / Center: Form Canvas (8 Columns) -->
+<div class="col-span-12 lg:col-span-8 space-y-space-lg">
+<!-- STEP 1 CONTENT SECTION -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm transition-all" id="panel-step-1">
+<div class="flex items-center justify-between pb-space-sm mb-space-md border-b-0">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-md bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm">1</span>
+<h2 class="font-title-sm text-title-sm text-primary">Información General de la Entidad</h2>
+</div>
+<span class="font-label-sm text-label-sm text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verificado
+          </span>
+</div>
+<div class="space-y-space-md">
+<div class="grid grid-cols-12 gap-space-md">
+<div class="col-span-12 md:col-span-7">
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1 font-semibold" for="org-legal-name">Nombre Oficial / Razón Social *</label>
+<div class="relative">
+<input class="w-full h-10 px-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/40 shadow-inner" id="org-legal-name" oninput="updateLivePreview()" type="text" value="Condominio Parque Oriente"/>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5">
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1 font-semibold" for="org-rut">RUT Tributario *</label>
+<input class="w-full h-10 px-space-sm rounded-lg bg-surface-container-low font-numeric-data text-numeric-data text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/40 shadow-inner" id="org-rut" type="text" value="77.456.789-K"/>
+</div>
+</div>
+<!-- Organization Type Selector Cards -->
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-2 font-semibold">Tipo de Condominio o Propiedad</label>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xs">
+<label class="cursor-pointer relative flex flex-col p-space-sm rounded-xl bg-secondary-fixed text-on-secondary-fixed shadow-sm transition-all">
+<input checked="" class="sr-only" name="org_type" onchange="updateOrgTypeTag('Condominio Residencial')" type="radio" value="residencial"/>
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-[24px]">apartment</span>
+<span class="w-4 h-4 rounded-full bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</span>
+</div>
+<div class="font-label-md text-label-md font-semibold">Residencial</div>
+<div class="font-body-sm text-body-sm opacity-80 mt-0.5">Torres de Deptos</div>
+</label>
+<label class="cursor-pointer relative flex flex-col p-space-sm rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-all">
+<input class="sr-only" name="org_type" onchange="updateOrgTypeTag('Edificio Corporativo')" type="radio" value="corporativo"/>
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-[24px] text-on-surface-variant">corporate_fare</span>
+</div>
+<div class="font-label-md text-label-md font-semibold">Corporativo</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Oficinas y Plantas</div>
+</label>
+<label class="cursor-pointer relative flex flex-col p-space-sm rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-all">
+<input class="sr-only" name="org_type" onchange="updateOrgTypeTag('Loteo &amp; Parcelas')" type="radio" value="parcelas"/>
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-[24px] text-on-surface-variant">holiday_village</span>
+</div>
+<div class="font-label-md text-label-md font-semibold">Loteo / Parcelas</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Comunidad Rural</div>
+</label>
+<label class="cursor-pointer relative flex flex-col p-space-sm rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-all">
+<input class="sr-only" name="org_type" onchange="updateOrgTypeTag('Empresa Externa')" type="radio" value="administradora"/>
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-[24px] text-on-surface-variant">business_center</span>
+</div>
+<div class="font-label-md text-label-md font-semibold">Admin. Externa</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Gestión Cartera</div>
+</label>
+</div>
+</div>
+<!-- Contact Fields -->
+<div class="grid grid-cols-12 gap-space-md">
+<div class="col-span-12 md:col-span-6">
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1 font-semibold" for="org-email">Email de Operaciones &amp; Cobros *</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">mail</span>
+<input class="w-full h-10 pl-9 pr-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/40 shadow-inner" id="org-email" type="email" value="administracion@parqueoriente.cl"/>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6">
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1 font-semibold" for="org-phone">Teléfono de Conserjería / Mesa Central *</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">call</span>
+<input class="w-full h-10 pl-9 pr-space-sm rounded-lg bg-surface-container-low font-numeric-data text-numeric-data text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/40 shadow-inner" id="org-phone" type="tel" value="+56 9 8765 4321"/>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1 font-semibold" for="org-address">Dirección Urbana / Comuna *</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">location_on</span>
+<input class="w-full h-10 pl-9 pr-space-sm rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/40 shadow-inner" id="org-address" type="text" value="Av. Las Condes 12400, Las Condes, Región Metropolitana"/>
+</div>
+</div>
+</div>
+</section>
+<!-- STEP 2 CONTENT SECTION -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm transition-all" id="panel-step-2">
+<div class="flex items-center justify-between pb-space-sm mb-space-md border-b-0">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-md bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm">2</span>
+<h2 class="font-title-sm text-title-sm text-primary">Marca, Logotipo y URL Personalizada</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed px-2 py-0.5 rounded-full font-semibold">Edición activa</span>
+</div>
+<div class="space-y-space-lg">
+<!-- Logo Drag & Drop Zone -->
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1.5 font-semibold">Logotipo Institucional para Boletas y Portal</label>
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col md:flex-row items-center gap-space-md">
+<div class="w-20 h-20 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary flex-shrink-0 relative overflow-hidden group" id="preview-logo-box">
+<span class="material-symbols-outlined text-[36px] text-secondary" id="logo-icon-display">domain</span>
+<span class="absolute bottom-1 right-1 w-3 h-3 rounded-full bg-emerald-500"></span>
+</div>
+<div class="space-y-1 text-center md:text-left flex-1">
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
+<button class="px-space-sm py-1.5 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-container transition-colors shadow-sm" onclick="triggerFileSelect()" type="button">
+                    Examinar archivo
+                  </button>
+<span class="font-body-sm text-body-sm text-on-surface-variant">o arrastra una imagen aquí</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Se admiten archivos SVG, PNG transparente o JPG (Máx. 2MB. Recomendado: 400×400px en proporción cuadrada o rectangular horizontal)</p>
+</div>
+</div>
+</div>
+<!-- Brand Accent Color Picker -->
+<div>
+<div class="flex items-center justify-between mb-2">
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Color de Acento de la Organización</label>
+<span class="font-numeric-data text-numeric-data text-on-surface font-semibold" id="color-hex-label">#005CBB (Azul Royal)</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-6 gap-space-xs">
+<button class="flex items-center gap-2 p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors text-left group" onclick="selectThemeColor('#15243E', 'Azul Marino Corporativo')" type="button">
+<span class="w-6 h-6 rounded-lg bg-[#15243E] shadow-sm flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm font-semibold truncate">Marino</span>
+</button>
+<button class="flex items-center gap-2 p-2 rounded-xl bg-secondary-fixed text-on-secondary-fixed transition-colors text-left ring-2 ring-secondary" onclick="selectThemeColor('#005CBB', 'Azul Royal')" type="button">
+<span class="w-6 h-6 rounded-lg bg-[#005CBB] shadow-sm flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm font-semibold truncate">Royal</span>
+</button>
+<button class="flex items-center gap-2 p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors text-left group" onclick="selectThemeColor('#059669', 'Esmeralda Jardín')" type="button">
+<span class="w-6 h-6 rounded-lg bg-[#059669] shadow-sm flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm font-semibold truncate">Esmeralda</span>
+</button>
+<button class="flex items-center gap-2 p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors text-left group" onclick="selectThemeColor('#4F46E5', 'Índigo Moderno')" type="button">
+<span class="w-6 h-6 rounded-lg bg-[#4F46E5] shadow-sm flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm font-semibold truncate">Índigo</span>
+</button>
+<button class="flex items-center gap-2 p-2 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors text-left group" onclick="selectThemeColor('#004149', 'Turquesa Profundo')" type="button">
+<span class="w-6 h-6 rounded-lg bg-[#004149] shadow-sm flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm font-semibold truncate">Turquesa</span>
+</button>
+<div class="flex items-center gap-2 p-2 rounded-xl bg-surface-container-low">
+<input class="w-6 h-6 rounded-lg border-0 cursor-pointer bg-transparent p-0" id="custom-color-picker" onchange="selectCustomColor(this.value)" type="color" value="#005CBB"/>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">Hex libre</span>
+</div>
+</div>
+</div>
+<!-- Subdomain Slug Definition -->
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1 font-semibold" for="subdomain-slug">Identificador de Acceso y Portal de Residentes</label>
+<div class="flex rounded-lg overflow-hidden bg-surface-container-low shadow-inner">
+<span class="inline-flex items-center px-space-sm bg-surface-container font-label-md text-label-md text-on-surface-variant font-mono">
+                urbanapro.cl/comunidad/
+              </span>
+<input class="flex-1 h-10 px-space-sm bg-transparent font-mono text-body-md text-on-surface font-semibold focus:outline-none focus:bg-surface-container-lowest" id="subdomain-slug" oninput="updateLiveSlug(this.value)" type="text" value="parque-oriente"/>
+<button class="px-space-sm text-emerald-600 font-label-sm text-label-sm font-semibold flex items-center gap-1 bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Disponible
+              </button>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-1">Este enlace servirá para el ingreso de propietarios, reservas de quincho y pago de gastos comunes.</p>
+</div>
+</div>
+</section>
+<!-- STEP 3 CONTENT SECTION -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm transition-all" id="panel-step-3">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-sm mb-space-md border-b-0">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-md bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm">3</span>
+<h2 class="font-title-sm text-title-sm text-primary">Equipo Inicial y Roles Operativos</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Asigna los primeros accesos a tu equipo administrativo y personal en garita.</p>
+</div>
+<button class="flex items-center gap-1 px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg transition-colors self-start sm:self-auto shadow-sm" onclick="addNewTeamRow()" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>+ Agregar usuario</span>
+</button>
+</div>
+<!-- Editable Team Table -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-low">
+<table class="w-full text-left" id="team-assignment-table">
+<thead>
+<tr class="h-9 bg-surface-container font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">
+<th class="px-space-md">Miembro / Identificador</th>
+<th class="px-space-sm">Correo Electrónico</th>
+<th class="px-space-sm">Rol Asignado</th>
+<th class="px-space-sm text-center">Estado</th>
+<th class="px-space-sm text-right">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent font-body-md text-body-md" id="team-table-rows">
+<!-- Row 1: Mariana Soto -->
+<tr class="h-12 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="px-space-md">
+<div class="flex items-center gap-2">
+<img alt="Mariana Soto" class="w-7 h-7 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1ULv2TrNnCX5Iodg4QEdhcG-_HhU7tKSwzBLoaUOQeO_j2m9ievMGO76KBFPZlMepQxTeYleboPsY6wkkFA490VlChxx77irFVs6-jvVoMzVnBuyuM2uNiS57Jy_GgPbhiMD4en3MyT3b_VRrN8TSOr795zkBUNTZAYHWxl2Di8SONZE-m-vGtNJa69gM-7PENR47TKdTQ4MFa2ywVCdJrYEpfQmbgRjxOJwVD1OZZcS6-p1SdfxZtnYhk"/>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface block">Mariana Soto</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tú (Propietario de Cuenta)</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm font-mono text-body-sm text-on-surface">mariana.soto@urbanapro.cl</td>
+<td class="px-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+                    Admin General
+                  </span>
+</td>
+<td class="px-space-sm text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Activo</span>
+</td>
+<td class="px-space-sm text-right">
+<span class="material-symbols-outlined text-outline text-[18px] opacity-40 cursor-not-allowed">lock</span>
+</td>
+</tr>
+<!-- Row 2: Roberto Valdés -->
+<tr class="h-12 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">RV</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Roberto Valdés</span>
+</div>
+</td>
+<td class="px-space-sm font-mono text-body-sm text-on-surface">r.valdes@seguridad.cl</td>
+<td class="px-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 font-label-sm text-label-sm font-semibold">
+                    Garita &amp; Control
+                  </span>
+</td>
+<td class="px-space-sm text-center">
+<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-label-sm text-label-sm font-semibold">Borrador</span>
+</td>
+<td class="px-space-sm text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-error transition-colors" onclick="removeTableRow(this)" title="Eliminar invitación" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Camila Fuentes -->
+<tr class="h-12 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<td class="px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">CF</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Camila Fuentes</span>
+</div>
+</td>
+<td class="px-space-sm font-mono text-body-sm text-on-surface">c.fuentes@admincentral.cl</td>
+<td class="px-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+                    Finanzas &amp; Cobros
+                  </span>
+</td>
+<td class="px-space-sm text-center">
+<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-label-sm text-label-sm font-semibold">Borrador</span>
+</td>
+<td class="px-space-sm text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-error transition-colors" onclick="removeTableRow(this)" title="Eliminar invitación" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-low flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px] flex-shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm">
+            Las invitaciones por correo electrónico serán enviadas automáticamente una vez completado el registro. Los miembros recibirán un enlace de acceso con validez de 72 horas para definir sus credenciales de ingreso.
+          </p>
+</div>
+</section>
+<!-- Step Navigation Action Bar -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-1 px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" id="btn-wizard-prev" onclick="previousWizardStep()" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Paso anterior</span>
+</button>
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-1 px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+<span>Guardar borrador</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs w-full sm:w-auto">
+<button class="w-full sm:w-auto flex items-center justify-center gap-2 px-space-lg py-2.5 rounded-lg bg-secondary hover:bg-secondary-container text-on-secondary font-label-md text-label-md font-semibold transition-all shadow-md hover:shadow-lg" id="btn-wizard-next" onclick="nextWizardStep()" type="button">
+<span id="btn-wizard-next-text">Continuar al Paso 3</span>
+<span class="material-symbols-outlined text-[18px]" id="btn-wizard-next-icon">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right: Sticky Live Environment Preview (4 Columns) -->
+<div class="col-span-12 lg:col-span-4 space-y-space-md sticky top-16">
+<!-- Live Preview Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-xs mb-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">visibility</span>
+<h3 class="font-label-md text-label-md font-bold text-primary uppercase tracking-wider">Vista Previa en Vivo</h3>
+</div>
+<span class="font-label-sm text-label-sm text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded font-semibold flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Dinámico
+          </span>
+</div>
+<!-- Simulated Tenant Header Pill -->
+<div class="rounded-xl overflow-hidden shadow-inner bg-surface-container-low mb-space-md">
+<!-- Top simulated tenant bar -->
+<div class="h-10 bg-primary px-space-sm flex items-center justify-between text-on-primary transition-colors" id="preview-header-bar">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">apartment</span>
+<span class="font-label-sm text-label-sm font-semibold truncate max-w-[170px]" id="preview-name-header">Condominio Parque Oriente</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+</div>
+<!-- Body of simulated snippet -->
+<div class="p-space-sm space-y-space-xs bg-surface-container-lowest">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm shadow-sm transition-colors" id="preview-mini-avatar">
+<span class="material-symbols-outlined text-[18px]">home_work</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-title-sm text-title-sm text-on-surface truncate font-bold" id="preview-title">Condominio Parque Oriente</div>
+<div class="font-label-sm text-label-sm text-secondary font-medium" id="preview-org-badge">Condominio Residencial</div>
+</div>
+</div>
+<div class="pt-2">
+<div class="font-label-sm text-label-sm text-outline uppercase font-semibold">Portal Residente</div>
+<div class="font-mono text-body-sm text-secondary truncate font-medium" id="preview-url-text">urbanapro.cl/comunidad/parque-oriente</div>
+</div>
+</div>
+</div>
+<!-- Allocation Checklist -->
+<div class="space-y-space-xs pb-space-sm">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Módulos Inicializados</div>
+<div class="flex items-center justify-between py-1 px-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Gastos Comunes &amp; Prorrateo</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Auto</span>
+</div>
+<div class="flex items-center justify-between py-1 px-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Garita &amp; Bitácora de Visitas</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Habilitado</span>
+</div>
+<div class="flex items-center justify-between py-1 px-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Asamblea Digital &amp; Votaciones</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Activo</span>
+</div>
+</div>
+<!-- Team Summary Count -->
+<div class="p-space-sm rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">badge</span>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Accesos asignados</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">3 personas listas</div>
+</div>
+</div>
+<div class="flex -space-x-2 overflow-hidden">
+<img alt="Mariana" class="inline-block h-6 w-6 rounded-full ring-2 ring-surface-container-lowest" src="https://lh3.googleusercontent.com/aida/AEtjO1ULv2TrNnCX5Iodg4QEdhcG-_HhU7tKSwzBLoaUOQeO_j2m9ievMGO76KBFPZlMepQxTeYleboPsY6wkkFA490VlChxx77irFVs6-jvVoMzVnBuyuM2uNiS57Jy_GgPbhiMD4en3MyT3b_VRrN8TSOr795zkBUNTZAYHWxl2Di8SONZE-m-vGtNJa69gM-7PENR47TKdTQ4MFa2ywVCdJrYEpfQmbgRjxOJwVD1OZZcS6-p1SdfxZtnYhk"/>
+<div class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] ring-2 ring-surface-container-lowest">RV</div>
+<div class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-primary text-on-primary font-label-sm text-[10px] ring-2 ring-surface-container-lowest">CF</div>
+</div>
+</div>
+</div>
+<!-- Institutional Security Badge Card -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex items-start gap-space-xs text-on-surface-variant shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] flex-shrink-0">shield</span>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Aislamiento de Datos Nivel SOC 2</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Cada organización se hospeda en esquemas de base de datos cifrados individualmente según la normativa chilena Ley 21.442 de Copropiedad Inmobiliaria.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Success Toast Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary-container/50 backdrop-blur-sm transition-opacity opacity-0 pointer-events-none" id="completion-modal">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-2xl p-space-xl shadow-2xl text-center transform scale-95 transition-transform">
+<div class="w-14 h-14 mx-auto rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-[36px]">verified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">¡Organización Habilitada!</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+        El espacio para <strong class="text-on-surface" id="modal-org-name">Condominio Parque Oriente</strong> fue creado con éxito. Hemos enviado las credenciales de acceso a los miembros iniciales.
+      </p>
+<div class="space-y-space-xs">
+<button class="w-full py-2.5 px-space-md rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-semibold hover:bg-secondary-container transition-colors shadow-md" onclick="closeCompletionModal()" type="button">
+          Ir al Dashboard de la Organización
+        </button>
+<button class="w-full py-2 px-space-md rounded-lg text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" onclick="closeCompletionModal()" type="button">
+          Permanecer en el selector
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentStep = 2;
+  let activeColor = '#005CBB';
+
+  function updateLivePreview() {
+    const orgNameInput = document.getElementById('org-legal-name');
+    const previewNameHeader = document.getElementById('preview-name-header');
+    const previewTitle = document.getElementById('preview-title');
+    const modalOrgName = document.getElementById('modal-org-name');
+    
+    const value = orgNameInput.value.trim() || 'Nueva Organización';
+    previewNameHeader.textContent = value;
+    previewTitle.textContent = value;
+    modalOrgName.textContent = value;
+  }
+
+  function updateLiveSlug(val) {
+    const slugClean = val.toLowerCase().replace(/[^a-z0-9-]/g, '');
+    const previewUrl = document.getElementById('preview-url-text');
+    previewUrl.textContent = 'urbanapro.cl/comunidad/' + (slugClean || 'mi-condominio');
+  }
+
+  function updateOrgTypeTag(typeName) {
+    const badge = document.getElementById('preview-org-badge');
+    badge.textContent = typeName;
+  }
+
+  function selectThemeColor(colorHex, colorLabel) {
+    activeColor = colorHex;
+    document.getElementById('color-hex-label').textContent = colorHex + ' (' + colorLabel + ')';
+    applyColorToPreview(colorHex);
+  }
+
+  function selectCustomColor(hex) {
+    activeColor = hex;
+    document.getElementById('color-hex-label').textContent = hex + ' (Personalizado)';
+    applyColorToPreview(hex);
+  }
+
+  function applyColorToPreview(color) {
+    const previewHeader = document.getElementById('preview-header-bar');
+    const previewAvatar = document.getElementById('preview-mini-avatar');
+    const logoDisplay = document.getElementById('logo-icon-display');
+    
+    if (previewHeader) previewHeader.style.backgroundColor = color;
+    if (previewAvatar) previewAvatar.style.backgroundColor = color;
+    if (logoDisplay) logoDisplay.style.color = color;
+  }
+
+  function setWizardStep(stepNumber) {
+    currentStep = stepNumber;
+    renderStepView();
+  }
+
+  function nextWizardStep() {
+    if (currentStep < 3) {
+      currentStep++;
+      renderStepView();
+    } else {
+      // Final submission trigger
+      const modal = document.getElementById('completion-modal');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.firstElementChild.classList.remove('scale-95');
+    }
+  }
+
+  function previousWizardStep() {
+    if (currentStep > 1) {
+      currentStep--;
+      renderStepView();
+    }
+  }
+
+  function renderStepView() {
+    const progressBar = document.getElementById('step-progress-bar');
+    const nextBtnText = document.getElementById('btn-wizard-next-text');
+    const nextBtnIcon = document.getElementById('btn-wizard-next-icon');
+    const prevBtn = document.getElementById('btn-wizard-prev');
+
+    // Update Progress Width
+    if (currentStep === 1) progressBar.style.width = '33.33%';
+    if (currentStep === 2) progressBar.style.width = '66.66%';
+    if (currentStep === 3) progressBar.style.width = '100%';
+
+    // Toggle button texts
+    if (currentStep === 3) {
+      nextBtnText.textContent = 'Finalizar y Crear Organización';
+      nextBtnIcon.textContent = 'check_circle';
+      prevBtn.classList.remove('opacity-50', 'pointer-events-none');
+    } else {
+      nextBtnText.textContent = 'Continuar al Paso ' + (currentStep + 1);
+      nextBtnIcon.textContent = 'arrow_forward';
+    }
+
+    if (currentStep === 1) {
+      prevBtn.classList.add('opacity-50', 'pointer-events-none');
+    } else {
+      prevBtn.classList.remove('opacity-50', 'pointer-events-none');
+    }
+
+    // Update Stepper Badges
+    for (let i = 1; i <= 3; i++) {
+      const btn = document.getElementById('step-btn-' + i);
+      const iconBox = document.getElementById('step-icon-' + i);
+      const tag = document.getElementById('step-tag-' + i);
+
+      if (i === currentStep) {
+        btn.className = 'col-span-12 md:col-span-4 flex items-center gap-space-sm text-left p-2 rounded-xl transition-all bg-secondary-fixed text-on-secondary-fixed shadow-sm';
+        iconBox.className = 'w-9 h-9 rounded-xl bg-secondary text-on-secondary flex items-center justify-center font-numeric-data text-numeric-data font-bold flex-shrink-0 shadow-sm';
+        tag.className = 'font-label-sm text-label-sm text-on-secondary-fixed font-bold uppercase';
+        tag.textContent = 'Paso ' + i + ' · Activo';
+      } else if (i < currentStep) {
+        btn.className = 'col-span-12 md:col-span-4 flex items-center gap-space-sm text-left p-2 rounded-xl transition-all hover:bg-surface-container-low';
+        iconBox.className = 'w-9 h-9 rounded-xl bg-emerald-600 text-on-primary flex items-center justify-center font-numeric-data text-numeric-data font-bold flex-shrink-0';
+        tag.className = 'font-label-sm text-label-sm text-emerald-600 font-bold uppercase flex items-center gap-1';
+        tag.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span> Paso ' + i + ' Completo';
+      } else {
+        btn.className = 'col-span-12 md:col-span-4 flex items-center gap-space-sm text-left p-2 rounded-xl transition-all hover:bg-surface-container-low';
+        iconBox.className = 'w-9 h-9 rounded-xl bg-surface-container-high text-on-surface-variant flex items-center justify-center font-numeric-data text-numeric-data font-bold flex-shrink-0';
+        tag.className = 'font-label-sm text-label-sm text-on-surface-variant font-bold uppercase';
+        tag.textContent = 'Paso ' + i;
+      }
+    }
+
+    // Softly scroll the target section into comfortable focus
+    const activeSection = document.getElementById('panel-step-' + currentStep);
+    if (activeSection) {
+      activeSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  function triggerFileSelect() {
+    const logoBox = document.getElementById('preview-logo-box');
+    logoBox.classList.add('scale-105', 'bg-secondary-fixed');
+    setTimeout(() => {
+      logoBox.classList.remove('scale-105', 'bg-secondary-fixed');
+    }, 400);
+  }
+
+  function addNewTeamRow() {
+    const tableBody = document.getElementById('team-table-rows');
+    const newRow = document.createElement('tr');
+    newRow.className = 'h-12 bg-surface-container-lowest hover:bg-surface-container-low transition-colors';
+    
+    newRow.innerHTML = `
+      <td class="px-space-md">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold">NU</div>
+          <input type="text" placeholder="Nombre completo" class="w-32 md:w-40 h-8 px-2 rounded bg-surface-container-low font-label-md text-label-md text-on-surface focus:outline-none focus:bg-surface-container-lowest">
+        </div>
+      </td>
+      <td class="px-space-sm">
+        <input type="email" placeholder="usuario@correo.cl" class="w-36 md:w-48 h-8 px-2 rounded bg-surface-container-low font-mono text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest">
+      </td>
+      <td class="px-space-sm">
+        <select class="h-8 px-2 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface focus:outline-none">
+          <option>Supervisor</option>
+          <option>Finanzas</option>
+          <option>Garita</option>
+          <option>Admin</option>
+        </select>
+      </td>
+      <td class="px-space-sm text-center">
+        <span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-label-sm text-label-sm font-semibold">Borrador</span>
+      </td>
+      <td class="px-space-sm text-right">
+        <button type="button" onclick="removeTableRow(this)" class="p-1 rounded text-on-surface-variant hover:text-error transition-colors" title="Eliminar invitación">
+          <span class="material-symbols-outlined text-[18px]">delete</span>
+        </button>
+      </td>
+    `;
+    tableBody.appendChild(newRow);
+  }
+
+  function removeTableRow(btn) {
+    const row = btn.closest('tr');
+    if (row) {
+      row.remove();
+    }
+  }
+
+  function closeCompletionModal() {
+    const modal = document.getElementById('completion-modal');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.firstElementChild.classList.add('scale-95');
+  }
+
+  // Initialize initial state on load
+  document.addEventListener('DOMContentLoaded', () => {
+    renderStepView();
+    updateLivePreview();
+  });
+</script></main></div></body></html>

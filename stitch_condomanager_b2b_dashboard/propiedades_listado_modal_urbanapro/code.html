@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>UrbanaPro</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-fixed":"#001b3f","primary":"#15243e","primary-fixed":"#d7e3ff","secondary":"#005cbb","on-error-container":"#93000a","secondary-fixed-dim":"#abc7ff","inverse-primary":"#b7c7e8","on-secondary-container":"#002f66","surface-tint":"#505f7c","on-secondary-fixed-variant":"#00458f","primary-fixed-dim":"#b7c7e8","on-tertiary-fixed-variant":"#004f58","surface-container-lowest":"#ffffff","background":"#f7f9fc","on-error":"#ffffff","outline":"#75777e","on-primary-fixed":"#0b1b35","on-primary":"#ffffff","surface-bright":"#f7f9fc","error-container":"#ffdad6","surface-container":"#eceef1","surface-variant":"#e0e3e6","on-primary-container":"#95a4c4","secondary-container":"#5798ff","tertiary-container":"#004149","primary-container":"#2b3a55","tertiary":"#00292f","outline-variant":"#c5c6ce","on-surface":"#191c1e","on-primary-fixed-variant":"#384763","secondary-fixed":"#d7e3ff","on-secondary":"#ffffff","surface-dim":"#d8dadd","on-tertiary":"#ffffff","inverse-on-surface":"#eff1f4","tertiary-fixed":"#98f0ff","inverse-surface":"#2d3133","on-tertiary-container":"#09b5c8","surface":"#f7f9fc","surface-container-high":"#e6e8eb","tertiary-fixed-dim":"#4ed8eb","error":"#ba1a1a","surface-container-highest":"#e0e3e6","on-background":"#191c1e","on-tertiary-fixed":"#001f24","on-surface-variant":"#44474d","surface-container-low":"#f2f4f7"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"sidebar-collapsed-width":"4.5rem","table-row-dense":"2.25rem","space-lg":"1.5rem","space-md":"1rem","space-sm":"0.75rem","space-2xl":"3rem","space-xs":"0.5rem","container-padding":"1.5rem","table-row-regular":"3rem","space-xl":"2rem","space-xxs":"0.25rem","sidebar-width":"16.25rem"},"fontFamily":{"body-md":["Inter"],"numeric-data":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"title-sm":["Inter"],"headline-md":["Inter"],"display-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"numeric-data":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"title-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 bottom-0 w-sidebar-width bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-space-md flex items-center justify-between flex-shrink-0"><div class="flex items-center gap-space-xs"><img alt="UrbanaPro Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V9SRGsY_8CdlmxCo7bXClGge17_gJwGPNNDhShmF9Csl0akUXgrIqg5d0tcJlYhjcr4dPgkR6Oi8vmvqx53O1rL1CPGo1rycwSRXt_sDXxvDUDaSvOGLyCJIfjjj3LPWL5mYBJj5m98Leuc6hVkw02_KAXQ_WxaHM8x0yIht--aw-DSFqRvaMgM8ZA517ds7TnFX8RRnIsvAqm2JEjAfylw-0PzKS3klQhT9KtIpB0B51IUK9AdOBePTA"/><span class="font-title-sm text-title-sm text-primary tracking-tight">UrbanaPro</span></div><span class="px-space-xxs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase">SaaS</span></div><div class="flex-1 overflow-y-auto px-space-xs py-space-xs"><nav class="space-y-0.5" data-active-classes="bg-secondary-fixed text-on-secondary-fixed font-semibold"><a aria-current="page" class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg transition-colors bg-secondary-fixed text-on-secondary-fixed font-semibold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md truncate">Dashboard</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="propiedades" href="#"><span class="material-symbols-outlined text-[20px]">apartment</span><span class="font-body-md text-body-md truncate">Propiedades</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="unidades" href="#"><span class="material-symbols-outlined text-[20px]">meeting_room</span><span class="font-body-md text-body-md truncate">Unidades</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="propietarios" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span class="font-body-md text-body-md truncate">Propietarios</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="finanzas" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-body-md text-body-md truncate">Finanzas</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="proveedores" href="#"><span class="material-symbols-outlined text-[20px]">handshake</span><span class="font-body-md text-body-md truncate">Proveedores</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="agenda" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-body-md text-body-md truncate">Agenda</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="garita" href="#"><span class="material-symbols-outlined text-[20px]">local_police</span><span class="font-body-md text-body-md truncate">Garita</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span class="font-body-md text-body-md truncate">Reportes</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="administracion" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md truncate">Administración</span></a></nav></div><div class="p-space-sm space-y-space-sm bg-surface-container-lowest flex-shrink-0"><div class="bg-surface-container-low p-space-xs rounded-lg space-y-1.5"><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Almacenamiento</span><span class="font-numeric-data text-numeric-data">84% de 50GB</span></div><div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-secondary rounded-full w-[84%]"></div></div></div><div class="flex items-center justify-between px-1"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-body-sm text-body-sm text-on-surface-variant">En línea - Sincronizado</span></div><button aria-label="Colapsar menú lateral" class="p-1 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span></button></div></div></aside><div class="pl-sidebar-width min-h-screen flex flex-col"><header class="fixed top-0 left-sidebar-width right-0 h-14 bg-surface-container-lowest z-40 px-space-md flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-xs py-1.5 rounded-lg hover:bg-surface-container transition-colors text-left" type="button"><div class="w-7 h-7 rounded bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed"><span class="material-symbols-outlined text-[18px]">domain</span></div><div><div class="font-label-md text-label-md text-on-surface leading-none font-semibold">Residencial Las Palmas Torre A &amp; B</div><div class="font-body-sm text-body-sm text-on-surface-variant leading-none mt-0.5">Cambiar condominio</div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></button></div><div class="flex-1 max-w-xl mx-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-16 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary" placeholder="Buscar por unidad, residente, ticket o pago..." type="text"/><div class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant pointer-events-none">Ctrl+K</div></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1"><button aria-label="Notificaciones" class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] flex items-center justify-center font-bold">3</span></button><button aria-label="Centro de ayuda" class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help</span></button></div><button class="flex items-center gap-1.5 px-space-sm h-8 bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container font-label-md text-label-md rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nuevo registro</span><span class="material-symbols-outlined text-[16px]">arrow_drop_down</span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvRPg8xm7EhDwh0Atg5GAJFro9CS9LByKTptnKJtcH0LRAyvJSMx6F3H_DrTZi24GM_M1mPlgC9O9NMrPeWRUhKrGn9MCNb697FIIfPPVbBAiaih3VflUVG006kAIAfq85cSdJS1vfE-IejQmJ2DMu_ZuL5gDBi6PUh_8p1aBjHGg4rKceGK6t4ZXQIbNOGyuW6ZGkljM-0Dw46rxhGrEg6D621u50nbzkLZmcLniDBniH4RUxI3mW"/><div class="text-left"><div class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Lic. Mariana Soto</div><div class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Administradora General</div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="w-full pt-14 px-container-padding flex-1 bg-background"><div class="flex flex-col w-full pb-space-2xl">
+<!-- Active Navigation Sync Script -->
+<script>
+    (function syncNav() {
+      const activeLink = document.querySelector('aside nav a[data-path="propiedades"]');
+      if (activeLink) {
+        document.querySelectorAll('aside nav a').forEach(el => {
+          el.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-semibold');
+          el.classList.add('text-on-surface-variant');
+        });
+        activeLink.classList.remove('text-on-surface-variant');
+        activeLink.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-semibold');
+      }
+    })();
+  </script>
+<!-- Top Page Header & Context -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md py-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Propiedades</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">6 activas</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+        Portafolio inmobiliario consolidado • Administración centralizada de condominios y activos
+      </p>
+</div>
+<!-- Quick Stats Metric Band -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-2 rounded-xl shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">apartment</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Unidades Totales</div>
+<div class="font-numeric-data text-numeric-data text-primary font-bold">742 Deptos / Locales</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-2 rounded-xl shadow-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Recaudación Global</div>
+<div class="font-numeric-data text-numeric-data text-primary font-bold">95.4% al día</div>
+</div>
+</div>
+<button class="flex items-center gap-1.5 px-space-md h-9 bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container font-label-md text-label-md rounded-lg shadow-sm transition-all" id="btnOpenModal" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Nueva Propiedad</span>
+</button>
+</div>
+</div>
+<!-- Filter & View Controls Ribbon -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm mt-space-xs mb-space-lg">
+<div class="flex flex-1 items-center gap-space-sm">
+<!-- Search Input -->
+<div class="relative flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-4 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/20" placeholder="Buscar por nombre, comuna o dirección..." type="text"/>
+</div>
+<!-- Type Pills Filter -->
+<div class="hidden sm:flex items-center bg-surface-container-low p-1 rounded-lg gap-1">
+<button class="px-3 py-1 rounded font-label-sm text-label-sm bg-surface-container-lowest text-primary shadow-xs font-semibold" type="button">Todos (6)</button>
+<button class="px-3 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">PH / Edificio</button>
+<button class="px-3 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">Casas</button>
+<button class="px-3 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">Comercial</button>
+<button class="px-3 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">Corporativo</button>
+</div>
+</div>
+<!-- Right Controls -->
+<div class="flex items-center gap-space-xs self-end lg:self-auto">
+<div class="flex items-center gap-1.5 px-space-xs py-1 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="font-label-sm text-label-sm pl-1.5">Estado:</span>
+<select class="bg-transparent font-label-sm text-label-sm text-primary font-semibold focus:outline-none pr-1">
+<option value="active">Activas (6)</option>
+<option value="archived">Archivadas (0)</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-container-low p-0.5 rounded-lg">
+<button aria-label="Vista cuadrícula" class="p-1 rounded bg-surface-container-lowest text-primary shadow-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+<button aria-label="Vista tabla" class="p-1 rounded text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Properties Responsive Grid (3 Columns Desktop) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg">
+<!-- Card 1: Residencial Las Palmas Torre A & B (Current active condominium) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-visible relative group">
+<!-- Accent selection indicator bar -->
+<div class="h-1.5 w-full bg-secondary rounded-t-xl"></div>
+<div class="p-space-md flex-1 flex flex-col">
+<!-- Header -->
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold tracking-wide">PH / EDIFICIO</span>
+<span class="flex items-center gap-1 text-[11px] font-label-sm font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Activa
+              </span>
+</div>
+<h2 class="font-title-sm text-title-sm text-primary font-bold truncate group-hover:text-secondary transition-colors" title="Residencial Las Palmas Torre A &amp; B">
+              Residencial Las Palmas Torre A &amp; B
+            </h2>
+</div>
+<!-- Kebab Action Dropdown Menu Container (DEMO OPEN STATE) -->
+<div class="relative">
+<button aria-label="Menú de acciones" class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" id="kebabTrigger1" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<!-- Open flyout context menu on Card 1 for rich SaaS visual preview -->
+<div class="absolute right-0 top-8 w-56 bg-surface-container-lowest rounded-xl shadow-xl z-20 py-1.5 flex flex-col" id="kebabMenu1">
+<a class="flex items-center gap-2 px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-secondary">edit_note</span>
+<span>Editar datos</span>
+</a>
+<a class="flex items-center gap-2 px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary">groups</span>
+<span>Ver padrón de unidades</span>
+</a>
+<a class="flex items-center gap-2 px-space-sm py-2 text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm text-body-sm transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span>Duplicar configuración</span>
+</a>
+<div class="my-1 h-px bg-surface-container"></div>
+<a class="flex items-center gap-2 px-space-sm py-2 text-error hover:bg-error-container hover:text-on-error-container font-body-sm text-body-sm transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Eliminar propiedad</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Address & Geo Pin -->
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span class="truncate">Av. Las Condes 12400, Las Condes, RM</span>
+</div>
+<!-- Visual Property Card Thumbnail -->
+<div class="relative h-28 w-full rounded-lg overflow-hidden mb-space-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Modern upscale architectural residential twin towers in Santiago Las Condes with glass balconies, manicured entrance gardens, and clear blue sky in daylight photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVOxQJfZGxzw96Q2MENuYGUF6f7xe8SnzHzahCV5aK2lcgZBUXOfOLixyMfi4pMKDLqbKjZ7DrvQWBFI9NGCciNZ4Ao7q_bxINORirkvI8BvE0vmOcb5aJYAMydqTeQZvee944yXcJxk93zFHHOUTE5vowZV1gbgdK3Ur8Lb6NjqA3JrYkXT2PzMnp-xsR1eOT-osnXk2OF9Kj3Dk8s6LQ_bFo1ZsD-8-WSoNHiNbNkMYbBCwMCr_t"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-on-primary">
+<span class="font-numeric-data text-numeric-data font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">domain</span> 2 Torres • 18 Pisos
+            </span>
+<span class="font-label-sm text-label-sm bg-primary/80 backdrop-blur px-2 py-0.5 rounded text-secondary-fixed font-bold">Torre A &amp; B</span>
+</div>
+</div>
+<!-- Occupancy Bar & Unit Count -->
+<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-sm space-y-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">meeting_room</span> 184 unidades totales
+            </span>
+<span class="font-numeric-data text-numeric-data text-primary font-bold">96% Ocupación</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full w-[96%]"></div>
+</div>
+</div>
+<!-- Key Operational Mini Badges -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-sm">
+<div class="bg-surface-container-lowest p-2 rounded-lg bg-surface-container-low/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">support_agent</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase leading-none">Conserjería</div>
+<div class="font-numeric-data text-numeric-data text-on-surface font-semibold truncate">+56 9 8765 4321</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg bg-surface-container-low/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">account_balance_wallet</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase leading-none">Mora Actual</div>
+<div class="font-numeric-data text-numeric-data text-emerald-700 font-bold truncate">3.2% (Baja)</div>
+</div>
+</div>
+</div>
+<!-- Supervisor / Concierge Micro Profile -->
+<div class="flex items-center justify-between py-1 px-1 mt-auto">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-[10px] font-bold">
+              RL
+            </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Admin: <span class="font-semibold text-on-surface">Roberto Lagos</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold bg-secondary-fixed/50 px-2 py-0.5 rounded">Activa actual</span>
+</div>
+</div>
+<!-- Card Action Footer -->
+<div class="px-space-md py-space-xs bg-surface-container-low/50 rounded-b-xl flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">tune</span> Configuración
+        </a>
+<a class="flex items-center gap-1 px-3 py-1.5 bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container rounded-lg font-label-md text-label-md font-semibold transition-all" href="#">
+<span>Gestionar unidades</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Condominio Altos de San Carlos -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-visible relative group">
+<div class="p-space-md flex-1 flex flex-col">
+<!-- Header -->
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1.5">
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900 font-label-sm text-label-sm font-semibold tracking-wide">CONDOMINIO CASAS</span>
+<span class="flex items-center gap-1 text-[11px] font-label-sm font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Activa
+              </span>
+</div>
+<h2 class="font-title-sm text-title-sm text-primary font-bold truncate group-hover:text-secondary transition-colors" title="Condominio Altos de San Carlos">
+              Condominio Altos de San Carlos
+            </h2>
+</div>
+<button aria-label="Menú de opciones" class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Address -->
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span class="truncate">Camino San Carlos 4500, Las Condes, RM</span>
+</div>
+<!-- Visual Thumbnail -->
+<div class="relative h-28 w-full rounded-lg overflow-hidden mb-space-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High-end suburban gated community with modern contemporary houses, lush green trees, paved quiet residential street, and security booth under bright daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEg9B5urEJvwpFytyhnXMhJxq6A6zRNCz9FlETJmWZyfr1fBiL2HyFfsUU-wYYk-fNFMNtLDr08Y0oPrGT7HedSJMNy28rTwoSjvgnxnctkLaFB7ujnAFejziZtFWz1aX9QGDld4j6C10jVryZUCDpjjqSFCbqlZuSPJgFPkLhHjeq9_1FhpdOZMArP4QfJ9xiPBJlAkNmyUyNkum7kkaJ4_LVKxVIbP5O06dN_8i3DvtCIG0ll8Fa"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-on-primary">
+<span class="font-numeric-data text-numeric-data font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">cottage</span> 6 Micro-barrios
+            </span>
+<span class="font-label-sm text-label-sm bg-primary/80 backdrop-blur px-2 py-0.5 rounded text-white font-bold">Loteo Privado</span>
+</div>
+</div>
+<!-- Occupancy Bar -->
+<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-sm space-y-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">home</span> 94 casas parceladas
+            </span>
+<span class="font-numeric-data text-numeric-data text-primary font-bold">100% Ocupación</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-emerald-600 rounded-full w-[100%]"></div>
+</div>
+</div>
+<!-- Key Mini Badges -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-sm">
+<div class="bg-surface-container-lowest p-2 rounded-lg bg-surface-container-low/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">security</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase leading-none">Garita 24/7</div>
+<div class="font-numeric-data text-numeric-data text-on-surface font-semibold truncate">+56 2 2450 9901</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg bg-surface-container-low/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600 text-[18px]">warning</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase leading-none">Mora Actual</div>
+<div class="font-numeric-data text-numeric-data text-amber-700 font-bold truncate">6.8% (Media)</div>
+</div>
+</div>
+</div>
+<!-- Supervisor -->
+<div class="flex items-center justify-between py-1 px-1 mt-auto">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-emerald-800 text-white flex items-center justify-center font-label-sm text-[10px] font-bold">
+              CF
+            </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Admin: <span class="font-semibold text-on-surface">Camila Fuentes</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Auto-administrado</span>
+</div>
+</div>
+<!-- Card Action Footer -->
+<div class="px-space-md py-space-xs bg-surface-container-low/50 rounded-b-xl flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">tune</span> Configuración
+        </a>
+<a class="flex items-center gap-1 px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-primary rounded-lg font-label-md text-label-md font-semibold transition-all" href="#">
+<span>Gestionar unidades</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Edificio Parque Mirador del Valle -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-visible relative group">
+<div class="p-space-md flex-1 flex flex-col">
+<!-- Header -->
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold tracking-wide">PH / EDIFICIO</span>
+<span class="flex items-center gap-1 text-[11px] font-label-sm font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Activa
+              </span>
+</div>
+<h2 class="font-title-sm text-title-sm text-primary font-bold truncate group-hover:text-secondary transition-colors" title="Edificio Parque Mirador del Valle">
+              Edificio Parque Mirador del Valle
+            </h2>
+</div>
+<button aria-label="Menú de opciones" class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Address -->
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span class="truncate">Av. Cristóbal Colón 6100, Las Condes, RM</span>
+</div>
+<!-- Visual Thumbnail -->
+<div class="relative h-28 w-full rounded-lg overflow-hidden mb-space-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Modern architectural 24-floor apartment tower in Santiago, floor-to-ceiling glass windows, lush garden courtyard, pool deck visible, clear crisp afternoon light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfsZf9mMLsMD0BkO-MGaCTZciRwjk07OK5g8ObAzMagCwgHY1AcYU5ejqUFtUU5iGAQ42aryl9K1XVs26zM-lh9QpUrUIETrIrF0Y_cil1phryDfkJS6RDaAHN8E99RTKx5edkkWHn5ncNuDN_MxAkNpm5JA7YXzqN6ElMf5ib4SiVgX0I2nLEVl-E3DspAF9EGRo_TylQEWlIzzyIhY93VYfOo-7qUSqWpdtDUD-JOCzAJ4RvdgHD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-on-primary">
+<span class="font-numeric-data text-numeric-data font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">stairs</span> 24 Pisos • 3 Subterráneos
+            </span>
+<span class="font-label-sm text-label-sm bg-primary/80 backdrop-blur px-2 py-0.5 rounded text-white font-bold">Torre Única</span>
+</div>
+</div>
+<!-- Occupancy Bar -->
+<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-sm space-y-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">meeting_room</span> 210 departamentos
+            </span>
+<span class="font-numeric-data text-numeric-data text-primary font-bold">92% Ocupación</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full w-[92%]"></div>
+</div>
+</div>
+<!-- Key Mini Badges -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-sm">
+<div class="bg-surface-container-lowest p-2 rounded-lg bg-surface-container-low/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">call</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase leading-none">Central Telefónica</div>
+<div class="font-numeric-data text-numeric-data text-on-surface font-semibold truncate">+56 2 2890 1144</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg bg-surface-container-low/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">paid</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase leading-none">Recaudación</div>
+<div class="font-numeric-data text-numeric-data text-emerald-700 font-bold truncate">98.1% al día</div>
+</div>
+</div>
+</div>
+<!-- Supervisor -->
+<div class="flex items-center justify-between py-1 px-1 mt-auto">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-tint text-white flex items-center justify-center font-label-sm text-[10px] font-bold">
+              MS
+            </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Admin: <span class="font-semibold text-on-surface">Mariana Soto</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Comité Activo</span>
+</div>
+</div>
+<!-- Card Action Footer -->
+<div class="px-space-md py-space-xs bg-surface-container-low/50 rounded-b-xl flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">tune</span> Configuración
+        </a>
+<a class="flex items-center gap-1 px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-primary rounded-lg font-label-md text-label-md font-semibold transition-all" href="#">
+<span>Gestionar unidades</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4: Centro Comercial Nueva Costanera -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-visible relative group">
+<div class="p-space-md flex-1 flex flex-col">
+<!-- Header -->
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1.5">
+<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 font-label-sm text-label-sm font-semibold tracking-wide">LOCAL COMERCIAL</span>
+<span class="flex items-center gap-1 text-[11px] font-label-sm font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Activa
+              </span>
+</div>
+<h2 class="font-title-sm text-title-sm text-primary font-bold truncate group-hover:text-secondary transition-colors" title="Centro Comercial Nueva Costanera">
+              Centro Comercial Nueva Costanera
+            </h2>
+</div>
+<button aria-label="Menú de opciones" class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Address -->
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span class="truncate">Av. Nueva Costanera 3900, Vitacura, RM</span>
+</div>
+<!-- Visual Thumbnail -->
+<div class="relative h-28 w-full rounded-lg overflow-hidden mb-space-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High-end boutique commercial strip center in Vitacura with luxury storefronts, outdoor cafes, stone pavement, and elegant minimalist architectural canopy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Sv2wNWmPDLv5aHFNnIZcK2eYtIapHlPMSkEUv-Ueus3BKvCIceE0nm_zYFyN2-bM8yYsij66tsBhsf-7VgijIV8KpCkNFjLTQlppcofKIdBuWF3rEf_k70G01z33e149mAfg031oHMJy1VFQ07aAb-fNbVMJtE90yBFcwSH3X6tWgOiV3wbqYBpRC676TglRAWTLmkogxH-0-xsCenCp1hvOWwiYIJDnuv_q25gWNdjozXCUfUUh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-on-primary">
+<span class="font-numeric-data text-numeric-data font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">storefront</span> 38 Locales • Gastronómico
+            </span>
+<span class="font-label-sm text-label-sm bg-amber-900/80 backdrop-blur px-2 py-0.5 rounded text-amber-100 font-bold">Strip Mall</span>
+</div>
+</div>
+<!-- Occupancy Bar -->
+<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-sm space-y-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">store</span> 38 locales comerciales
+            </span>
+<span class="font-numeric-data text-numeric-data text-primary font-bold">89% Ocupación</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full w-[89%]"></div>
+</div>
+</div>
+<!-- Key Mini Badges -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-sm">
+<div class="bg-surface-container-lowest p-2 rounded-lg bg-surface-container-low/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">badge</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase leading-none">Administrador Mall</div>
+<div class="font-numeric-data text-numeric-data text-on-surface font-semibold truncate">Gerencia Retail</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg bg-surface-container-low/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">local_atm</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase leading-none">Gasto Común Promedio</div>
+<div class="font-numeric-data text-numeric-data text-primary font-bold truncate">1.45 UF/m²</div>
+</div>
+</div>
+</div>
+<!-- Supervisor -->
+<div class="flex items-center justify-between py-1 px-1 mt-auto">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-amber-800 text-white flex items-center justify-center font-label-sm text-[10px] font-bold">
+              GA
+            </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Operador: <span class="font-semibold text-on-surface">Gonzalo Alvear</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Arriendo Corp.</span>
+</div>
+</div>
+<!-- Card Action Footer -->
+<div class="px-space-md py-space-xs bg-surface-container-low/50 rounded-b-xl flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">tune</span> Configuración
+        </a>
+<a class="flex items-center gap-1 px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-primary rounded-lg font-label-md text-label-md font-semibold transition-all" href="#">
+<span>Gestionar unidades</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 5: Condominio Los Robles de Chicureo -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-visible relative group">
+<div class="p-space-md flex-1 flex flex-col">
+<!-- Header -->
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1.5">
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900 font-label-sm text-label-sm font-semibold tracking-wide">CONDOMINIO CASAS</span>
+<span class="flex items-center gap-1 text-[11px] font-label-sm font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Activa
+              </span>
+</div>
+<h2 class="font-title-sm text-title-sm text-primary font-bold truncate group-hover:text-secondary transition-colors" title="Condominio Los Robles de Chicureo">
+              Condominio Los Robles de Chicureo
+            </h2>
+</div>
+<button aria-label="Menú de opciones" class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Address -->
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span class="truncate">Av. El Valle 8200, Colina, RM</span>
+</div>
+<!-- Visual Thumbnail -->
+<div class="relative h-28 w-full rounded-lg overflow-hidden mb-space-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Chicureo gated residential enclave with Mediterranean style houses, wide roads, palm trees, Andes mountain backdrop, sunny afternoon lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA733m_kutmg1Mh-7_Ir-CdaJaaoMTb7yEdmpa_MqRLfJZMCacwOKJsmRsqly1tRb-WeM2CpXBknjLbhgDAX4Y3BgOo9pHncFw6fzPBtXRjZw0dL9hPfF4nIcuoZXqJMQM31Z4LKq4TV8MFK5brVLNPIh5iM6TxbJYMPEKBWU41b5GZ66GflfzCLYvYTaecUGS_a6O3i1UV5le9lHJneAV4v1iRJbs2MxuRujUaW03OVWjBH98HDoMA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-on-primary">
+<span class="font-numeric-data text-numeric-data font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">park</span> 12 Hectáreas • Club House
+            </span>
+<span class="font-label-sm text-label-sm bg-primary/80 backdrop-blur px-2 py-0.5 rounded text-white font-bold">Macro Lote</span>
+</div>
+</div>
+<!-- Occupancy Bar -->
+<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-sm space-y-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">home_pin</span> 128 casas construidas
+            </span>
+<span class="font-numeric-data text-numeric-data text-primary font-bold">98% Ocupación</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-emerald-600 rounded-full w-[98%]"></div>
+</div>
+</div>
+<!-- Key Mini Badges -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-sm">
+<div class="bg-surface-container-lowest p-2 rounded-lg bg-surface-container-low/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">nest_doorbell_visitor</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase leading-none">Control Acceso</div>
+<div class="font-numeric-data text-numeric-data text-on-surface font-semibold truncate">App Móvil + QR</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg bg-surface-container-low/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">savings</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase leading-none">Fondo Reserva</div>
+<div class="font-numeric-data text-numeric-data text-emerald-700 font-bold truncate">$42.800.000 CLP</div>
+</div>
+</div>
+</div>
+<!-- Supervisor -->
+<div class="flex items-center justify-between py-1 px-1 mt-auto">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-emerald-900 text-white flex items-center justify-center font-label-sm text-[10px] font-bold">
+              JP
+            </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Admin: <span class="font-semibold text-on-surface">Juan Pablo Díaz</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Junta Vigilancia</span>
+</div>
+</div>
+<!-- Card Action Footer -->
+<div class="px-space-md py-space-xs bg-surface-container-low/50 rounded-b-xl flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">tune</span> Configuración
+        </a>
+<a class="flex items-center gap-1 px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-primary rounded-lg font-label-md text-label-md font-semibold transition-all" href="#">
+<span>Gestionar unidades</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 6: Plaza Corporativa Apoquindo -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-visible relative group">
+<div class="p-space-md flex-1 flex flex-col">
+<!-- Header -->
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-1.5">
+<span class="px-2 py-0.5 rounded-full bg-purple-100 text-purple-900 font-label-sm text-label-sm font-semibold tracking-wide">EDIFICIO CORPORATIVO</span>
+<span class="flex items-center gap-1 text-[11px] font-label-sm font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Activa
+              </span>
+</div>
+<h2 class="font-title-sm text-title-sm text-primary font-bold truncate group-hover:text-secondary transition-colors" title="Plaza Corporativa Apoquindo">
+              Plaza Corporativa Apoquindo
+            </h2>
+</div>
+<button aria-label="Menú de opciones" class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Address -->
+<div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span class="truncate">Av. Apoquindo 4800, Las Condes, RM</span>
+</div>
+<!-- Visual Thumbnail -->
+<div class="relative h-28 w-full rounded-lg overflow-hidden mb-space-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Futuristic glass curtain office highrise building on Apoquindo Avenue Santiago with mirror reflection, modern plaza, clean corporate entrance lobby." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw4VskI81c5DwFRTWbFwIWqP-XNerT07eEnOjaNE6DFAqZyD2kaCSY0aBqLu2O0u2vLntYgnKaS3fXr5E0UZ-si1eyV4je-a_MBgYHS1Gwcy-ahj-CCnBOBM4p7ifY1x7tsB7pNKPZSDmTeNAxjtsBj9DInHqdfrNhNqA0SfMeh2eBYtn5sGDV4w0OPGCuzEnEGNevOfOWJELvvlByoGDt9DBpYAayHAegtTn7ljd-9VYD1l7ou_oU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-on-primary">
+<span class="font-numeric-data text-numeric-data font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">corporate_fare</span> 28 Pisos Clase A+
+            </span>
+<span class="font-label-sm text-label-sm bg-purple-900/80 backdrop-blur px-2 py-0.5 rounded text-purple-100 font-bold">Oficinas LEED</span>
+</div>
+</div>
+<!-- Occupancy Bar -->
+<div class="bg-surface-container-low p-space-xs rounded-lg mb-space-sm space-y-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">work</span> 88 oficinas habilitadas
+            </span>
+<span class="font-numeric-data text-numeric-data text-primary font-bold">94% Ocupación</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-purple-600 rounded-full w-[94%]"></div>
+</div>
+</div>
+<!-- Key Mini Badges -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-sm">
+<div class="bg-surface-container-lowest p-2 rounded-lg bg-surface-container-low/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase leading-none">Molinetes / Acceso</div>
+<div class="font-numeric-data text-numeric-data text-on-surface font-semibold truncate">Torniquetes Ópticos</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg bg-surface-container-low/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">receipt_long</span>
+<div class="min-w-0">
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase leading-none">Facturación Mes</div>
+<div class="font-numeric-data text-numeric-data text-primary font-bold truncate">3.200 UF</div>
+</div>
+</div>
+</div>
+<!-- Supervisor -->
+<div class="flex items-center justify-between py-1 px-1 mt-auto">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center font-label-sm text-[10px] font-bold">
+              FM
+            </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Facility: <span class="font-semibold text-on-surface">Fernanda Morales</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">BMS Automatizado</span>
+</div>
+</div>
+<!-- Card Action Footer -->
+<div class="px-space-md py-space-xs bg-surface-container-low/50 rounded-b-xl flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">tune</span> Configuración
+        </a>
+<a class="flex items-center gap-1 px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-primary rounded-lg font-label-md text-label-md font-semibold transition-all" href="#">
+<span>Gestionar unidades</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- FLOATING MODAL: Nueva Propiedad / Editar Propiedad (Displayed prominently with toggle support) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-primary-container/40 backdrop-blur-sm transition-opacity" id="modalProperty">
+<div class="bg-surface-container-lowest w-full max-w-2xl rounded-2xl shadow-xl flex flex-col max-h-[90vh] overflow-hidden">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container-lowest flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">add_business</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Registrar Nueva Propiedad</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Ingresa la información matriz del activo para configurar gastos comunes, roles y padrón de copropietarios.
+          </p>
+</div>
+<button aria-label="Cerrar modal" class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" id="btnCloseModal" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Modal Body (2-Column Form Layout) -->
+<div class="px-space-lg py-space-md overflow-y-auto space-y-space-md flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Nombre de la propiedad -->
+<div class="md:col-span-2 space-y-1.5">
+<label class="block font-label-md text-label-md text-primary font-semibold">
+              Nombre de la Propiedad o Comunidad <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">apartment</span>
+<input class="w-full h-10 pl-9 pr-3 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/20" placeholder="Ej. Condominio Los Jardines de Lo Barnechea" type="text" value="Residencial Las Palmas Torre A &amp; B"/>
+</div>
+</div>
+<!-- Tipo de Propiedad -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-primary font-semibold">
+              Tipo de Inmueble <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">category</span>
+<select class="w-full h-10 pl-9 pr-8 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/20 appearance-none">
+<option selected="" value="ph">PH / Edificio Residencial</option>
+<option value="casas">Condominio Casas / Loteo</option>
+<option value="comercial">Centro Comercial / Strip Mall</option>
+<option value="corporativo">Edificio Corporativo / Oficinas</option>
+<option value="industrial">Parque Logístico / Industrial</option>
+<option value="mixto">Uso Mixto (Residencial + Retail)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Capacidad de Unidades -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-primary font-semibold">
+              Capacidad de Unidades / Lotes <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">pin</span>
+<input class="w-full h-10 pl-9 pr-3 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/20" placeholder="Ej. 120" type="number" value="184"/>
+</div>
+</div>
+<!-- Dirección Calle y Número -->
+<div class="md:col-span-2 space-y-1.5">
+<label class="block font-label-md text-label-md text-primary font-semibold">
+              Dirección Completa <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">location_on</span>
+<input class="w-full h-10 pl-9 pr-3 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/20" placeholder="Calle, numeración, comuna y ciudad" type="text" value="Av. Las Condes 12400, Las Condes, Región Metropolitana"/>
+</div>
+</div>
+<!-- Teléfono Conserjería -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-primary font-semibold">
+              Teléfono Conserjería / Guardia
+            </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">call</span>
+<input class="w-full h-10 pl-9 pr-3 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/20" placeholder="+56 9 1234 5678" type="tel" value="+56 9 8765 4321"/>
+</div>
+</div>
+<!-- Email Cobranzas / Admin -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-primary font-semibold">
+              Email Administrativo / Cobranzas
+            </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">mail</span>
+<input class="w-full h-10 pl-9 pr-3 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/20" placeholder="contacto@micondominio.cl" type="email" value="administracion@laspalmas.cl"/>
+</div>
+</div>
+<!-- Portal Comunitario / URL -->
+<div class="md:col-span-2 space-y-1.5">
+<label class="block font-label-md text-label-md text-primary font-semibold">
+              Portal Comunitario UrbanaPro
+            </label>
+<div class="flex rounded-lg overflow-hidden bg-surface-container-low">
+<span class="inline-flex items-center px-3 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold select-none">
+                https://urbanapro.cl/app/
+              </span>
+<input class="flex-1 h-10 px-3 bg-transparent font-body-md text-body-md text-on-surface focus:outline-none" type="text" value="las-palmas-torre-ab"/>
+</div>
+<p class="text-[11px] font-body-sm text-on-surface-variant pl-1">
+              Enlace directo mediante el cual copropietarios y arrendatarios revisan gastos comunes y reservan quinchos.
+            </p>
+</div>
+</div>
+<!-- Informative Callout Banner inside Modal -->
+<div class="p-space-sm rounded-xl bg-secondary-fixed/40 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">info</span>
+<div class="text-[12px] font-body-sm text-on-secondary-fixed leading-relaxed">
+<strong>Configuración automática:</strong> Al guardar la propiedad, se creará de inmediato el plan de cuentas contable base regulado por la Ley de Copropiedad Inmobiliaria N° 21.442.
+          </div>
+</div>
+</div>
+<!-- Modal Footer Action Bar -->
+<div class="px-space-lg py-space-sm bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-space-md h-9 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors font-medium" id="btnCancelModal" type="button">
+          Cancelar
+        </button>
+<button class="px-space-lg h-9 rounded-lg bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container font-label-md text-label-md font-semibold transition-all shadow-sm flex items-center gap-1.5" id="btnSaveModal" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Guardar Propiedad</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Scripts for Modal & Kebab Dropdown Toggles -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('modalProperty');
+      const openBtn = document.getElementById('btnOpenModal');
+      const closeBtn = document.getElementById('btnCloseModal');
+      const cancelBtn = document.getElementById('btnCancelModal');
+      const saveBtn = document.getElementById('btnSaveModal');
+      
+      const kebabTrigger = document.getElementById('kebabTrigger1');
+      const kebabMenu = document.getElementById('kebabMenu1');
+
+      // Modal open/close handlers
+      const closeModal = () => modal.classList.add('hidden');
+      const openModal = () => modal.classList.remove('hidden');
+
+      if (openBtn) openBtn.addEventListener('click', openModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+      if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+          saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">sync</span> Guardando...';
+          setTimeout(() => {
+            closeModal();
+            saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span><span>Guardar Propiedad</span>';
+          }, 600);
+        });
+      }
+
+      // Kebab menu toggle for Card 1
+      if (kebabTrigger && kebabMenu) {
+        kebabTrigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          kebabMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!kebabMenu.contains(e.target) && e.target !== kebabTrigger) {
+            kebabMenu.classList.add('hidden');
+          }
+        });
+      }
+    });
+  </script>
+</div></main></div></body></html>

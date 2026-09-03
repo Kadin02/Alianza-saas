@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>UrbanaPro</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-fixed":"#001b3f","primary":"#15243e","primary-fixed":"#d7e3ff","secondary":"#005cbb","on-error-container":"#93000a","secondary-fixed-dim":"#abc7ff","inverse-primary":"#b7c7e8","on-secondary-container":"#002f66","surface-tint":"#505f7c","on-secondary-fixed-variant":"#00458f","primary-fixed-dim":"#b7c7e8","on-tertiary-fixed-variant":"#004f58","surface-container-lowest":"#ffffff","background":"#f7f9fc","on-error":"#ffffff","outline":"#75777e","on-primary-fixed":"#0b1b35","on-primary":"#ffffff","surface-bright":"#f7f9fc","error-container":"#ffdad6","surface-container":"#eceef1","surface-variant":"#e0e3e6","on-primary-container":"#95a4c4","secondary-container":"#5798ff","tertiary-container":"#004149","primary-container":"#2b3a55","tertiary":"#00292f","outline-variant":"#c5c6ce","on-surface":"#191c1e","on-primary-fixed-variant":"#384763","secondary-fixed":"#d7e3ff","on-secondary":"#ffffff","surface-dim":"#d8dadd","on-tertiary":"#ffffff","inverse-on-surface":"#eff1f4","tertiary-fixed":"#98f0ff","inverse-surface":"#2d3133","on-tertiary-container":"#09b5c8","surface":"#f7f9fc","surface-container-high":"#e6e8eb","tertiary-fixed-dim":"#4ed8eb","error":"#ba1a1a","surface-container-highest":"#e0e3e6","on-background":"#191c1e","on-tertiary-fixed":"#001f24","on-surface-variant":"#44474d","surface-container-low":"#f2f4f7"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"sidebar-collapsed-width":"4.5rem","table-row-dense":"2.25rem","space-lg":"1.5rem","space-md":"1rem","space-sm":"0.75rem","space-2xl":"3rem","space-xs":"0.5rem","container-padding":"1.5rem","table-row-regular":"3rem","space-xl":"2rem","space-xxs":"0.25rem","sidebar-width":"16.25rem"},"fontFamily":{"body-md":["Inter"],"numeric-data":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"title-sm":["Inter"],"headline-md":["Inter"],"display-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"numeric-data":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"title-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 bottom-0 w-sidebar-width bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-space-md flex items-center justify-between flex-shrink-0"><div class="flex items-center gap-space-xs"><img alt="UrbanaPro Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V9SRGsY_8CdlmxCo7bXClGge17_gJwGPNNDhShmF9Csl0akUXgrIqg5d0tcJlYhjcr4dPgkR6Oi8vmvqx53O1rL1CPGo1rycwSRXt_sDXxvDUDaSvOGLyCJIfjjj3LPWL5mYBJj5m98Leuc6hVkw02_KAXQ_WxaHM8x0yIht--aw-DSFqRvaMgM8ZA517ds7TnFX8RRnIsvAqm2JEjAfylw-0PzKS3klQhT9KtIpB0B51IUK9AdOBePTA"/><span class="font-title-sm text-title-sm text-primary tracking-tight">UrbanaPro</span></div><span class="px-space-xxs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase">SaaS</span></div><div class="flex-1 overflow-y-auto px-space-xs py-space-xs"><nav class="space-y-0.5" data-active-classes="bg-secondary-fixed text-on-secondary-fixed font-semibold"><a aria-current="page" class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg transition-colors bg-secondary-fixed text-on-secondary-fixed font-semibold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md truncate">Dashboard</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="propiedades" href="#"><span class="material-symbols-outlined text-[20px]">apartment</span><span class="font-body-md text-body-md truncate">Propiedades</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="unidades" href="#"><span class="material-symbols-outlined text-[20px]">meeting_room</span><span class="font-body-md text-body-md truncate">Unidades</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="propietarios" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span class="font-body-md text-body-md truncate">Propietarios</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="finanzas" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-body-md text-body-md truncate">Finanzas</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="proveedores" href="#"><span class="material-symbols-outlined text-[20px]">handshake</span><span class="font-body-md text-body-md truncate">Proveedores</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="agenda" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-body-md text-body-md truncate">Agenda</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="garita" href="#"><span class="material-symbols-outlined text-[20px]">local_police</span><span class="font-body-md text-body-md truncate">Garita</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span class="font-body-md text-body-md truncate">Reportes</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="administracion" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md truncate">Administración</span></a></nav></div><div class="p-space-sm space-y-space-sm bg-surface-container-lowest flex-shrink-0"><div class="bg-surface-container-low p-space-xs rounded-lg space-y-1.5"><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Almacenamiento</span><span class="font-numeric-data text-numeric-data">84% de 50GB</span></div><div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-secondary rounded-full w-[84%]"></div></div></div><div class="flex items-center justify-between px-1"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-body-sm text-body-sm text-on-surface-variant">En línea - Sincronizado</span></div><button aria-label="Colapsar menú lateral" class="p-1 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span></button></div></div></aside><div class="pl-sidebar-width min-h-screen flex flex-col"><header class="fixed top-0 left-sidebar-width right-0 h-14 bg-surface-container-lowest z-40 px-space-md flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-xs py-1.5 rounded-lg hover:bg-surface-container transition-colors text-left" type="button"><div class="w-7 h-7 rounded bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed"><span class="material-symbols-outlined text-[18px]">domain</span></div><div><div class="font-label-md text-label-md text-on-surface leading-none font-semibold">Residencial Las Palmas Torre A &amp; B</div><div class="font-body-sm text-body-sm text-on-surface-variant leading-none mt-0.5">Cambiar condominio</div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></button></div><div class="flex-1 max-w-xl mx-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-16 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary" placeholder="Buscar por unidad, residente, ticket o pago..." type="text"/><div class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant pointer-events-none">Ctrl+K</div></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1"><button aria-label="Notificaciones" class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] flex items-center justify-center font-bold">3</span></button><button aria-label="Centro de ayuda" class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help</span></button></div><button class="flex items-center gap-1.5 px-space-sm h-8 bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container font-label-md text-label-md rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nuevo registro</span><span class="material-symbols-outlined text-[16px]">arrow_drop_down</span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvRPg8xm7EhDwh0Atg5GAJFro9CS9LByKTptnKJtcH0LRAyvJSMx6F3H_DrTZi24GM_M1mPlgC9O9NMrPeWRUhKrGn9MCNb697FIIfPPVbBAiaih3VflUVG006kAIAfq85cSdJS1vfE-IejQmJ2DMu_ZuL5gDBi6PUh_8p1aBjHGg4rKceGK6t4ZXQIbNOGyuW6ZGkljM-0Dw46rxhGrEg6D621u50nbzkLZmcLniDBniH4RUxI3mW"/><div class="text-left"><div class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Lic. Mariana Soto</div><div class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Administradora General</div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="w-full pt-14 px-container-padding flex-1 bg-background"><div class="flex flex-col w-full space-y-space-lg pb-space-2xl">
+<!-- Header del Dashboard -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pt-space-xs">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight">Panel Principal</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider">Activo</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">domain</span>
+        Resumen ejecutivo de la comunidad: <strong class="font-semibold text-on-surface">Residencial Las Palmas Torre A &amp; B</strong>
+</p>
+</div>
+<!-- Controles y Filtros Rápidos -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<div class="flex items-center bg-surface-container-lowest shadow-sm rounded-lg px-space-xs py-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] mr-1.5 text-outline">calendar_today</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer pr-2">
+<option selected="" value="oct-2024">Octubre 2024</option>
+<option value="sep-2024">Septiembre 2024</option>
+<option value="ago-2024">Agosto 2024</option>
+</select>
+</div>
+<button class="inline-flex items-center gap-1 px-space-sm h-9 bg-surface-container-lowest text-primary hover:bg-surface-container transition-all shadow-sm rounded-lg font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Exportar</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md h-9 bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container transition-all shadow-sm rounded-lg font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>+ Nuevo cobro</span>
+</button>
+</div>
+</div>
+<!-- Fila Superior de 4 KPIs -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1: Propiedades -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm transition-all hover:shadow-md relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Propiedades</span>
+<div class="font-display-lg text-display-lg text-primary tracking-tight">3 <span class="font-title-sm text-title-sm text-on-surface-variant font-normal">complejos</span></div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">apartment</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-numeric-data text-numeric-data">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +1 este año
+        </span>
+<span class="font-body-sm text-body-sm text-outline">Torres A, B &amp; Club</span>
+</div>
+</div>
+<!-- KPI 2: Unidades -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm transition-all hover:shadow-md relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Unidades</span>
+<div class="font-display-lg text-display-lg text-primary tracking-tight">184</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">meeting_room</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-16 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 96%"></div>
+</div>
+<span class="font-numeric-data text-numeric-data text-primary font-semibold">96%</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">176 habitadas</span>
+</div>
+</div>
+<!-- KPI 3: Propietarios -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm transition-all hover:shadow-md relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Propietarios</span>
+<div class="font-display-lg text-display-lg text-primary tracking-tight">210</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[22px]">groups</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 98% portal activo
+        </span>
+<span class="font-body-sm text-body-sm text-outline">194 registrados</span>
+</div>
+</div>
+<!-- KPI 4: Por Cobrar -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm transition-all hover:shadow-md relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Por Cobrar</span>
+<div class="font-display-lg text-display-lg text-error tracking-tight font-numeric-data">$8.420.000</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+          14 boletas pendientes
+        </span>
+<span class="font-numeric-data text-numeric-data text-error font-semibold">4.8% mora</span>
+</div>
+</div>
+</div>
+<!-- Grid Principal de 2 Columnas -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Columna Izquierda: Cargos Pendientes (7 cols en desktop) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col">
+<!-- Card Header -->
+<div class="p-space-md flex items-center justify-between bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[22px]">pending_actions</span>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-title-sm text-title-sm text-primary">Cargos Pendientes</h2>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">14 cuentas</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Boletas vencidas y cobranzas activas este período</p>
+</div>
+</div>
+<a class="inline-flex items-center gap-1 px-space-xs py-1 rounded-lg text-secondary hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors font-label-md text-label-md" href="#">
+<span>Ver todos</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Tabla de Deudores / Cargos -->
+<div class="overflow-x-auto w-full flex-1">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider h-9">
+<th class="py-2 px-space-md font-semibold">Unidad</th>
+<th class="py-2 px-space-sm font-semibold">Propietario / Residente</th>
+<th class="py-2 px-space-sm font-semibold text-right">Monto</th>
+<th class="py-2 px-space-sm font-semibold text-center">Estado</th>
+<th class="py-2 px-space-md font-semibold text-right">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent font-body-md text-body-md">
+<!-- Fila 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-space-md">
+<div class="font-numeric-data text-numeric-data font-semibold text-primary">Depto A-402</div>
+<div class="font-body-sm text-body-sm text-outline">Torre A • Piso 4</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-label-md text-label-md text-on-surface">Valentina Riquelme</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">v.riquelme@gmail.com</div>
+</td>
+<td class="py-3 px-space-sm text-right font-numeric-data text-numeric-data font-bold text-error">
+                $184.500
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-block px-2 py-0.5 rounded-full bg-red-100 text-red-800 font-label-sm text-label-sm uppercase font-semibold">
+                  Último aviso
+                </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 bg-surface-container hover:bg-secondary hover:text-on-secondary text-primary font-label-sm text-label-sm rounded-lg transition-colors inline-flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">send</span> Cobrar
+                </button>
+</td>
+</tr>
+<!-- Fila 2 -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-space-md">
+<div class="font-numeric-data text-numeric-data font-semibold text-primary">Depto B-1104</div>
+<div class="font-body-sm text-body-sm text-outline">Torre B • Piso 11</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-label-md text-label-md text-on-surface">Carlos Mendoza V.</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">cmendoza@invercorp.cl</div>
+</td>
+<td class="py-3 px-space-sm text-right font-numeric-data text-numeric-data font-bold text-error">
+                $245.000
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-block px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm uppercase font-semibold">
+                  Vencido
+                </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 bg-surface-container hover:bg-secondary hover:text-on-secondary text-primary font-label-sm text-label-sm rounded-lg transition-colors inline-flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">forward_to_inbox</span> Aviso
+                </button>
+</td>
+</tr>
+<!-- Fila 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-space-md">
+<div class="font-numeric-data text-numeric-data font-semibold text-primary">Oficina 302</div>
+<div class="font-body-sm text-body-sm text-outline">Edificio Comercial</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-label-md text-label-md text-on-surface">Inversiones Sur SpA</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">contacto@inversur.cl</div>
+</td>
+<td class="py-3 px-space-sm text-right font-numeric-data text-numeric-data font-bold text-on-surface">
+                $312.000
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-block px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-label-sm text-label-sm uppercase font-semibold">
+                  Por vencer
+                </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 bg-surface-container hover:bg-secondary hover:text-on-secondary text-primary font-label-sm text-label-sm rounded-lg transition-colors inline-flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">send</span> Recordar
+                </button>
+</td>
+</tr>
+<!-- Fila 4 -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-space-md">
+<div class="font-numeric-data text-numeric-data font-semibold text-primary">Depto A-105</div>
+<div class="font-body-sm text-body-sm text-outline">Torre A • Piso 1</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-label-md text-label-md text-on-surface">Francisca Leighton</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">fleighton@abogados.com</div>
+</td>
+<td class="py-3 px-space-sm text-right font-numeric-data text-numeric-data font-bold text-error">
+                $138.900
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-block px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm uppercase font-semibold">
+                  Vencido
+                </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 bg-surface-container hover:bg-secondary hover:text-on-secondary text-primary font-label-sm text-label-sm rounded-lg transition-colors inline-flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">send</span> Cobrar
+                </button>
+</td>
+</tr>
+<!-- Fila 5 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-3 px-space-md">
+<div class="font-numeric-data text-numeric-data font-semibold text-primary">Depto B-701</div>
+<div class="font-body-sm text-body-sm text-outline">Torre B • Piso 7</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="font-label-md text-label-md text-on-surface">Andrés Gómez L.</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">andres.gomez@live.cl</div>
+</td>
+<td class="py-3 px-space-sm text-right font-numeric-data text-numeric-data font-bold text-on-surface">
+                $165.200
+              </td>
+<td class="py-3 px-space-sm text-center">
+<span class="inline-block px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-label-sm text-label-sm uppercase font-semibold">
+                  Por vencer
+                </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-2.5 py-1 bg-surface-container hover:bg-secondary hover:text-on-secondary text-primary font-label-sm text-label-sm rounded-lg transition-colors inline-flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">send</span> Recordar
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Card Footer -->
+<div class="p-space-xs px-space-md bg-surface-container-lowest flex items-center justify-between mt-auto">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mostrando 5 de 14 morosos</span>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="font-numeric-data">Total adeudado en lista: $1.045.600</span>
+</div>
+</div>
+</div>
+<!-- Columna Derecha: Agenda de la Semana (5 cols en desktop) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-2xl shadow-sm p-space-md flex flex-col justify-between">
+<div>
+<!-- Card Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">calendar_month</span>
+<div>
+<h2 class="font-title-sm text-title-sm text-primary">Agenda de la Semana</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Lun 21 - Dom 27 Octubre</span>
+</div>
+</div>
+<button class="inline-flex items-center gap-1 px-space-xs py-1 rounded-lg bg-surface-container hover:bg-secondary-fixed text-primary font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">add</span>
+<span>Agendar</span>
+</button>
+</div>
+<!-- Leyenda de Categorías -->
+<div class="flex items-center gap-space-sm pt-space-xs pb-space-sm">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> Cita
+          </div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> Evento
+          </div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Tarea
+          </div>
+</div>
+<!-- Lista de Eventos -->
+<div class="space-y-space-xs">
+<!-- Evento 1 (Cita - Azul) -->
+<div class="p-space-xs rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-colors flex items-start justify-between gap-space-xs group">
+<div class="flex items-start gap-2.5 min-w-0">
+<div class="mt-1 w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-primary font-semibold truncate group-hover:text-secondary transition-colors">
+                  Reunión Comité de Administración
+                </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Aprobación de Presupuesto Anual • Sala de Reuniones
+                </div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-numeric-data text-numeric-data font-semibold">Hoy, 16:30</span>
+<div class="font-body-sm text-body-sm text-outline mt-0.5">Lic. Soto</div>
+</div>
+</div>
+<!-- Evento 2 (Tarea - Verde) -->
+<div class="p-space-xs rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-colors flex items-start justify-between gap-space-xs group">
+<div class="flex items-start gap-2.5 min-w-0">
+<div class="mt-1 w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-primary font-semibold truncate group-hover:text-secondary transition-colors">
+                  Mantenimiento Ascensores Schindler
+                </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Revisión preventiva Torres A y B • Técnico certified
+                </div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-numeric-data text-numeric-data font-semibold">Mañana, 09:00</span>
+<div class="font-body-sm text-body-sm text-outline mt-0.5">Operaciones</div>
+</div>
+</div>
+<!-- Evento 3 (Evento - Ámbar) -->
+<div class="p-space-xs rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-colors flex items-start justify-between gap-space-xs group">
+<div class="flex items-start gap-2.5 min-w-0">
+<div class="mt-1 w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0"></div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-primary font-semibold truncate group-hover:text-secondary transition-colors">
+                  Asamblea Ordinaria de Copropietarios
+                </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Segunda citación y votaciones • Salón Comunal
+                </div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-numeric-data text-numeric-data font-semibold">Jue 24 Oct, 19:00</span>
+<div class="font-body-sm text-body-sm text-outline mt-0.5">180 convocados</div>
+</div>
+</div>
+<!-- Evento 4 (Cita - Azul) -->
+<div class="p-space-xs rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-colors flex items-start justify-between gap-space-xs group">
+<div class="flex items-start gap-2.5 min-w-0">
+<div class="mt-1 w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-primary font-semibold truncate group-hover:text-secondary transition-colors">
+                  Inspección Red Seca e Incendios
+                </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Visita técnica Cuerpo de Bomberos • Subterráneos
+                </div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-numeric-data text-numeric-data font-semibold">Vie 25 Oct, 11:30</span>
+<div class="font-body-sm text-body-sm text-outline mt-0.5">Seguridad</div>
+</div>
+</div>
+<!-- Evento 5 (Tarea - Verde) -->
+<div class="p-space-xs rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-colors flex items-start justify-between gap-space-xs group">
+<div class="flex items-start gap-2.5 min-w-0">
+<div class="mt-1 w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-primary font-semibold truncate group-hover:text-secondary transition-colors">
+                  Lectura Remanente Agua Potable
+                </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Cierre de facturación de medidores secundarios
+                </div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-numeric-data text-numeric-data font-semibold">Sáb 26 Oct, 10:00</span>
+<div class="font-body-sm text-body-sm text-outline mt-0.5">Conserjería</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer de Agenda -->
+<div class="pt-space-sm flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sincronizado con Google Calendar</span>
+<button class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-0.5" type="button">
+<span>Ver mes completo</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Sección Inferior: Accesos Directos a Módulos del ERP -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Accesos Directos a Módulos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Navegación ágil a las operaciones más frecuentes del condominio</p>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Atajos Rápidos</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<!-- Módulo 1: Emisión de Gastos Comunes -->
+<a class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm hover:shadow-md transition-all group flex flex-col justify-between space-y-space-md" href="#">
+<div class="space-y-space-sm">
+<div class="w-11 h-11 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">receipt_long</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-primary group-hover:text-secondary transition-colors font-semibold">
+              Emisión de Gastos
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Calcular alícuotas y prorrateo masivo del mes actual.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-secondary font-label-md text-label-md">
+<span>Emitir ciclo</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Módulo 2: Registro de Pagos -->
+<a class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm hover:shadow-md transition-all group flex flex-col justify-between space-y-space-md" href="#">
+<div class="space-y-space-sm">
+<div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-primary group-hover:text-secondary transition-colors font-semibold">
+              Registro de Pagos
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Conciliar transferencias bancarias y depósitos directos.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-secondary font-label-md text-label-md">
+<span>Conciliar</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Módulo 3: Control de Garita -->
+<a class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm hover:shadow-md transition-all group flex flex-col justify-between space-y-space-md" href="#">
+<div class="space-y-space-sm">
+<div class="w-11 h-11 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">local_police</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-primary group-hover:text-secondary transition-colors font-semibold">
+              Garita y Visitas
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Bitácora de accesos peatonales, autos y encomiendas.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-secondary font-label-md text-label-md">
+<span>Ver bitácora</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Módulo 4: Gestión de Unidades -->
+<a class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm hover:shadow-md transition-all group flex flex-col justify-between space-y-space-md" href="#">
+<div class="space-y-space-sm">
+<div class="w-11 h-11 rounded-xl bg-surface-container-high text-primary flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">key</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-primary group-hover:text-secondary transition-colors font-semibold">
+              Gestión de Unidades
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Padrón de departamentos, bodegas y estacionamientos.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-secondary font-label-md text-label-md">
+<span>Explorar padrón</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Módulo 5: Proveedores y Mantenimiento -->
+<a class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm hover:shadow-md transition-all group flex flex-col justify-between space-y-space-md" href="#">
+<div class="space-y-space-sm">
+<div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">handshake</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-primary group-hover:text-secondary transition-colors font-semibold">
+              Proveedores y Mant.
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Órdenes de servicio técnico, contratos y cotizaciones.
+            </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-secondary font-label-md text-label-md">
+<span>Abrir tickets</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+</div></main></div></body></html>

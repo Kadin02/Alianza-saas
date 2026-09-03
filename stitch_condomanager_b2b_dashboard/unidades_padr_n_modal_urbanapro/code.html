@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>UrbanaPro</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-fixed":"#001b3f","primary":"#15243e","primary-fixed":"#d7e3ff","secondary":"#005cbb","on-error-container":"#93000a","secondary-fixed-dim":"#abc7ff","inverse-primary":"#b7c7e8","on-secondary-container":"#002f66","surface-tint":"#505f7c","on-secondary-fixed-variant":"#00458f","primary-fixed-dim":"#b7c7e8","on-tertiary-fixed-variant":"#004f58","surface-container-lowest":"#ffffff","background":"#f7f9fc","on-error":"#ffffff","outline":"#75777e","on-primary-fixed":"#0b1b35","on-primary":"#ffffff","surface-bright":"#f7f9fc","error-container":"#ffdad6","surface-container":"#eceef1","surface-variant":"#e0e3e6","on-primary-container":"#95a4c4","secondary-container":"#5798ff","tertiary-container":"#004149","primary-container":"#2b3a55","tertiary":"#00292f","outline-variant":"#c5c6ce","on-surface":"#191c1e","on-primary-fixed-variant":"#384763","secondary-fixed":"#d7e3ff","on-secondary":"#ffffff","surface-dim":"#d8dadd","on-tertiary":"#ffffff","inverse-on-surface":"#eff1f4","tertiary-fixed":"#98f0ff","inverse-surface":"#2d3133","on-tertiary-container":"#09b5c8","surface":"#f7f9fc","surface-container-high":"#e6e8eb","tertiary-fixed-dim":"#4ed8eb","error":"#ba1a1a","surface-container-highest":"#e0e3e6","on-background":"#191c1e","on-tertiary-fixed":"#001f24","on-surface-variant":"#44474d","surface-container-low":"#f2f4f7"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"sidebar-collapsed-width":"4.5rem","table-row-dense":"2.25rem","space-lg":"1.5rem","space-md":"1rem","space-sm":"0.75rem","space-2xl":"3rem","space-xs":"0.5rem","container-padding":"1.5rem","table-row-regular":"3rem","space-xl":"2rem","space-xxs":"0.25rem","sidebar-width":"16.25rem"},"fontFamily":{"body-md":["Inter"],"numeric-data":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"title-sm":["Inter"],"headline-md":["Inter"],"display-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-lg":["Inter"]},"fontSize":{"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"numeric-data":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"title-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 bottom-0 w-sidebar-width bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-space-md flex items-center justify-between flex-shrink-0"><div class="flex items-center gap-space-xs"><img alt="UrbanaPro Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V9SRGsY_8CdlmxCo7bXClGge17_gJwGPNNDhShmF9Csl0akUXgrIqg5d0tcJlYhjcr4dPgkR6Oi8vmvqx53O1rL1CPGo1rycwSRXt_sDXxvDUDaSvOGLyCJIfjjj3LPWL5mYBJj5m98Leuc6hVkw02_KAXQ_WxaHM8x0yIht--aw-DSFqRvaMgM8ZA517ds7TnFX8RRnIsvAqm2JEjAfylw-0PzKS3klQhT9KtIpB0B51IUK9AdOBePTA"/><span class="font-title-sm text-title-sm text-primary tracking-tight">UrbanaPro</span></div><span class="px-space-xxs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase">SaaS</span></div><div class="flex-1 overflow-y-auto px-space-xs py-space-xs"><nav class="space-y-0.5" data-active-classes="bg-secondary-fixed text-on-secondary-fixed font-semibold"><a aria-current="page" class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg transition-colors bg-secondary-fixed text-on-secondary-fixed font-semibold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md truncate">Dashboard</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="propiedades" href="#"><span class="material-symbols-outlined text-[20px]">apartment</span><span class="font-body-md text-body-md truncate">Propiedades</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="unidades" href="#"><span class="material-symbols-outlined text-[20px]">meeting_room</span><span class="font-body-md text-body-md truncate">Unidades</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="propietarios" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span class="font-body-md text-body-md truncate">Propietarios</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="finanzas" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-body-md text-body-md truncate">Finanzas</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="proveedores" href="#"><span class="material-symbols-outlined text-[20px]">handshake</span><span class="font-body-md text-body-md truncate">Proveedores</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="agenda" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-body-md text-body-md truncate">Agenda</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="garita" href="#"><span class="material-symbols-outlined text-[20px]">local_police</span><span class="font-body-md text-body-md truncate">Garita</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span class="font-body-md text-body-md truncate">Reportes</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="administracion" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md truncate">Administración</span></a></nav></div><div class="p-space-sm space-y-space-sm bg-surface-container-lowest flex-shrink-0"><div class="bg-surface-container-low p-space-xs rounded-lg space-y-1.5"><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Almacenamiento</span><span class="font-numeric-data text-numeric-data">84% de 50GB</span></div><div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-secondary rounded-full w-[84%]"></div></div></div><div class="flex items-center justify-between px-1"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-body-sm text-body-sm text-on-surface-variant">En línea - Sincronizado</span></div><button aria-label="Colapsar menú lateral" class="p-1 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">keyboard_double_arrow_left</span></button></div></div></aside><div class="pl-sidebar-width min-h-screen flex flex-col"><header class="fixed top-0 left-sidebar-width right-0 h-14 bg-surface-container-lowest z-40 px-space-md flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-xs py-1.5 rounded-lg hover:bg-surface-container transition-colors text-left" type="button"><div class="w-7 h-7 rounded bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed"><span class="material-symbols-outlined text-[18px]">domain</span></div><div><div class="font-label-md text-label-md text-on-surface leading-none font-semibold">Residencial Las Palmas Torre A &amp; B</div><div class="font-body-sm text-body-sm text-on-surface-variant leading-none mt-0.5">Cambiar condominio</div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></button></div><div class="flex-1 max-w-xl mx-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-16 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary" placeholder="Buscar por unidad, residente, ticket o pago..." type="text"/><div class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant pointer-events-none">Ctrl+K</div></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1"><button aria-label="Notificaciones" class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] flex items-center justify-center font-bold">3</span></button><button aria-label="Centro de ayuda" class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help</span></button></div><button class="flex items-center gap-1.5 px-space-sm h-8 bg-secondary hover:bg-secondary-container text-on-secondary hover:text-on-secondary-container font-label-md text-label-md rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Nuevo registro</span><span class="material-symbols-outlined text-[16px]">arrow_drop_down</span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvRPg8xm7EhDwh0Atg5GAJFro9CS9LByKTptnKJtcH0LRAyvJSMx6F3H_DrTZi24GM_M1mPlgC9O9NMrPeWRUhKrGn9MCNb697FIIfPPVbBAiaih3VflUVG006kAIAfq85cSdJS1vfE-IejQmJ2DMu_ZuL5gDBi6PUh_8p1aBjHGg4rKceGK6t4ZXQIbNOGyuW6ZGkljM-0Dw46rxhGrEg6D621u50nbzkLZmcLniDBniH4RUxI3mW"/><div class="text-left"><div class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Lic. Mariana Soto</div><div class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Administradora General</div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="w-full pt-14 px-container-padding flex-1 bg-background"><div class="flex flex-col w-full pb-12">
+<!-- Sincronización del Sidebar: Activar Módulo Unidades -->
+<script>
+    (function activateSidebar() {
+      const links = document.querySelectorAll('aside nav a[data-path]');
+      links.forEach(el => {
+        if (el.getAttribute('data-path') === 'unidades') {
+          el.className = 'flex items-center gap-space-xs px-space-sm py-2 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-semibold transition-colors shadow-sm';
+          const icon = el.querySelector('.material-symbols-outlined');
+          if (icon) icon.style.fontVariationSettings = "'FILL' 1";
+        } else {
+          el.className = 'flex items-center gap-space-xs px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors';
+          const icon = el.querySelector('.material-symbols-outlined');
+          if (icon) icon.style.fontVariationSettings = "'FILL' 0";
+        }
+      });
+    })();
+  </script>
+<!-- 1. Header del Módulo -->
+<header class="py-space-md mb-space-sm">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Título y Breadcrumb -->
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider bg-secondary-fixed/50 px-2 py-0.5 rounded">Catálogo Físico</span>
+<span class="text-outline-variant font-label-sm">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">UrbanaPro Enterprise</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Unidades</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Padrón general de departamentos, casas, oficinas y bodegas por comunidad
+        </p>
+</div>
+<!-- Acción Principal -->
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="flex items-center gap-space-xs px-4 h-10 bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-md text-label-md rounded-lg shadow-sm transition-all transform active:scale-98" onclick="document.getElementById('modal-nueva-unidad').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[19px]">add</span>
+<span>Nueva Unidad</span>
+</button>
+</div>
+</div>
+<!-- Micro-KPIs en pastillas horizontales -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-xs md:gap-space-md mt-space-md">
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Total Unidades</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-headline-md text-headline-md text-primary font-numeric-data">184</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">inmuebles</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">domain_add</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Ocupadas</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-headline-md text-headline-md text-primary font-numeric-data">176</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-emerald-100 text-emerald-800">96%</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Vacantes / Desocupadas</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-headline-md text-headline-md text-primary font-numeric-data">8</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-amber-100 text-amber-800">4%</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center text-amber-600">
+<span class="material-symbols-outlined text-[22px]">meeting_room</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Recaudación Esperada</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md text-secondary font-numeric-data">$18.450.000</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+</div>
+</div>
+</header>
+<!-- 2. Barra de Filtros y Búsqueda -->
+<section class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm mb-space-sm">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
+<!-- Selector de Propiedad & Buscador -->
+<div class="flex flex-1 flex-col sm:flex-row items-stretch sm:items-center gap-space-xs">
+<div class="relative min-w-[240px]">
+<select class="w-full h-9 pl-3 pr-8 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary">
+<option selected="">Todas las propiedades</option>
+<option>Residencial Las Palmas Torre A &amp; B</option>
+<option>Condominio Altos de San Carlos</option>
+<option>Edificio Parque Mirador del Valle</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-on-surface-variant text-[18px] pointer-events-none">expand_more</span>
+</div>
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2 text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary" placeholder="Buscar por número de unidad, rol o propietario..." type="text"/>
+</div>
+</div>
+<!-- Filtros Rápidos (Tabs) & Botones de Utilidad -->
+<div class="flex items-center justify-between sm:justify-end gap-space-xs flex-wrap">
+<!-- Segmented Controls / Quick status tabs -->
+<div class="inline-flex p-0.5 bg-surface-container-low rounded-lg">
+<button class="px-3 py-1 font-label-sm text-label-sm rounded-md bg-surface-container-lowest text-primary font-semibold shadow-sm transition-all" type="button">
+            Todas
+          </button>
+<button class="px-3 py-1 font-label-sm text-label-sm rounded-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+            Ocupadas (176)
+          </button>
+<button class="px-3 py-1 font-label-sm text-label-sm rounded-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+            Vacías (8)
+          </button>
+</div>
+<!-- Filtros avanzados y Exportación -->
+<div class="flex items-center gap-1.5">
+<button class="flex items-center gap-1.5 h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+<span class="hidden md:inline">Filtros avanzados</span>
+</button>
+<button class="flex items-center gap-1.5 h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" title="Exportar reporte de unidades" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span class="hidden md:inline">Exportar Excel</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Tabla de Unidades -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full border-collapse text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider h-9">
+<th class="pl-space-md pr-space-xs font-semibold" scope="col">Unidad</th>
+<th class="px-space-xs font-semibold text-center" scope="col">Piso</th>
+<th class="px-space-xs font-semibold" scope="col">Propiedad</th>
+<th class="px-space-xs font-semibold" scope="col">Propietario Actual</th>
+<th class="px-space-xs font-semibold text-right" scope="col">Cuota Mensual / Gasto Común</th>
+<th class="px-space-xs font-semibold text-center" scope="col">Estado</th>
+<th class="pr-space-md pl-space-xs font-semibold text-right" scope="col">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-md text-body-md">
+<!-- Row 1: Depto 101-A -->
+<tr class="h-table-row-regular bg-surface-container-lowest hover:bg-surface-container-low/60 transition-colors">
+<td class="pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed/40 text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">meeting_room</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-primary font-semibold block leading-tight">Depto 101-A</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-none">Habitacional • 84 m²</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-center font-numeric-data text-numeric-data text-on-surface-variant">
+              Piso 1
+            </td>
+<td class="px-space-xs">
+<span class="font-body-md text-body-md text-on-surface font-medium block">Residencial Las Palmas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Torre A</span>
+</td>
+<td class="px-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold flex-shrink-0">
+                  VR
+                </div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">Valentina Riquelme</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">v.riquelme@gmail.com</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-right font-numeric-data text-numeric-data font-semibold text-primary">
+              $184.500
+            </td>
+<td class="px-space-xs text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-emerald-100 text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Ocupada
+              </span>
+</td>
+<td class="pr-space-md pl-space-xs text-right">
+<div class="inline-flex items-center gap-1">
+<button aria-label="Editar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Eliminar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+<button aria-label="Más opciones" class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Depto 204-B -->
+<tr class="h-table-row-regular bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed/40 text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">meeting_room</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-primary font-semibold block leading-tight">Depto 204-B</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-none">Habitacional • 105 m²</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-center font-numeric-data text-numeric-data text-on-surface-variant">
+              Piso 2
+            </td>
+<td class="px-space-xs">
+<span class="font-body-md text-body-md text-on-surface font-medium block">Residencial Las Palmas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Torre B</span>
+</td>
+<td class="px-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm font-bold flex-shrink-0">
+                  CM
+                </div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">Carlos Mendoza</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">+56 9 8452 1104</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-right font-numeric-data text-numeric-data font-semibold text-primary">
+              $245.000
+            </td>
+<td class="px-space-xs text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-emerald-100 text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Ocupada
+              </span>
+</td>
+<td class="pr-space-md pl-space-xs text-right">
+<div class="inline-flex items-center gap-1">
+<button aria-label="Editar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Eliminar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+<button aria-label="Más opciones" class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Depto 402-A (Vacía) -->
+<tr class="h-table-row-regular bg-surface-container-lowest hover:bg-surface-container-low/60 transition-colors">
+<td class="pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">door_back</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-primary font-semibold block leading-tight">Depto 402-A</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-none">Habitacional • 120 m²</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-center font-numeric-data text-numeric-data text-on-surface-variant">
+              Piso 4
+            </td>
+<td class="px-space-xs">
+<span class="font-body-md text-body-md text-on-surface font-medium block">Residencial Las Palmas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Torre A</span>
+</td>
+<td class="px-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">person_off</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium block truncate">Sin asignar / Inmobiliaria</span>
+<span class="font-body-sm text-body-sm text-outline block truncate">Entrega pendiente</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-right font-numeric-data text-numeric-data font-semibold text-primary">
+              $312.000
+            </td>
+<td class="px-space-xs text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-amber-100 text-amber-800">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                Vacía
+              </span>
+</td>
+<td class="pr-space-md pl-space-xs text-right">
+<div class="inline-flex items-center gap-1">
+<button aria-label="Editar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Eliminar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+<button aria-label="Más opciones" class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Oficina 302 -->
+<tr class="h-table-row-regular bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed/40 text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">business_center</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-primary font-semibold block leading-tight">Oficina 302</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-none">Comercial • 62 m²</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-center font-numeric-data text-numeric-data text-on-surface-variant">
+              Piso 3
+            </td>
+<td class="px-space-xs">
+<span class="font-body-md text-body-md text-on-surface font-medium block">Condominio Altos de San Carlos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Edificio Corporativo</span>
+</td>
+<td class="px-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-label-sm font-bold flex-shrink-0">
+                  FL
+                </div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">Francisca Leighton</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">contacto@leightonlegal.cl</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-right font-numeric-data text-numeric-data font-semibold text-primary">
+              $138.900
+            </td>
+<td class="px-space-xs text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-emerald-100 text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Ocupada
+              </span>
+</td>
+<td class="pr-space-md pl-space-xs text-right">
+<div class="inline-flex items-center gap-1">
+<button aria-label="Editar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Eliminar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+<button aria-label="Más opciones" class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Depto 501-A -->
+<tr class="h-table-row-regular bg-surface-container-lowest hover:bg-surface-container-low/60 transition-colors">
+<td class="pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed/40 text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">meeting_room</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-primary font-semibold block leading-tight">Depto 501-A</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-none">Habitacional • 78 m²</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-center font-numeric-data text-numeric-data text-on-surface-variant">
+              Piso 5
+            </td>
+<td class="px-space-xs">
+<span class="font-body-md text-body-md text-on-surface font-medium block">Residencial Las Palmas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Torre A</span>
+</td>
+<td class="px-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold flex-shrink-0">
+                  AG
+                </div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">Andrés Gómez</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">andres.gomez@empresa.com</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-right font-numeric-data text-numeric-data font-semibold text-primary">
+              $165.200
+            </td>
+<td class="px-space-xs text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-emerald-100 text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Ocupada
+              </span>
+</td>
+<td class="pr-space-md pl-space-xs text-right">
+<div class="inline-flex items-center gap-1">
+<button aria-label="Editar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Eliminar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+<button aria-label="Más opciones" class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Depto 702-B -->
+<tr class="h-table-row-regular bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed/40 text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">meeting_room</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-primary font-semibold block leading-tight">Depto 702-B</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-none">Habitacional • 95 m²</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-center font-numeric-data text-numeric-data text-on-surface-variant">
+              Piso 7
+            </td>
+<td class="px-space-xs">
+<span class="font-body-md text-body-md text-on-surface font-medium block">Residencial Las Palmas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Torre B</span>
+</td>
+<td class="px-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-variant text-on-surface flex items-center justify-center font-label-sm text-label-sm font-bold flex-shrink-0">
+                  MS
+                </div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">Marcela Santander</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">+56 9 7123 9988</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-right font-numeric-data text-numeric-data font-semibold text-primary">
+              $198.000
+            </td>
+<td class="px-space-xs text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-emerald-100 text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Ocupada
+              </span>
+</td>
+<td class="pr-space-md pl-space-xs text-right">
+<div class="inline-flex items-center gap-1">
+<button aria-label="Editar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Eliminar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+<button aria-label="Más opciones" class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Penthouse 1401 -->
+<tr class="h-table-row-regular bg-surface-container-lowest hover:bg-surface-container-low/60 transition-colors">
+<td class="pl-space-md pr-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed/30 text-tertiary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<div>
+<span class="font-title-sm text-title-sm text-primary font-semibold block leading-tight">Penthouse 1401</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-none">Exclusiva • 210 m²</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-center font-numeric-data text-numeric-data text-on-surface-variant">
+              Piso 14
+            </td>
+<td class="px-space-xs">
+<span class="font-body-md text-body-md text-on-surface font-medium block">Edificio Parque Mirador</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Torre Mirador</span>
+</td>
+<td class="px-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold flex-shrink-0">
+                  JP
+                </div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">Joaquín Prieto V.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block truncate">jprieto@inversionespv.cl</span>
+</div>
+</div>
+</td>
+<td class="px-space-xs text-right font-numeric-data text-numeric-data font-semibold text-primary">
+              $420.000
+            </td>
+<td class="px-space-xs text-center">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-emerald-100 text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                Ocupada
+              </span>
+</td>
+<td class="pr-space-md pl-space-xs text-right">
+<div class="inline-flex items-center gap-1">
+<button aria-label="Editar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Eliminar unidad" class="p-1.5 rounded text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+<button aria-label="Más opciones" class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Paginación de Tabla -->
+<div class="px-space-md py-3 bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-3 shadow-[0_-1px_0_rgba(0,0,0,0.04)]">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+        Mostrando <span class="font-semibold text-on-surface font-numeric-data">1 a 7</span> de <span class="font-semibold text-on-surface font-numeric-data">184</span> unidades
+      </span>
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-outline-variant hover:bg-surface-container disabled:opacity-40 disabled:cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-secondary text-on-secondary font-numeric-data text-numeric-data font-semibold" type="button">1</button>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container font-numeric-data text-numeric-data" type="button">2</button>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container font-numeric-data text-numeric-data" type="button">3</button>
+<span class="px-1 text-outline font-body-sm">...</span>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container font-numeric-data text-numeric-data" type="button">27</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 4. Modal de Alta / Edición (Flotante y Superpuesto) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary-container/40 backdrop-blur-sm transition-opacity" id="modal-nueva-unidad">
+<div class="bg-surface-container-lowest rounded-2xl shadow-xl w-full max-w-xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="px-space-lg pt-space-lg pb-space-sm flex items-start justify-between bg-surface-container-lowest">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<h2 class="font-headline-md text-headline-md text-primary">Nueva Unidad</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Ingresa los datos para incorporar una nueva unidad al padrón de la comunidad
+          </p>
+</div>
+<button aria-label="Cerrar modal" class="p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" onclick="document.getElementById('modal-nueva-unidad').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body (Formulario) -->
+<form class="px-space-lg py-space-sm space-y-space-md" onsubmit="event.preventDefault(); document.getElementById('modal-nueva-unidad').classList.add('hidden');">
+<!-- Selector de Propiedad -->
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider mb-1.5">
+            Propiedad / Comunidad <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 pl-3 pr-9 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary" required="">
+<option disabled="" value="">Selecciona la comunidad</option>
+<option selected="">Residencial Las Palmas Torre A &amp; B</option>
+<option>Condominio Altos de San Carlos</option>
+<option>Edificio Parque Mirador del Valle</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Grid: Número de Unidad & Piso -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider mb-1.5">
+              Número de Unidad <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 px-3 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary" placeholder="ej. Depto 304-B" required="" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[18px]">apartment</span>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider mb-1.5">
+              Piso o Nivel <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 pl-3 pr-9 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary" required="">
+<option>Subterráneo -2</option>
+<option>Subterráneo -1</option>
+<option>Piso 1</option>
+<option>Piso 2</option>
+<option selected="">Piso 3</option>
+<option>Piso 4</option>
+<option>Piso 5</option>
+<option>Piso 6</option>
+<option>Piso 7</option>
+<option>Piso 8 o superior</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Grid: Tipo de Unidad & Cuota Mensual base -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider mb-1.5">
+              Tipo de Unidad <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 pl-3 pr-9 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary" required="">
+<option selected="">Departamento</option>
+<option>Oficina</option>
+<option>Bodega</option>
+<option>Estacionamiento</option>
+<option>Local Comercial</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider mb-1.5">
+              Cuota Mensual Base (Estimada) <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-numeric-data text-numeric-data text-on-surface-variant font-bold">$</span>
+<input class="w-full h-10 pl-7 pr-3 bg-surface-container-low text-on-surface font-numeric-data text-numeric-data rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary" placeholder="185.000" required="" type="text"/>
+</div>
+</div>
+</div>
+<!-- Propietario Inicial (Opcional) -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="block font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">
+              Propietario Inicial
+            </label>
+<span class="font-body-sm text-body-sm text-outline">Opcional</span>
+</div>
+<div class="relative">
+<input class="w-full h-10 pl-9 pr-3 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary" placeholder="Buscar titular por nombre, RUT o email..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">person_search</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Si se omite, la unidad quedará registrada con estado <strong class="font-medium text-amber-800">Vacía / Inmobiliaria</strong>.
+          </p>
+</div>
+<!-- Modal Footer -->
+<div class="pt-space-md pb-space-xs flex items-center justify-end gap-space-xs bg-surface-container-lowest">
+<button class="px-4 h-10 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" onclick="document.getElementById('modal-nueva-unidad').classList.add('hidden')" type="button">
+            Cancelar
+          </button>
+<button class="flex items-center gap-1.5 px-5 h-10 rounded-lg bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-md text-label-md shadow-sm transition-all transform active:scale-98" type="submit">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Guardar Unidad</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div></main></div></body></html>
