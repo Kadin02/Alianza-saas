@@ -21,7 +21,7 @@ export default function SelectOrganizationPage() {
 
   function enterOrganization(orgId: number) {
     setActiveOrgId(orgId)
-    navigate("/org-home")
+    navigate("/app")
   }
 
   function logout() {

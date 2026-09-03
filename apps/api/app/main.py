@@ -9,6 +9,8 @@ from app.modules.auth import models as auth_models  # noqa: F401 — registra Us
 from app.modules.auth.router import router as auth_router
 from app.modules.organizations import models as org_models  # noqa: F401 — registra Organization/Membership
 from app.modules.organizations.router import router as organizations_router
+from app.modules.properties import models as property_models  # noqa: F401 — registra Property
+from app.modules.properties.router import router as properties_router
 
 logger = logging.getLogger(__name__)
 
@@ -32,6 +34,7 @@ async def unhandled_exception_handler(request: Request, exc: Exception):
 api_router_prefix = "/api"
 app.include_router(auth_router, prefix=api_router_prefix)
 app.include_router(organizations_router, prefix=api_router_prefix)
+app.include_router(properties_router, prefix=api_router_prefix)
 
 
 @app.get("/health")

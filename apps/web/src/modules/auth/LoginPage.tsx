@@ -35,7 +35,7 @@ export default function LoginPage() {
       setToken(data.access_token)
       if (data.memberships.length === 1) {
         setActiveOrgId(data.memberships[0].organization.id)
-        navigate("/org-home")
+        navigate("/app")
       } else {
         navigate("/select-organization")
       }

@@ -98,7 +98,7 @@ export default function OnboardingPage() {
     mutationFn: createOrganization,
     onSuccess: (membership) => {
       setActiveOrgId(membership.organization.id)
-      navigate("/org-home")
+      navigate("/app")
     },
   })
 
