@@ -9,6 +9,7 @@ import { Button } from "@/shared/ui/button"
 import { Dialog, DialogContent, DialogTitle } from "@/shared/ui/dialog"
 import { Input } from "@/shared/ui/input"
 import { Label } from "@/shared/ui/label"
+import { blurActiveElement } from "@/shared/lib/utils"
 
 import { createOwner, updateOwner } from "./api"
 import type { OwnerRead } from "./types"
@@ -18,7 +19,10 @@ const ownerSchema = z.object({
   identification: z.string().optional(),
   phone: z.string().optional(),
   email: z.string().email("Correo inválido").optional().or(z.literal("")),
-  unit_id: z.coerce.number().optional(),
+  unit_id: z
+    .string()
+    .optional()
+    .transform((v) => (v ? Number(v) : undefined)),
 })
 
 type OwnerFormInput = z.input<typeof ownerSchema>
@@ -65,6 +69,7 @@ export function OwnerFormDialog({ open, onOpenChange, editing }: OwnerFormDialog
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["owners"] })
+      blurActiveElement()
       onOpenChange(false)
     },
   })
@@ -76,24 +81,24 @@ export function OwnerFormDialog({ open, onOpenChange, editing }: OwnerFormDialog
         <form className="mt-4 space-y-4" onSubmit={handleSubmit((v) => mutation.mutate(v))}>
           <div>
             <Label htmlFor="full_name">Nombre completo *</Label>
-            <Input id="full_name" className="mt-1" placeholder="Carlos Mendoza" {...register("full_name")} />
+            <Input id="full_name" autoComplete="off" className="mt-1" placeholder="Carlos Mendoza" {...register("full_name")} />
             {errors.full_name && <p className="mt-1 text-body-sm text-danger">{errors.full_name.message}</p>}
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <div>
               <Label htmlFor="identification">Identificación / Cédula</Label>
-              <Input id="identification" className="mt-1" placeholder="8-123-4567" {...register("identification")} />
+              <Input id="identification" autoComplete="off" className="mt-1" placeholder="8-123-4567" {...register("identification")} />
             </div>
             <div>
               <Label htmlFor="phone">Teléfono</Label>
-              <Input id="phone" className="mt-1" placeholder="+507 6123 4567" {...register("phone")} />
+              <Input id="phone" autoComplete="off" className="mt-1" placeholder="+507 6123 4567" {...register("phone")} />
             </div>
           </div>
 
           <div>
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" className="mt-1" placeholder="carlos@correo.com" {...register("email")} />
+            <Input id="email" type="email" autoComplete="off" className="mt-1" placeholder="carlos@correo.com" {...register("email")} />
             {errors.email && <p className="mt-1 text-body-sm text-danger">{errors.email.message}</p>}
           </div>
 

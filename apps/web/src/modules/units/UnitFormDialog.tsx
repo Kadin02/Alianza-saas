@@ -9,6 +9,7 @@ import { Button } from "@/shared/ui/button"
 import { Dialog, DialogContent, DialogTitle } from "@/shared/ui/dialog"
 import { Input } from "@/shared/ui/input"
 import { Label } from "@/shared/ui/label"
+import { blurActiveElement } from "@/shared/lib/utils"
 
 import { createUnit, updateUnit } from "./api"
 import { unitTypeLabels } from "./labels"
@@ -19,7 +20,10 @@ const unitSchema = z.object({
   unit_number: z.string().min(1, "Ingresa el número de unidad"),
   floor: z.string().optional(),
   unit_type: z.enum(["DEPARTAMENTO", "OFICINA", "BODEGA", "ESTACIONAMIENTO", "LOCAL_COMERCIAL"]),
-  monthly_fee: z.coerce.number().min(0).optional(),
+  monthly_fee: z
+    .string()
+    .optional()
+    .transform((v) => (v ? Number(v) : undefined)),
 })
 
 type UnitFormInput = z.input<typeof unitSchema>
@@ -55,7 +59,7 @@ export function UnitFormDialog({ open, onOpenChange, editing }: UnitFormDialogPr
               unit_number: editing.unit_number,
               floor: editing.floor ?? "",
               unit_type: editing.unit_type,
-              monthly_fee: editing.monthly_fee ? Number(editing.monthly_fee) : undefined,
+              monthly_fee: editing.monthly_fee ?? "",
             }
           : { property_id: properties?.[0]?.id, unit_number: "", floor: "", unit_type: "DEPARTAMENTO" }
       )
@@ -67,6 +71,7 @@ export function UnitFormDialog({ open, onOpenChange, editing }: UnitFormDialogPr
       editing ? updateUnit(editing.id, values) : createUnit(values),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["units"] })
+      blurActiveElement()
       onOpenChange(false)
     },
   })
@@ -96,12 +101,12 @@ export function UnitFormDialog({ open, onOpenChange, editing }: UnitFormDialogPr
           <div className="grid grid-cols-2 gap-4">
             <div>
               <Label htmlFor="unit_number">Número de Unidad *</Label>
-              <Input id="unit_number" className="mt-1" placeholder="ej. Depto 304-B" {...register("unit_number")} />
+              <Input id="unit_number" autoComplete="off" className="mt-1" placeholder="ej. Depto 304-B" {...register("unit_number")} />
               {errors.unit_number && <p className="mt-1 text-body-sm text-danger">{errors.unit_number.message}</p>}
             </div>
             <div>
               <Label htmlFor="floor">Piso o Nivel</Label>
-              <Input id="floor" className="mt-1" placeholder="Piso 3" {...register("floor")} />
+              <Input id="floor" autoComplete="off" className="mt-1" placeholder="Piso 3" {...register("floor")} />
             </div>
           </div>
 

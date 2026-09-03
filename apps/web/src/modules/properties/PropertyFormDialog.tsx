@@ -9,7 +9,7 @@ import { Button } from "@/shared/ui/button"
 import { Dialog, DialogContent, DialogTitle } from "@/shared/ui/dialog"
 import { Input } from "@/shared/ui/input"
 import { Label } from "@/shared/ui/label"
-import { cn } from "@/shared/lib/utils"
+import { blurActiveElement, cn } from "@/shared/lib/utils"
 
 import { createProperty, updateProperty } from "./api"
 import { propertyTypeLabels } from "./labels"
@@ -75,6 +75,7 @@ export function PropertyFormDialog({ open, onOpenChange, editing }: PropertyForm
         : createProperty({ ...values, email: values.email || undefined }),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["properties"] })
+      blurActiveElement()
       onOpenChange(false)
     },
   })
@@ -86,7 +87,7 @@ export function PropertyFormDialog({ open, onOpenChange, editing }: PropertyForm
         <form className="mt-4 space-y-4" onSubmit={handleSubmit((v) => mutation.mutate(v))}>
           <div>
             <Label htmlFor="name">Nombre *</Label>
-            <Input id="name" className="mt-1" placeholder="Residencial Las Palmas" {...register("name")} />
+            <Input id="name" autoComplete="off" className="mt-1" placeholder="Residencial Las Palmas" {...register("name")} />
             {errors.name && <p className="mt-1 text-body-sm text-danger">{errors.name.message}</p>}
           </div>
 
@@ -119,7 +120,7 @@ export function PropertyFormDialog({ open, onOpenChange, editing }: PropertyForm
 
           <div>
             <Label htmlFor="address">Dirección *</Label>
-            <Input id="address" className="mt-1" placeholder="Av. Las Condes 12400" {...register("address")} />
+            <Input id="address" autoComplete="off" className="mt-1" placeholder="Av. Las Condes 12400" {...register("address")} />
             {errors.address && <p className="mt-1 text-body-sm text-danger">{errors.address.message}</p>}
           </div>
 
@@ -134,14 +135,14 @@ export function PropertyFormDialog({ open, onOpenChange, editing }: PropertyForm
               <Label htmlFor="phone">Teléfono</Label>
               <div className="relative mt-1 flex items-center">
                 <Phone className="pointer-events-none absolute left-3 h-4 w-4 text-outline" />
-                <Input id="phone" className="pl-9" placeholder="+56 9 8765 4321" {...register("phone")} />
+                <Input id="phone" autoComplete="off" className="pl-9" placeholder="+56 9 8765 4321" {...register("phone")} />
               </div>
             </div>
             <div>
               <Label htmlFor="email">Email</Label>
               <div className="relative mt-1 flex items-center">
                 <Mail className="pointer-events-none absolute left-3 h-4 w-4 text-outline" />
-                <Input id="email" type="email" className="pl-9" placeholder="conserjeria@..." {...register("email")} />
+                <Input id="email" type="email" autoComplete="off" className="pl-9" placeholder="conserjeria@..." {...register("email")} />
               </div>
               {errors.email && <p className="mt-1 text-body-sm text-danger">{errors.email.message}</p>}
             </div>
