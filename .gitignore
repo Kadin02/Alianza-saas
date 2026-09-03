@@ -5,4 +5,6 @@ apps/api/.env
 apps/api/*.db
 apps/web/node_modules/
 apps/web/dist/
+apps/web/.env
+apps/web/*.png
 .DS_Store
