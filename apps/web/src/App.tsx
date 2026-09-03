@@ -4,6 +4,7 @@ import { Navigate, Route, BrowserRouter, Routes } from "react-router-dom"
 import LoginPage from "@/modules/auth/LoginPage"
 import FinancePage from "@/modules/finance/FinancePage"
 import ReceiptPage from "@/modules/finance/ReceiptPage"
+import ReportsPage from "@/modules/finance/ReportsPage"
 import OnboardingPage from "@/modules/organizations/OnboardingPage"
 import OrgHomePlaceholder from "@/modules/organizations/OrgHomePlaceholder"
 import SelectOrganizationPage from "@/modules/organizations/SelectOrganizationPage"
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="units" element={<UnitsPage />} />
             <Route path="owners" element={<OwnersPage />} />
             <Route path="finance" element={<FinancePage />} />
+            <Route path="reports" element={<ReportsPage />} />
           </Route>
 
           <Route path="*" element={<Navigate to="/login" replace />} />

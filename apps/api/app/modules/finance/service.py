@@ -16,11 +16,14 @@ from app.modules.finance.schemas import (
     PaymentCreateRequest,
     PaymentReceipt,
     PaymentRead,
+    PropertyReportRow,
     ReceiptApplicationLine,
+    ReportsOverview,
     UnitStatement,
 )
 from app.modules.owners import repository as owners_repo
 from app.modules.owners.models import UnitOwner
+from app.modules.properties import repository as properties_repo
 from app.modules.units import repository as units_repo
 
 
@@ -442,3 +445,74 @@ def get_unit_statement(db: Session, *, organization_id: int, unit_id: int) -> Un
         available_credit=available_credit,
         ledger=ledger,
     )
+
+
+def get_reports_overview(db: Session, *, organization_id: int, month: int, year: int) -> ReportsOverview:
+    charges = finance_repo.list_charges(db, organization_id=organization_id)
+    payments = finance_repo.list_payments(db, organization_id=organization_id)
+    today = date_.today()
+
+    total_pendiente = sum((c.balance for c in charges), Decimal("0.00"))
+
+    overdue_charges = [c for c in charges if c.due_date < today and c.status != ChargeStatus.PAGADO]
+    total_morosidad = sum((c.balance for c in overdue_charges), Decimal("0.00"))
+    unidades_en_mora = len({c.unit_id for c in overdue_charges})
+
+    total_cargos_mes = sum(
+        (c.amount for c in charges if c.date_created.month == month and c.date_created.year == year),
+        Decimal("0.00"),
+    )
+
+    total_recaudado_mes = Decimal("0.00")
+    for payment in payments:
+        if payment.payment_date.month == month and payment.payment_date.year == year:
+            total_recaudado_mes += sum((a.applied_amount for a in payment.applications), Decimal("0.00"))
+
+    return ReportsOverview(
+        month=month,
+        year=year,
+        total_recaudado_mes=total_recaudado_mes,
+        total_pendiente=total_pendiente,
+        total_morosidad=total_morosidad,
+        unidades_en_mora=unidades_en_mora,
+        total_cargos_mes=total_cargos_mes,
+    )
+
+
+def get_reports_by_property(db: Session, *, organization_id: int) -> list[PropertyReportRow]:
+    properties = properties_repo.list_properties(db, organization_id=organization_id)
+    units = units_repo.list_units(db, organization_id=organization_id)
+    unit_to_property_id = {u.id: u.property_id for u in units}
+
+    charges = finance_repo.list_charges(db, organization_id=organization_id)
+    today = date_.today()
+
+    agg: dict[int, dict] = {
+        p.id: {"charged": Decimal("0.00"), "paid": Decimal("0.00"), "pending": Decimal("0.00"), "overdue_units": set()}
+        for p in properties
+    }
+
+    for charge in charges:
+        property_id = unit_to_property_id.get(charge.unit_id)
+        if property_id is None or property_id not in agg:
+            continue
+        row = agg[property_id]
+        row["charged"] += charge.amount
+        row["paid"] += charge.applied_amount
+        row["pending"] += charge.balance
+        if charge.due_date < today and charge.status != ChargeStatus.PAGADO:
+            row["overdue_units"].add(charge.unit_id)
+
+    result = [
+        PropertyReportRow(
+            property_id=p.id,
+            property_name=p.name,
+            total_charged=agg[p.id]["charged"],
+            total_paid=agg[p.id]["paid"],
+            total_pending=agg[p.id]["pending"],
+            units_overdue=len(agg[p.id]["overdue_units"]),
+        )
+        for p in properties
+    ]
+    result.sort(key=lambda r: r.property_name)
+    return result

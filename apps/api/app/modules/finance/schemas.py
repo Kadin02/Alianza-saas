@@ -118,6 +118,25 @@ class ReceiptApplicationLine(BaseModel):
     applied_amount: Decimal
 
 
+class ReportsOverview(BaseModel):
+    month: int
+    year: int
+    total_recaudado_mes: Decimal
+    total_pendiente: Decimal
+    total_morosidad: Decimal
+    unidades_en_mora: int
+    total_cargos_mes: Decimal
+
+
+class PropertyReportRow(BaseModel):
+    property_id: int
+    property_name: str
+    total_charged: Decimal
+    total_paid: Decimal
+    total_pending: Decimal
+    units_overdue: int
+
+
 class PaymentReceipt(BaseModel):
     payment_id: int
     receipt_number: str | None

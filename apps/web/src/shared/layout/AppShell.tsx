@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
 import {
   Banknote,
+  BarChart3,
   Building2,
   CalendarDays,
   Grid2x2,
@@ -31,6 +32,7 @@ const navItems: NavItem[] = [
   { label: "Unidades", to: "/app/units", icon: Grid2x2 },
   { label: "Propietarios", to: "/app/owners", icon: Users },
   { label: "Finanzas", to: "/app/finance", icon: Banknote },
+  { label: "Reportes", to: "/app/reports", icon: BarChart3 },
   { label: "Proveedores", icon: Handshake },
   { label: "Agenda", icon: CalendarDays },
   { label: "Garita", icon: ShieldCheck },

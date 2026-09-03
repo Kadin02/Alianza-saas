@@ -13,6 +13,8 @@ from app.modules.finance.schemas import (
     PaymentCreateRequest,
     PaymentReceipt,
     PaymentRead,
+    PropertyReportRow,
+    ReportsOverview,
     UnitStatement,
 )
 from app.modules.organizations.models import Membership
@@ -93,3 +95,21 @@ def get_unit_statement(
     db: Session = Depends(get_db),
 ):
     return finance_service.get_unit_statement(db, organization_id=membership.organization_id, unit_id=unit_id)
+
+
+@router.get("/reports/overview", response_model=ReportsOverview)
+def get_reports_overview(
+    month: int = Query(ge=1, le=12),
+    year: int = Query(ge=2020, le=2100),
+    membership: Membership = Depends(get_current_membership),
+    db: Session = Depends(get_db),
+):
+    return finance_service.get_reports_overview(db, organization_id=membership.organization_id, month=month, year=year)
+
+
+@router.get("/reports/by-property", response_model=list[PropertyReportRow])
+def get_reports_by_property(
+    membership: Membership = Depends(get_current_membership),
+    db: Session = Depends(get_db),
+):
+    return finance_service.get_reports_by_property(db, organization_id=membership.organization_id)
