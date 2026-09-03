@@ -5,6 +5,7 @@ export interface OwnerRead {
   phone: string | null
   identification: string | null
   created_at: string
+  unit_id: number | null
   unit_number: string | null
   property_name: string | null
 }

@@ -33,7 +33,7 @@ export default function FinancePage() {
     <div className="flex flex-col gap-4">
       <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
         <div>
-          <h1 className="text-headline-lg text-primary-container">Finanzas</h1>
+          <h1 className="heading-gradient text-headline-lg font-bold">Finanzas</h1>
           <p className="mt-0.5 text-body-sm text-on-surface-variant">Cargos, pagos y estado de cuenta por unidad</p>
         </div>
         <div className="flex gap-2">
@@ -193,7 +193,8 @@ export default function FinancePage() {
               <table className="w-full text-left">
                 <thead>
                   <tr className="h-9 bg-surface-container-low text-label-sm uppercase tracking-wider text-on-surface-variant">
-                    <th className="px-4">Unidad</th>
+                    <th className="px-4">N.º</th>
+                    <th className="px-3">Unidad</th>
                     <th className="px-3">Propietario</th>
                     <th className="px-3">Fecha</th>
                     <th className="px-3">Método / Ref.</th>
@@ -209,7 +210,10 @@ export default function FinancePage() {
                       className="h-12 cursor-pointer transition-colors hover:bg-surface-container-low/50"
                       onClick={() => setStatementUnitId(payment.unit_id)}
                     >
-                      <td className="px-4">
+                      <td className="px-4 font-numeric-data text-body-sm text-on-surface-variant">
+                        {payment.receipt_number ?? `#${payment.id}`}
+                      </td>
+                      <td className="px-3">
                         <div className="font-semibold text-on-surface">{payment.unit_number}</div>
                         <div className="text-body-sm text-on-surface-variant">{payment.property_name}</div>
                       </td>

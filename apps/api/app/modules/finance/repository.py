@@ -64,9 +64,18 @@ def get_payment(db: Session, *, organization_id: int, payment_id: int) -> Paymen
     )
 
 
+def get_last_payment_with_receipt_number(db: Session, *, organization_id: int) -> Payment | None:
+    return (
+        db.query(Payment)
+        .filter(Payment.organization_id == organization_id, Payment.receipt_number.isnot(None))
+        .order_by(Payment.id.desc())
+        .first()
+    )
+
+
 def create_payment(
     db: Session, *, organization_id: int, unit_id: int, owner_id: int | None,
-    amount, payment_date: date, method: str | None, reference: str | None,
+    amount, payment_date: date, method: str | None, reference: str | None, receipt_number: str | None = None,
 ) -> Payment:
     payment = Payment(
         organization_id=organization_id,
@@ -76,6 +85,7 @@ def create_payment(
         payment_date=payment_date,
         method=method,
         reference=reference,
+        receipt_number=receipt_number,
     )
     db.add(payment)
     db.flush()

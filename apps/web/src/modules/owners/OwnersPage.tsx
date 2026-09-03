@@ -1,10 +1,11 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
-import { Mail, Pencil, Phone, Plus, Trash2, Users } from "lucide-react"
+import { Building2, Mail, Pencil, Phone, Plus, Trash2, Users } from "lucide-react"
 import { useState } from "react"
 
 import { Button } from "@/shared/ui/button"
 
 import { deleteOwner, listOwners } from "./api"
+import { AssignUnitDialog } from "./AssignUnitDialog"
 import { OwnerFormDialog } from "./OwnerFormDialog"
 import type { OwnerRead } from "./types"
 
@@ -12,6 +13,7 @@ export default function OwnersPage() {
   const queryClient = useQueryClient()
   const [dialogOpen, setDialogOpen] = useState(false)
   const [editing, setEditing] = useState<OwnerRead | null>(null)
+  const [assigningOwner, setAssigningOwner] = useState<OwnerRead | null>(null)
 
   const { data: owners, isLoading } = useQuery({ queryKey: ["owners"], queryFn: listOwners })
 
@@ -41,7 +43,7 @@ export default function OwnersPage() {
       <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-headline-lg text-primary-container">Propietarios</h1>
+            <h1 className="heading-gradient text-headline-lg font-bold">Propietarios</h1>
             <span className="rounded-full bg-surface-container-high px-2.5 py-0.5 text-label-sm font-semibold text-on-surface-variant">
               {owners?.length ?? 0} {owners?.length === 1 ? "registrado" : "registrados"}
             </span>
@@ -124,6 +126,14 @@ export default function OwnersPage() {
                   <td className="px-3">
                     <div className="flex justify-end gap-1">
                       <button
+                        onClick={() => setAssigningOwner(owner)}
+                        className="rounded-lg p-1.5 text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
+                        aria-label="Asignar unidad"
+                        title="Asignar unidad"
+                      >
+                        <Building2 className="h-4 w-4" />
+                      </button>
+                      <button
                         onClick={() => openEdit(owner)}
                         className="rounded-lg p-1.5 text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
                         aria-label="Editar"
@@ -147,6 +157,7 @@ export default function OwnersPage() {
       )}
 
       <OwnerFormDialog open={dialogOpen} onOpenChange={setDialogOpen} editing={editing} />
+      <AssignUnitDialog owner={assigningOwner} onOpenChange={(open) => !open && setAssigningOwner(null)} />
     </div>
   )
 }

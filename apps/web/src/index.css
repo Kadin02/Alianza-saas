@@ -157,3 +157,10 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
+
+.heading-gradient {
+  background: linear-gradient(135deg, var(--color-primary-container), var(--color-brand-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

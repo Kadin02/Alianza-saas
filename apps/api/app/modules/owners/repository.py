@@ -67,6 +67,12 @@ def get_active_unit_link_for_unit(db: Session, *, unit_id: int) -> UnitOwner | N
     )
 
 
+def deactivate_link(db: Session, *, link: UnitOwner) -> None:
+    link.is_active = False
+    link.end_date = date.today()
+    db.flush()
+
+
 def update_owner(
     db: Session, *, owner: Owner, full_name: str, email: str | None,
     phone: str | None, identification: str | None,

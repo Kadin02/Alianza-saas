@@ -9,6 +9,7 @@ export interface PropertyRead {
   phone: string | null
   email: string | null
   website: string | null
+  photo_url: string | null
   created_at: string
 }
 
@@ -20,4 +21,5 @@ export interface PropertyPayload {
   phone?: string
   email?: string
   website?: string
+  photo_url?: string
 }

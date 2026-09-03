@@ -5,7 +5,7 @@ from app.core.deps import get_current_membership
 from app.db.session import get_db
 from app.modules.organizations.models import Membership
 from app.modules.owners import service as owners_service
-from app.modules.owners.schemas import OwnerCreateRequest, OwnerRead, OwnerUpdateRequest
+from app.modules.owners.schemas import AssignUnitRequest, OwnerCreateRequest, OwnerRead, OwnerUpdateRequest
 
 router = APIRouter(prefix="/owners", tags=["owners"])
 
@@ -43,3 +43,24 @@ def delete_owner(
     db: Session = Depends(get_db),
 ):
     owners_service.delete_owner(db, organization_id=membership.organization_id, owner_id=owner_id)
+
+
+@router.post("/{owner_id}/assign-unit", response_model=OwnerRead)
+def assign_unit(
+    owner_id: int,
+    payload: AssignUnitRequest,
+    membership: Membership = Depends(get_current_membership),
+    db: Session = Depends(get_db),
+):
+    return owners_service.assign_unit(
+        db, organization_id=membership.organization_id, owner_id=owner_id, unit_id=payload.unit_id
+    )
+
+
+@router.delete("/{owner_id}/unit", response_model=OwnerRead)
+def unassign_unit(
+    owner_id: int,
+    membership: Membership = Depends(get_current_membership),
+    db: Session = Depends(get_db),
+):
+    return owners_service.unassign_unit(db, organization_id=membership.organization_id, owner_id=owner_id)

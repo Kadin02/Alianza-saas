@@ -42,7 +42,7 @@ export default function UnitsPage() {
       <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-headline-lg text-primary-container">Unidades</h1>
+            <h1 className="heading-gradient text-headline-lg font-bold">Unidades</h1>
             <span className="rounded-full bg-surface-container-high px-2.5 py-0.5 text-label-sm font-semibold text-on-surface-variant">
               {units?.length ?? 0} {units?.length === 1 ? "unidad" : "unidades"}
             </span>

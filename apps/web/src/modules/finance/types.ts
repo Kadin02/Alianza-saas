@@ -44,6 +44,7 @@ export interface GenerateMonthlyChargesResult {
 
 export interface PaymentRead {
   id: number
+  receipt_number: string | null
   unit_id: number
   unit_number: string
   property_name: string
@@ -98,6 +99,7 @@ export interface ReceiptApplicationLine {
 
 export interface PaymentReceipt {
   payment_id: number
+  receipt_number: string | null
   payment_date: string
   amount: string
   method: string | null

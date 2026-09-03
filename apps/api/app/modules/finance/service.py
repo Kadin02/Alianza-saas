@@ -208,10 +208,22 @@ def create_late_fee(db: Session, *, organization_id: int, charge_id: int, payloa
     return _to_charge_read(late_fee)
 
 
+def _generate_receipt_number(db: Session, *, organization_id: int) -> str:
+    last = finance_repo.get_last_payment_with_receipt_number(db, organization_id=organization_id)
+    n = 0
+    if last and last.receipt_number:
+        try:
+            n = int(last.receipt_number.split("-")[1])
+        except (IndexError, ValueError):
+            n = 0
+    return f"REC-{n + 1:06d}"
+
+
 def _to_payment_read(payment: Payment, *, owner_name: str | None) -> PaymentRead:
     applied = sum((a.applied_amount for a in payment.applications), Decimal("0.00"))
     return PaymentRead(
         id=payment.id,
+        receipt_number=payment.receipt_number,
         unit_id=payment.unit_id,
         unit_number=payment.unit.unit_number,
         property_name=payment.unit.property_name,
@@ -250,6 +262,7 @@ def create_payment_fifo(db: Session, *, organization_id: int, payload: PaymentCr
         owner_id, _ = _get_active_owner_name(db, unit_id=payload.unit_id)
 
     amount = _to_dec(payload.amount)
+    receipt_number = _generate_receipt_number(db, organization_id=organization_id)
 
     payment = finance_repo.create_payment(
         db,
@@ -260,6 +273,7 @@ def create_payment_fifo(db: Session, *, organization_id: int, payload: PaymentCr
         payment_date=payload.payment_date,
         method=payload.method,
         reference=payload.reference,
+        receipt_number=receipt_number,
     )
 
     charges = finance_repo.list_charges(db, organization_id=organization_id, unit_id=payload.unit_id)
@@ -332,6 +346,7 @@ def get_payment_receipt(db: Session, *, organization_id: int, payment_id: int) -
 
     return PaymentReceipt(
         payment_id=payment.id,
+        receipt_number=payment.receipt_number,
         payment_date=payment.payment_date,
         amount=payment.amount,
         method=payment.method,

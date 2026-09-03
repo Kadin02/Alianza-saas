@@ -20,3 +20,13 @@ export async function updateOwner(id: number, payload: OwnerUpdatePayload): Prom
 export async function deleteOwner(id: number): Promise<void> {
   await apiClient.delete(`/owners/${id}`)
 }
+
+export async function assignUnit(ownerId: number, unitId: number): Promise<OwnerRead> {
+  const { data } = await apiClient.post<OwnerRead>(`/owners/${ownerId}/assign-unit`, { unit_id: unitId })
+  return data
+}
+
+export async function unassignUnit(ownerId: number): Promise<OwnerRead> {
+  const { data } = await apiClient.delete<OwnerRead>(`/owners/${ownerId}/unit`)
+  return data
+}

@@ -31,19 +31,19 @@ export function StatementDialog({ unitId, onOpenChange }: StatementDialogProps) 
             </p>
 
             <div className="mt-4 grid grid-cols-3 gap-3">
-              <div className="rounded-xl bg-surface-container-low p-3">
+              <div className="rounded-xl bg-gradient-to-br from-surface-container-low to-surface-container p-3 shadow-sm transition-shadow hover:shadow-md">
                 <div className="text-label-sm uppercase text-on-surface-variant">Total cargos</div>
                 <div className="mt-1 font-numeric-data text-title-sm text-on-surface">
                   {formatCurrency(statement.total_cargos)}
                 </div>
               </div>
-              <div className="rounded-xl bg-surface-container-low p-3">
+              <div className="rounded-xl bg-gradient-to-br from-surface-container-low to-surface-container p-3 shadow-sm transition-shadow hover:shadow-md">
                 <div className="text-label-sm uppercase text-on-surface-variant">Total pagado</div>
                 <div className="mt-1 font-numeric-data text-title-sm text-on-surface">
                   {formatCurrency(statement.total_pagos)}
                 </div>
               </div>
-              <div className="rounded-xl bg-danger-bg p-3">
+              <div className="rounded-xl bg-gradient-to-br from-danger-bg to-danger/10 p-3 shadow-sm transition-shadow hover:shadow-md">
                 <div className="text-label-sm uppercase text-danger-text">Saldo pendiente</div>
                 <div className="mt-1 font-numeric-data text-title-sm text-danger-text">
                   {formatCurrency(statement.total_due)}

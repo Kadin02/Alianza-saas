@@ -18,6 +18,10 @@ class OwnerUpdateRequest(BaseModel):
     identification: str | None = Field(default=None, max_length=40)
 
 
+class AssignUnitRequest(BaseModel):
+    unit_id: int
+
+
 class OwnerRead(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
@@ -27,5 +31,6 @@ class OwnerRead(BaseModel):
     phone: str | None
     identification: str | None
     created_at: datetime
+    unit_id: int | None = None
     unit_number: str | None = None
     property_name: str | None = None

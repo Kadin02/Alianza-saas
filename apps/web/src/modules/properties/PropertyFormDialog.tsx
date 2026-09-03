@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
-import { Building2, Check, Home, Mail, Phone, Store } from "lucide-react"
+import { Building2, Check, Home, Image as ImageIcon, Mail, Phone, Store } from "lucide-react"
 import { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -23,6 +23,7 @@ const propertySchema = z.object({
   phone: z.string().optional(),
   email: z.string().email("Correo inválido").optional().or(z.literal("")),
   website: z.string().optional(),
+  photo_url: z.string().url("URL inválida").optional().or(z.literal("")),
 })
 
 type PropertyFormInput = z.input<typeof propertySchema>
@@ -60,19 +61,21 @@ export function PropertyFormDialog({ open, onOpenChange, editing }: PropertyForm
               phone: editing.phone ?? "",
               email: editing.email ?? "",
               website: editing.website ?? "",
+              photo_url: editing.photo_url ?? "",
             }
-          : { name: "", type: "PH", address: "", max_units: 50, phone: "", email: "", website: "" }
+          : { name: "", type: "PH", address: "", max_units: 50, phone: "", email: "", website: "", photo_url: "" }
       )
     }
   }, [open, editing, reset])
 
   const type = watch("type")
+  const photoUrl = watch("photo_url")
 
   const mutation = useMutation({
-    mutationFn: (values: PropertyFormValues) =>
-      editing
-        ? updateProperty(editing.id, { ...values, email: values.email || undefined })
-        : createProperty({ ...values, email: values.email || undefined }),
+    mutationFn: (values: PropertyFormValues) => {
+      const clean = { ...values, email: values.email || undefined, photo_url: values.photo_url || undefined }
+      return editing ? updateProperty(editing.id, clean) : createProperty(clean)
+    },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["properties"] })
       blurActiveElement()
@@ -128,6 +131,26 @@ export function PropertyFormDialog({ open, onOpenChange, editing }: PropertyForm
             <Label htmlFor="max_units">Máximo de unidades</Label>
             <Input id="max_units" type="number" min={1} className="mt-1" {...register("max_units")} />
             {errors.max_units && <p className="mt-1 text-body-sm text-danger">{errors.max_units.message}</p>}
+          </div>
+
+          <div>
+            <Label htmlFor="photo_url">Foto (URL de la imagen)</Label>
+            <div className="mt-1 flex items-center gap-3">
+              <div className="relative flex flex-1 items-center">
+                <ImageIcon className="pointer-events-none absolute left-3 h-4 w-4 text-outline" />
+                <Input id="photo_url" autoComplete="off" className="pl-9" placeholder="https://…" {...register("photo_url")} />
+              </div>
+              {photoUrl && (
+                <img
+                  src={photoUrl}
+                  alt=""
+                  className="h-9 w-14 flex-shrink-0 rounded-md object-cover"
+                  onError={(e) => (e.currentTarget.style.visibility = "hidden")}
+                  onLoad={(e) => (e.currentTarget.style.visibility = "visible")}
+                />
+              )}
+            </div>
+            {errors.photo_url && <p className="mt-1 text-body-sm text-danger">{errors.photo_url.message}</p>}
           </div>
 
           <div className="grid grid-cols-2 gap-4">

@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query"
-import { Printer } from "lucide-react"
+import { Download, Loader2 } from "lucide-react"
+import { useRef, useState } from "react"
 import { useParams } from "react-router-dom"
 
 import { Logo } from "@/shared/ui/Logo"
@@ -10,12 +11,35 @@ import { formatCurrency, formatDate } from "./labels"
 export default function ReceiptPage() {
   const { paymentId } = useParams<{ paymentId: string }>()
   const id = Number(paymentId)
+  const receiptRef = useRef<HTMLDivElement>(null)
+  const [downloading, setDownloading] = useState(false)
 
   const { data: receipt, isLoading, isError } = useQuery({
     queryKey: ["payment-receipt", id],
     queryFn: () => getPaymentReceipt(id),
     enabled: Number.isFinite(id),
   })
+
+  async function handleDownload() {
+    if (!receiptRef.current || !receipt) return
+    setDownloading(true)
+    try {
+      const [{ default: html2canvas }, { default: jsPDF }] = await Promise.all([
+        import("html2canvas"),
+        import("jspdf"),
+      ])
+      const canvas = await html2canvas(receiptRef.current, { scale: 2, backgroundColor: "#ffffff" })
+      const imgData = canvas.toDataURL("image/png")
+      const pdf = new jsPDF({ unit: "pt", format: "a4" })
+      const pageWidth = pdf.internal.pageSize.getWidth()
+      const imgWidth = pageWidth
+      const imgHeight = (canvas.height * imgWidth) / canvas.width
+      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight)
+      pdf.save(`${receipt.receipt_number ?? `recibo-${receipt.payment_id}`}.pdf`)
+    } finally {
+      setDownloading(false)
+    }
+  }
 
   if (isLoading) {
     return <div className="p-8 text-body-md text-on-surface-variant">Cargando recibo…</div>
@@ -29,15 +53,19 @@ export default function ReceiptPage() {
     <div className="min-h-screen bg-surface-container-low py-8 print:bg-white print:py-0">
       <div className="mx-auto flex max-w-2xl justify-end px-4 pb-4 print:hidden">
         <button
-          onClick={() => window.print()}
-          className="inline-flex items-center gap-1.5 rounded-lg bg-brand-blue px-4 py-2 text-body-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-blue-hover"
+          onClick={handleDownload}
+          disabled={downloading}
+          className="inline-flex items-center gap-1.5 rounded-lg bg-brand-blue px-4 py-2 text-body-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-blue-hover disabled:opacity-60"
         >
-          <Printer className="h-4 w-4" />
-          Imprimir / Guardar PDF
+          {downloading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Download className="h-4 w-4" />}
+          {downloading ? "Generando…" : "Descargar PDF"}
         </button>
       </div>
 
-      <div className="mx-auto max-w-2xl rounded-2xl bg-white p-8 shadow-lg print:max-w-none print:rounded-none print:p-0 print:shadow-none">
+      <div
+        ref={receiptRef}
+        className="mx-auto max-w-2xl rounded-2xl bg-white p-8 shadow-lg print:max-w-none print:rounded-none print:p-0 print:shadow-none"
+      >
         <div className="flex items-start justify-between border-b border-outline-variant pb-6">
           <div>
             <Logo />
@@ -48,7 +76,7 @@ export default function ReceiptPage() {
           </div>
           <div className="text-right">
             <div className="text-title-sm text-primary-container">Recibo de Pago</div>
-            <div className="mt-1 text-body-sm text-on-surface-variant">N.º {String(receipt.payment_id).padStart(6, "0")}</div>
+            <div className="mt-1 text-body-sm text-on-surface-variant">N.º {receipt.receipt_number ?? `#${receipt.payment_id}`}</div>
             <div className="text-body-sm text-on-surface-variant">{formatDate(receipt.payment_date)}</div>
           </div>
         </div>

@@ -13,6 +13,7 @@ class PropertyCreateRequest(BaseModel):
     phone: str | None = Field(default=None, max_length=40)
     email: str | None = Field(default=None, max_length=160)
     website: str | None = Field(default=None, max_length=200)
+    photo_url: str | None = Field(default=None, max_length=500)
 
 
 class PropertyUpdateRequest(PropertyCreateRequest):
@@ -30,4 +31,5 @@ class PropertyRead(BaseModel):
     phone: str | None
     email: str | None
     website: str | None
+    photo_url: str | None
     created_at: datetime

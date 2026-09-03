@@ -45,7 +45,7 @@ export default function PropertiesPage() {
       <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-headline-lg text-primary-container">Propiedades</h1>
+            <h1 className="heading-gradient text-headline-lg font-bold">Propiedades</h1>
             <span className="rounded-full bg-surface-container-high px-2.5 py-0.5 text-label-sm font-semibold text-on-surface-variant">
               {properties?.length ?? 0} {properties?.length === 1 ? "activa" : "activas"}
             </span>
@@ -78,8 +78,22 @@ export default function PropertiesPage() {
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
         {properties?.map((property) => (
-          <div key={property.id} className="flex flex-col rounded-xl bg-surface-container-lowest shadow-sm transition-all hover:shadow-md">
-            <div className="h-1.5 w-full rounded-t-xl bg-secondary" />
+          <div
+            key={property.id}
+            className="group flex flex-col overflow-hidden rounded-xl bg-surface-container-lowest shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary-container/10"
+          >
+            {property.photo_url ? (
+              <div className="relative h-32 w-full overflow-hidden">
+                <img
+                  src={property.photo_url}
+                  alt={property.name}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0" />
+              </div>
+            ) : (
+              <div className="h-1.5 w-full bg-gradient-to-r from-brand-blue to-secondary" />
+            )}
             <div className="flex flex-1 flex-col p-4">
               <div className="mb-1.5 flex items-start justify-between gap-2">
                 <div className="min-w-0 flex-1">

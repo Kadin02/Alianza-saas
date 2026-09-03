@@ -63,6 +63,7 @@ class PaymentRead(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     id: int
+    receipt_number: str | None
     unit_id: int
     unit_number: str
     property_name: str
@@ -119,6 +120,7 @@ class ReceiptApplicationLine(BaseModel):
 
 class PaymentReceipt(BaseModel):
     payment_id: int
+    receipt_number: str | None
     payment_date: date
     amount: Decimal
     method: str | None

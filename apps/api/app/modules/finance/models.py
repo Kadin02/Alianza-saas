@@ -67,6 +67,7 @@ class Payment(Base):
     payment_date: Mapped[date] = mapped_column(Date, nullable=False)
     method: Mapped[str | None] = mapped_column(String, nullable=True)
     reference: Mapped[str | None] = mapped_column(String, nullable=True)
+    receipt_number: Mapped[str | None] = mapped_column(String, nullable=True, index=True)
 
     created_at: Mapped[datetime] = mapped_column(DateTime, default=lambda: datetime.now(timezone.utc))
 

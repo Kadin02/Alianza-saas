@@ -82,10 +82,10 @@ export default function AppShell() {
                 end={item.to === "/app"}
                 className={({ isActive }) =>
                   cn(
-                    "flex items-center gap-2 rounded-lg px-3 py-2 transition-colors",
+                    "flex items-center gap-2 rounded-lg px-3 py-2 transition-all duration-200",
                     isActive
-                      ? "bg-secondary-fixed font-semibold text-on-secondary-fixed"
-                      : "text-on-surface-variant hover:bg-surface-container hover:text-on-surface"
+                      ? "bg-gradient-to-r from-secondary-fixed to-secondary-fixed/70 font-semibold text-on-secondary-fixed shadow-sm"
+                      : "text-on-surface-variant hover:translate-x-0.5 hover:bg-surface-container hover:text-on-surface"
                   )
                 }
               >
