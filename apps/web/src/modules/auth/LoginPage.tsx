@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
 import { z } from "zod"
 
-import Aurora from "@/shared/ui/Aurora"
+import loginBackground from "@/assets/images/login-background.jpg"
 import { Button } from "@/shared/ui/button"
 import { Input } from "@/shared/ui/input"
 import { Label } from "@/shared/ui/label"
@@ -40,10 +40,14 @@ export default function LoginPage() {
 
   return (
     <main className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden px-4 py-8">
-      {/* Fondo animado (React Bits · Aurora) en la paleta de marca */}
-      <div className="fixed inset-0 -z-10 bg-primary">
-        <Aurora colorStops={["#2b3a55", "#3a80e6", "#00b3c6"]} amplitude={0.9} blend={0.6} speed={0.6} />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/85 via-primary/70 to-brand-blue/30 backdrop-blur-[2px]" />
+      {/* Fondo: foto arquitectónica del diseño de Stitch + degradado corporativo */}
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <img
+          src={loginBackground}
+          alt=""
+          className="h-full w-full scale-105 transform object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/85 to-brand-blue/45 backdrop-blur-[2px]" />
       </div>
 
       <section
