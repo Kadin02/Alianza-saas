@@ -88,3 +88,28 @@ export interface UnitStatement {
   available_credit: string
   ledger: LedgerRow[]
 }
+
+export interface ReceiptApplicationLine {
+  charge_id: number
+  description: string
+  is_recargo: boolean
+  applied_amount: string
+}
+
+export interface PaymentReceipt {
+  payment_id: number
+  payment_date: string
+  amount: string
+  method: string | null
+  reference: string | null
+  subtotal: string
+  recargo: string
+  credit_generated: string
+  owner_name: string | null
+  unit_number: string
+  property_name: string
+  property_address: string
+  property_phone: string | null
+  property_email: string | null
+  applications: ReceiptApplicationLine[]
+}

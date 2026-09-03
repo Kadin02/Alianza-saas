@@ -3,6 +3,7 @@ import { Navigate, Route, BrowserRouter, Routes } from "react-router-dom"
 
 import LoginPage from "@/modules/auth/LoginPage"
 import FinancePage from "@/modules/finance/FinancePage"
+import ReceiptPage from "@/modules/finance/ReceiptPage"
 import OnboardingPage from "@/modules/organizations/OnboardingPage"
 import OrgHomePlaceholder from "@/modules/organizations/OrgHomePlaceholder"
 import SelectOrganizationPage from "@/modules/organizations/SelectOrganizationPage"
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/select-organization" element={<SelectOrganizationPage />} />
           <Route path="/onboarding" element={<OnboardingPage />} />
+          <Route path="/print/receipts/:paymentId" element={<ReceiptPage />} />
 
           <Route path="/app" element={<AppShell />}>
             <Route index element={<OrgHomePlaceholder />} />

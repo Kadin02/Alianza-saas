@@ -14,7 +14,9 @@ from app.modules.finance.schemas import (
     LateFeeCreateRequest,
     LedgerRow,
     PaymentCreateRequest,
+    PaymentReceipt,
     PaymentRead,
+    ReceiptApplicationLine,
     UnitStatement,
 )
 from app.modules.owners import repository as owners_repo
@@ -300,6 +302,51 @@ def create_payment_fifo(db: Session, *, organization_id: int, payload: PaymentCr
 
     owner_name = payment.owner.full_name if payment.owner else None
     return _to_payment_read(payment, owner_name=owner_name)
+
+
+def get_payment_receipt(db: Session, *, organization_id: int, payment_id: int) -> PaymentReceipt:
+    payment = finance_repo.get_payment(db, organization_id=organization_id, payment_id=payment_id)
+    if not payment:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "Pago no encontrado")
+
+    property_ref = payment.unit.property_ref
+
+    subtotal = Decimal("0.00")
+    recargo = Decimal("0.00")
+    applications: list[ReceiptApplicationLine] = []
+    for app in payment.applications:
+        charge = app.charge
+        applied = app.applied_amount
+        if charge.is_recargo:
+            recargo += applied
+        else:
+            subtotal += applied
+        applications.append(ReceiptApplicationLine(
+            charge_id=charge.id,
+            description=charge.description,
+            is_recargo=charge.is_recargo,
+            applied_amount=applied,
+        ))
+
+    applied_total = sum((a.applied_amount for a in payment.applications), Decimal("0.00"))
+
+    return PaymentReceipt(
+        payment_id=payment.id,
+        payment_date=payment.payment_date,
+        amount=payment.amount,
+        method=payment.method,
+        reference=payment.reference,
+        subtotal=subtotal,
+        recargo=recargo,
+        credit_generated=payment.amount - applied_total,
+        owner_name=payment.owner.full_name if payment.owner else None,
+        unit_number=payment.unit.unit_number,
+        property_name=property_ref.name,
+        property_address=property_ref.address,
+        property_phone=property_ref.phone,
+        property_email=property_ref.email,
+        applications=applications,
+    )
 
 
 def get_unit_statement(db: Session, *, organization_id: int, unit_id: int) -> UnitStatement:

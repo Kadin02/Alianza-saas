@@ -108,3 +108,28 @@ class OwnerCreditRead(BaseModel):
     remaining_amount: Decimal
     source_payment_id: int | None
     created_at: datetime
+
+
+class ReceiptApplicationLine(BaseModel):
+    charge_id: int
+    description: str
+    is_recargo: bool
+    applied_amount: Decimal
+
+
+class PaymentReceipt(BaseModel):
+    payment_id: int
+    payment_date: date
+    amount: Decimal
+    method: str | None
+    reference: str | None
+    subtotal: Decimal
+    recargo: Decimal
+    credit_generated: Decimal
+    owner_name: str | None
+    unit_number: str
+    property_name: str
+    property_address: str
+    property_phone: str | None
+    property_email: str | None
+    applications: list[ReceiptApplicationLine]

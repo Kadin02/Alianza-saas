@@ -56,6 +56,14 @@ def list_payments(db: Session, *, organization_id: int, unit_id: int | None = No
     return query.order_by(Payment.payment_date.desc(), Payment.id.desc()).all()
 
 
+def get_payment(db: Session, *, organization_id: int, payment_id: int) -> Payment | None:
+    return (
+        db.query(Payment)
+        .filter(Payment.organization_id == organization_id, Payment.id == payment_id)
+        .first()
+    )
+
+
 def create_payment(
     db: Session, *, organization_id: int, unit_id: int, owner_id: int | None,
     amount, payment_date: date, method: str | None, reference: str | None,

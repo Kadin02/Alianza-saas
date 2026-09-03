@@ -199,6 +199,7 @@ export default function FinancePage() {
                     <th className="px-3">Método / Ref.</th>
                     <th className="px-3 text-right">Monto</th>
                     <th className="px-3 text-right">Aplicado</th>
+                    <th className="px-3 text-right">Recibo</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-surface-container-low">
@@ -221,6 +222,18 @@ export default function FinancePage() {
                       <td className="px-3 text-right font-numeric-data text-on-surface">{formatCurrency(payment.amount)}</td>
                       <td className="px-3 text-right font-numeric-data text-primary-container">
                         {formatCurrency(payment.applied_to_charges)}
+                      </td>
+                      <td className="px-3 text-right">
+                        <a
+                          href={`/print/receipts/${payment.id}`}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-label-sm font-semibold text-brand-blue transition-colors hover:bg-surface-container"
+                        >
+                          <FileText className="h-3.5 w-3.5" />
+                          Ver recibo
+                        </a>
                       </td>
                     </tr>
                   ))}

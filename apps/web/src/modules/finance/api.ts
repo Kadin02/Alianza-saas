@@ -7,6 +7,7 @@ import type {
   GenerateMonthlyChargesResult,
   LateFeeCreatePayload,
   PaymentCreatePayload,
+  PaymentReceipt,
   PaymentRead,
   UnitStatement,
 } from "./types"
@@ -47,5 +48,10 @@ export async function createPayment(payload: PaymentCreatePayload): Promise<Paym
 
 export async function getUnitStatement(unitId: number): Promise<UnitStatement> {
   const { data } = await apiClient.get<UnitStatement>(`/finance/units/${unitId}/statement`)
+  return data
+}
+
+export async function getPaymentReceipt(paymentId: number): Promise<PaymentReceipt> {
+  const { data } = await apiClient.get<PaymentReceipt>(`/finance/payments/${paymentId}/receipt`)
   return data
 }

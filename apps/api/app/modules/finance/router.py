@@ -11,6 +11,7 @@ from app.modules.finance.schemas import (
     GenerateMonthlyChargesResult,
     LateFeeCreateRequest,
     PaymentCreateRequest,
+    PaymentReceipt,
     PaymentRead,
     UnitStatement,
 )
@@ -74,6 +75,15 @@ def create_payment(
     db: Session = Depends(get_db),
 ):
     return finance_service.create_payment_fifo(db, organization_id=membership.organization_id, payload=payload)
+
+
+@router.get("/payments/{payment_id}/receipt", response_model=PaymentReceipt)
+def get_payment_receipt(
+    payment_id: int,
+    membership: Membership = Depends(get_current_membership),
+    db: Session = Depends(get_db),
+):
+    return finance_service.get_payment_receipt(db, organization_id=membership.organization_id, payment_id=payment_id)
 
 
 @router.get("/units/{unit_id}/statement", response_model=UnitStatement)
