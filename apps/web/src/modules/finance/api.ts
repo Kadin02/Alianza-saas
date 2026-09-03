@@ -3,6 +3,7 @@ import { apiClient } from "@/shared/api/client"
 import type {
   ChargeCreatePayload,
   ChargeRead,
+  LateFeeCreatePayload,
   PaymentCreatePayload,
   PaymentRead,
   UnitStatement,
@@ -17,6 +18,11 @@ export async function listCharges(unitId?: number): Promise<ChargeRead[]> {
 
 export async function createCharge(payload: ChargeCreatePayload): Promise<ChargeRead> {
   const { data } = await apiClient.post<ChargeRead>("/finance/charges", payload)
+  return data
+}
+
+export async function createLateFee(chargeId: number, payload: LateFeeCreatePayload): Promise<ChargeRead> {
+  const { data } = await apiClient.post<ChargeRead>(`/finance/charges/${chargeId}/late-fee`, payload)
   return data
 }
 

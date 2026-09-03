@@ -7,6 +7,7 @@ from app.modules.finance import service as finance_service
 from app.modules.finance.schemas import (
     ChargeCreateRequest,
     ChargeRead,
+    LateFeeCreateRequest,
     PaymentCreateRequest,
     PaymentRead,
     UnitStatement,
@@ -32,6 +33,18 @@ def create_charge(
     db: Session = Depends(get_db),
 ):
     return finance_service.create_charge(db, organization_id=membership.organization_id, payload=payload)
+
+
+@router.post("/charges/{charge_id}/late-fee", response_model=ChargeRead, status_code=201)
+def create_late_fee(
+    charge_id: int,
+    payload: LateFeeCreateRequest,
+    membership: Membership = Depends(get_current_membership),
+    db: Session = Depends(get_db),
+):
+    return finance_service.create_late_fee(
+        db, organization_id=membership.organization_id, charge_id=charge_id, payload=payload
+    )
 
 
 @router.get("/payments", response_model=list[PaymentRead])

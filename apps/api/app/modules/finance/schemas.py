@@ -28,7 +28,12 @@ class ChargeRead(BaseModel):
     status: ChargeStatus
     date_created: date
     due_date: date
+    is_recargo: bool
     created_at: datetime
+
+
+class LateFeeCreateRequest(BaseModel):
+    amount: Decimal = Field(gt=0)
 
 
 class PaymentCreateRequest(BaseModel):
@@ -76,4 +81,16 @@ class UnitStatement(BaseModel):
     total_due: Decimal
     total_cargos: Decimal
     total_pagos: Decimal
+    available_credit: Decimal
     ledger: list[LedgerRow]
+
+
+class OwnerCreditRead(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: int
+    owner_id: int
+    amount: Decimal
+    remaining_amount: Decimal
+    source_payment_id: int | None
+    created_at: datetime

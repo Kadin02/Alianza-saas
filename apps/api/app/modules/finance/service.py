@@ -1,3 +1,4 @@
+from datetime import date as date_
 from decimal import Decimal, ROUND_HALF_UP
 
 from fastapi import HTTPException, status
@@ -8,6 +9,7 @@ from app.modules.finance.models import Charge, ChargeStatus, Payment
 from app.modules.finance.schemas import (
     ChargeCreateRequest,
     ChargeRead,
+    LateFeeCreateRequest,
     LedgerRow,
     PaymentCreateRequest,
     PaymentRead,
@@ -45,6 +47,7 @@ def _to_charge_read(charge: Charge) -> ChargeRead:
         status=charge.status,
         date_created=charge.date_created,
         due_date=charge.due_date,
+        is_recargo=charge.is_recargo,
         created_at=charge.created_at,
     )
 
@@ -54,6 +57,31 @@ def _get_active_owner_name(db: Session, *, unit_id: int) -> tuple[int | None, st
     if link:
         return link.owner_id, link.owner.full_name
     return None, None
+
+
+def _apply_available_credits(db: Session, *, organization_id: int, owner_id: int, charge: Charge) -> None:
+    """Aplica los saldos a favor disponibles del propietario (más antiguo primero) a un cargo."""
+    credits = finance_repo.list_available_credits(db, organization_id=organization_id, owner_id=owner_id)
+    remaining_charge = charge.balance
+    for credit in credits:
+        if remaining_charge <= Decimal("0.00"):
+            break
+        apply_amount = min(credit.remaining_amount, remaining_charge)
+        if apply_amount <= Decimal("0.00"):
+            continue
+        finance_repo.create_credit_application(
+            db,
+            organization_id=organization_id,
+            credit_id=credit.id,
+            charge_id=charge.id,
+            applied_amount=apply_amount,
+        )
+        credit.remaining_amount -= apply_amount
+        remaining_charge -= apply_amount
+        db.flush()
+    if credits:
+        db.refresh(charge)
+        _refresh_charge_status(charge)
 
 
 def list_charges(db: Session, *, organization_id: int, unit_id: int | None = None) -> list[ChargeRead]:
@@ -75,9 +103,40 @@ def create_charge(db: Session, *, organization_id: int, payload: ChargeCreateReq
         date_created=payload.date_created,
         due_date=payload.due_date,
     )
+
+    owner_id, _ = _get_active_owner_name(db, unit_id=payload.unit_id)
+    if owner_id is not None:
+        _apply_available_credits(db, organization_id=organization_id, owner_id=owner_id, charge=charge)
+
     db.commit()
     db.refresh(charge)
     return _to_charge_read(charge)
+
+
+def create_late_fee(db: Session, *, organization_id: int, charge_id: int, payload: LateFeeCreateRequest) -> ChargeRead:
+    original = finance_repo.get_charge(db, organization_id=organization_id, charge_id=charge_id)
+    if not original:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "Cargo no encontrado")
+
+    if original.due_date >= date_.today():
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "No se puede aplicar mora: el cargo aún no está vencido")
+
+    if original.balance <= Decimal("0.00"):
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "No se puede aplicar mora: el cargo ya está pagado")
+
+    late_fee = Charge(
+        organization_id=organization_id,
+        unit_id=original.unit_id,
+        description=f"Mora — {original.description}",
+        amount=_to_dec(payload.amount),
+        date_created=date_.today(),
+        due_date=date_.today(),
+        related_charge_id=original.id,
+    )
+    db.add(late_fee)
+    db.commit()
+    db.refresh(late_fee)
+    return _to_charge_read(late_fee)
 
 
 def _to_payment_read(payment: Payment, *, owner_name: str | None) -> PaymentRead:
@@ -160,6 +219,15 @@ def create_payment_fifo(db: Session, *, organization_id: int, payload: PaymentCr
         db.refresh(charge)
         _refresh_charge_status(charge)
 
+    if remaining > Decimal("0.00") and owner_id is not None:
+        finance_repo.create_owner_credit(
+            db,
+            organization_id=organization_id,
+            owner_id=owner_id,
+            source_payment_id=payment.id,
+            amount=remaining,
+        )
+
     db.commit()
     db.refresh(payment)
 
@@ -200,6 +268,17 @@ def get_unit_statement(db: Session, *, organization_id: int, unit_id: int) -> Un
             "_order": 1,
         })
 
+    for charge in charges:
+        for credit_app in charge.credit_applications:
+            rows.append({
+                "fecha": credit_app.created_at.date(),
+                "tipo": "CREDITO",
+                "concepto": f"Saldo a favor aplicado — {charge.description}",
+                "cargo": Decimal("0.00"),
+                "pago": credit_app.applied_amount,
+                "_order": 1,
+            })
+
     rows.sort(key=lambda r: (r["fecha"], r["_order"]))
 
     saldo = Decimal("0.00")
@@ -217,6 +296,11 @@ def get_unit_statement(db: Session, *, organization_id: int, unit_id: int) -> Un
     )
     total_due = sum((c.balance for c in charges), Decimal("0.00"))
 
+    available_credit = Decimal("0.00")
+    if owner_id is not None:
+        credits = finance_repo.list_available_credits(db, organization_id=organization_id, owner_id=owner_id)
+        available_credit = sum((c.remaining_amount for c in credits), Decimal("0.00"))
+
     return UnitStatement(
         unit_id=unit.id,
         unit_number=unit.unit_number,
@@ -226,5 +310,6 @@ def get_unit_statement(db: Session, *, organization_id: int, unit_id: int) -> Un
         total_due=total_due,
         total_cargos=total_cargos,
         total_pagos=total_pagos,
+        available_credit=available_credit,
         ledger=ledger,
     )

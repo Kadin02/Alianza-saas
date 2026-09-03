@@ -2,7 +2,7 @@ from datetime import date
 
 from sqlalchemy.orm import Session
 
-from app.modules.finance.models import Charge, Payment, PaymentApplication
+from app.modules.finance.models import Charge, CreditApplication, OwnerCredit, Payment, PaymentApplication
 
 
 def list_charges(db: Session, *, organization_id: int, unit_id: int | None = None) -> list[Charge]:
@@ -66,6 +66,48 @@ def create_application(db: Session, *, organization_id: int, payment_id: int, ch
     application = PaymentApplication(
         organization_id=organization_id,
         payment_id=payment_id,
+        charge_id=charge_id,
+        applied_amount=applied_amount,
+    )
+    db.add(application)
+    db.flush()
+    return application
+
+
+def create_owner_credit(
+    db: Session, *, organization_id: int, owner_id: int, source_payment_id: int | None, amount,
+) -> OwnerCredit:
+    credit = OwnerCredit(
+        organization_id=organization_id,
+        owner_id=owner_id,
+        source_payment_id=source_payment_id,
+        amount=amount,
+        remaining_amount=amount,
+    )
+    db.add(credit)
+    db.flush()
+    return credit
+
+
+def list_available_credits(db: Session, *, organization_id: int, owner_id: int) -> list[OwnerCredit]:
+    return (
+        db.query(OwnerCredit)
+        .filter(
+            OwnerCredit.organization_id == organization_id,
+            OwnerCredit.owner_id == owner_id,
+            OwnerCredit.remaining_amount > 0,
+        )
+        .order_by(OwnerCredit.created_at.asc())
+        .all()
+    )
+
+
+def create_credit_application(
+    db: Session, *, organization_id: int, credit_id: int, charge_id: int, applied_amount,
+) -> CreditApplication:
+    application = CreditApplication(
+        organization_id=organization_id,
+        credit_id=credit_id,
         charge_id=charge_id,
         applied_amount=applied_amount,
     )

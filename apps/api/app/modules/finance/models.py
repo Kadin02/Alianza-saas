@@ -28,20 +28,31 @@ class Charge(Base):
     date_created: Mapped[date] = mapped_column(Date, nullable=False)
     due_date: Mapped[date] = mapped_column(Date, nullable=False)
 
+    related_charge_id: Mapped[int | None] = mapped_column(ForeignKey("charges.id"), nullable=True)
+
     created_at: Mapped[datetime] = mapped_column(DateTime, default=lambda: datetime.now(timezone.utc))
 
     unit = relationship("Unit")
     applications: Mapped[list["PaymentApplication"]] = relationship(
         "PaymentApplication", back_populates="charge", cascade="all, delete-orphan"
     )
+    credit_applications: Mapped[list["CreditApplication"]] = relationship(
+        "CreditApplication", back_populates="charge", cascade="all, delete-orphan"
+    )
 
     @property
     def applied_amount(self) -> Decimal:
-        return sum((a.applied_amount for a in self.applications), Decimal("0.00"))
+        from_payments = sum((a.applied_amount for a in self.applications), Decimal("0.00"))
+        from_credits = sum((c.applied_amount for c in self.credit_applications), Decimal("0.00"))
+        return from_payments + from_credits
 
     @property
     def balance(self) -> Decimal:
         return self.amount - self.applied_amount
+
+    @property
+    def is_recargo(self) -> bool:
+        return self.related_charge_id is not None
 
 
 class Payment(Base):
@@ -78,3 +89,39 @@ class PaymentApplication(Base):
 
     payment: Mapped["Payment"] = relationship("Payment", back_populates="applications")
     charge: Mapped["Charge"] = relationship("Charge", back_populates="applications")
+
+
+class OwnerCredit(Base):
+    """Saldo a favor de un propietario, generado cuando un pago excede lo adeudado."""
+
+    __tablename__ = "owner_credits"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
+    organization_id: Mapped[int] = mapped_column(ForeignKey("organizations.id"), nullable=False, index=True)
+    owner_id: Mapped[int] = mapped_column(ForeignKey("owners.id"), nullable=False, index=True)
+    source_payment_id: Mapped[int | None] = mapped_column(ForeignKey("payments.id"), nullable=True)
+
+    amount: Mapped[Decimal] = mapped_column(Numeric(10, 2), nullable=False)
+    remaining_amount: Mapped[Decimal] = mapped_column(Numeric(10, 2), nullable=False)
+
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+    owner = relationship("Owner")
+    applications: Mapped[list["CreditApplication"]] = relationship(
+        "CreditApplication", back_populates="credit", cascade="all, delete-orphan"
+    )
+
+
+class CreditApplication(Base):
+    __tablename__ = "credit_applications"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
+    organization_id: Mapped[int] = mapped_column(ForeignKey("organizations.id"), nullable=False, index=True)
+    credit_id: Mapped[int] = mapped_column(ForeignKey("owner_credits.id"), nullable=False, index=True)
+    charge_id: Mapped[int] = mapped_column(ForeignKey("charges.id"), nullable=False, index=True)
+
+    applied_amount: Mapped[Decimal] = mapped_column(Numeric(10, 2), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+    credit: Mapped["OwnerCredit"] = relationship("OwnerCredit", back_populates="applications")
+    charge: Mapped["Charge"] = relationship("Charge", back_populates="credit_applications")

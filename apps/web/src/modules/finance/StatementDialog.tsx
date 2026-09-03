@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query"
+import { Wallet } from "lucide-react"
 
 import { Dialog, DialogContent, DialogTitle } from "@/shared/ui/dialog"
+import { cn } from "@/shared/lib/utils"
 
 import { getUnitStatement } from "./api"
 import { formatCurrency, formatDate } from "./labels"
@@ -49,6 +51,16 @@ export function StatementDialog({ unitId, onOpenChange }: StatementDialogProps) 
               </div>
             </div>
 
+            {Number(statement.available_credit) > 0 && (
+              <div className="mt-3 flex items-center gap-2 rounded-xl bg-secondary-fixed px-3 py-2 text-on-secondary-fixed">
+                <Wallet className="h-4 w-4" />
+                <span className="text-body-sm">
+                  Saldo a favor disponible: <span className="font-semibold">{formatCurrency(statement.available_credit)}</span> — se
+                  aplicará automáticamente al próximo cargo.
+                </span>
+              </div>
+            )}
+
             <div className="mt-4 max-h-80 overflow-y-auto rounded-xl bg-surface-container-lowest shadow-sm">
               <table className="w-full text-left">
                 <thead className="sticky top-0">
@@ -69,9 +81,16 @@ export function StatementDialog({ unitId, onOpenChange }: StatementDialogProps) 
                     </tr>
                   )}
                   {statement.ledger.map((row, i) => (
-                    <tr key={i} className="h-11">
+                    <tr key={i} className={cn("h-11", row.tipo === "CREDITO" && "bg-secondary-fixed/20")}>
                       <td className="px-3 text-body-sm text-on-surface-variant">{formatDate(row.fecha)}</td>
-                      <td className="px-3 text-body-sm text-on-surface">{row.concepto}</td>
+                      <td className="px-3 text-body-sm text-on-surface">
+                        {row.concepto}
+                        {row.tipo === "CREDITO" && (
+                          <span className="ml-1.5 rounded-full bg-secondary-fixed px-1.5 py-0.5 text-label-sm font-semibold text-on-secondary-fixed">
+                            Saldo a favor
+                          </span>
+                        )}
+                      </td>
                       <td className="px-3 text-right font-numeric-data text-body-sm text-on-surface">
                         {Number(row.cargo) > 0 ? formatCurrency(row.cargo) : "—"}
                       </td>

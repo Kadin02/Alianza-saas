@@ -12,7 +12,12 @@ export interface ChargeRead {
   status: ChargeStatus
   date_created: string
   due_date: string
+  is_recargo: boolean
   created_at: string
+}
+
+export interface LateFeeCreatePayload {
+  amount: number
 }
 
 export interface ChargeCreatePayload {
@@ -50,7 +55,7 @@ export interface PaymentCreatePayload {
 
 export interface LedgerRow {
   fecha: string
-  tipo: "CARGO" | "PAGO"
+  tipo: "CARGO" | "PAGO" | "CREDITO"
   concepto: string
   cargo: string
   pago: string
@@ -66,5 +71,6 @@ export interface UnitStatement {
   total_due: string
   total_cargos: string
   total_pagos: string
+  available_credit: string
   ledger: LedgerRow[]
 }
