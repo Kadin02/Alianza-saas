@@ -6,6 +6,7 @@ import OnboardingPage from "@/modules/organizations/OnboardingPage"
 import OrgHomePlaceholder from "@/modules/organizations/OrgHomePlaceholder"
 import SelectOrganizationPage from "@/modules/organizations/SelectOrganizationPage"
 import PropertiesPage from "@/modules/properties/PropertiesPage"
+import UnitsPage from "@/modules/units/UnitsPage"
 import AppShell from "@/shared/layout/AppShell"
 
 const queryClient = new QueryClient()
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/app" element={<AppShell />}>
             <Route index element={<OrgHomePlaceholder />} />
             <Route path="properties" element={<PropertiesPage />} />
+            <Route path="units" element={<UnitsPage />} />
           </Route>
 
           <Route path="*" element={<Navigate to="/login" replace />} />

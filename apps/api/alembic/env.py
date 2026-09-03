@@ -8,6 +8,7 @@ from app.db.base import Base
 from app.modules.auth import models as auth_models  # noqa: F401
 from app.modules.organizations import models as org_models  # noqa: F401
 from app.modules.properties import models as property_models  # noqa: F401
+from app.modules.units import models as unit_models  # noqa: F401
 
 config = context.config
 config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)

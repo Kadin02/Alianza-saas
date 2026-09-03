@@ -28,7 +28,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: "Dashboard", to: "/app", icon: LayoutGrid },
   { label: "Propiedades", to: "/app/properties", icon: Building2 },
-  { label: "Unidades", icon: Grid2x2 },
+  { label: "Unidades", to: "/app/units", icon: Grid2x2 },
   { label: "Propietarios", icon: Users },
   { label: "Finanzas", icon: Banknote },
   { label: "Proveedores", icon: Handshake },
