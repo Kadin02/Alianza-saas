@@ -5,6 +5,7 @@ import LoginPage from "@/modules/auth/LoginPage"
 import OnboardingPage from "@/modules/organizations/OnboardingPage"
 import OrgHomePlaceholder from "@/modules/organizations/OrgHomePlaceholder"
 import SelectOrganizationPage from "@/modules/organizations/SelectOrganizationPage"
+import OwnersPage from "@/modules/owners/OwnersPage"
 import PropertiesPage from "@/modules/properties/PropertiesPage"
 import UnitsPage from "@/modules/units/UnitsPage"
 import AppShell from "@/shared/layout/AppShell"
@@ -24,6 +25,7 @@ export default function App() {
             <Route index element={<OrgHomePlaceholder />} />
             <Route path="properties" element={<PropertiesPage />} />
             <Route path="units" element={<UnitsPage />} />
+            <Route path="owners" element={<OwnersPage />} />
           </Route>
 
           <Route path="*" element={<Navigate to="/login" replace />} />

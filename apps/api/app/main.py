@@ -11,6 +11,8 @@ from app.modules.organizations import models as org_models  # noqa: F401 — reg
 from app.modules.organizations.router import router as organizations_router
 from app.modules.properties import models as property_models  # noqa: F401 — registra Property
 from app.modules.properties.router import router as properties_router
+from app.modules.owners import models as owner_models  # noqa: F401 — registra Owner/UnitOwner
+from app.modules.owners.router import router as owners_router
 from app.modules.units import models as unit_models  # noqa: F401 — registra Unit
 from app.modules.units.router import router as units_router
 
@@ -38,6 +40,7 @@ app.include_router(auth_router, prefix=api_router_prefix)
 app.include_router(organizations_router, prefix=api_router_prefix)
 app.include_router(properties_router, prefix=api_router_prefix)
 app.include_router(units_router, prefix=api_router_prefix)
+app.include_router(owners_router, prefix=api_router_prefix)
 
 
 @app.get("/health")
