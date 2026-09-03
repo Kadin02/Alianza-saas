@@ -27,6 +27,13 @@ class MembershipRole(str, enum.Enum):
     OWNER_PORTAL = "OWNER_PORTAL"
 
 
+class OrganizationType(str, enum.Enum):
+    RESIDENCIAL = "RESIDENCIAL"
+    CORPORATIVO = "CORPORATIVO"
+    PARCELAS = "PARCELAS"
+    ADMINISTRADORA = "ADMINISTRADORA"
+
+
 class Organization(Base):
     __tablename__ = "organizations"
 
@@ -35,6 +42,12 @@ class Organization(Base):
     slug: Mapped[str] = mapped_column(String, unique=True, nullable=False, index=True)
     logo_url: Mapped[str | None] = mapped_column(String, nullable=True)
     brand_color: Mapped[str | None] = mapped_column(String, nullable=True)
+
+    org_type: Mapped[OrganizationType | None] = mapped_column(Enum(OrganizationType), nullable=True)
+    tax_id: Mapped[str | None] = mapped_column(String, nullable=True)
+    contact_email: Mapped[str | None] = mapped_column(String, nullable=True)
+    contact_phone: Mapped[str | None] = mapped_column(String, nullable=True)
+    address: Mapped[str | None] = mapped_column(String, nullable=True)
 
     plan: Mapped[PlanTier] = mapped_column(Enum(PlanTier), default=PlanTier.TRIAL, nullable=False)
     subscription_status: Mapped[SubscriptionStatus] = mapped_column(

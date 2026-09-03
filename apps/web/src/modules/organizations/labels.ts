@@ -1,4 +1,19 @@
-import type { MembershipRole } from "@/modules/auth/types"
+import type { MembershipRole, OrganizationType } from "@/modules/auth/types"
+
+export const orgTypeLabels: Record<OrganizationType, { title: string; subtitle: string }> = {
+  RESIDENCIAL: { title: "Residencial", subtitle: "Torres de deptos" },
+  CORPORATIVO: { title: "Corporativo", subtitle: "Oficinas y plantas" },
+  PARCELAS: { title: "Loteo / Parcelas", subtitle: "Comunidad rural" },
+  ADMINISTRADORA: { title: "Admin. externa", subtitle: "Gestión de cartera" },
+}
+
+export const brandColorPalette: { hex: string; label: string }[] = [
+  { hex: "#15243E", label: "Marino" },
+  { hex: "#005CBB", label: "Royal" },
+  { hex: "#059669", label: "Esmeralda" },
+  { hex: "#4F46E5", label: "Índigo" },
+  { hex: "#004149", label: "Turquesa" },
+]
 
 export const roleLabels: Record<MembershipRole, string> = {
   SUPERADMIN: "Super Admin",
