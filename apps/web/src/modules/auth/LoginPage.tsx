@@ -10,6 +10,7 @@ import { Button } from "@/shared/ui/button"
 import { Input } from "@/shared/ui/input"
 import { Label } from "@/shared/ui/label"
 import { setToken } from "@/shared/lib/auth-storage"
+import { setActiveOrgId } from "@/shared/lib/org-storage"
 
 import { login } from "./api"
 
@@ -32,7 +33,12 @@ export default function LoginPage() {
     mutationFn: login,
     onSuccess: (data) => {
       setToken(data.access_token)
-      navigate("/post-login")
+      if (data.memberships.length === 1) {
+        setActiveOrgId(data.memberships[0].organization.id)
+        navigate("/org-home")
+      } else {
+        navigate("/select-organization")
+      }
     },
   })
 
