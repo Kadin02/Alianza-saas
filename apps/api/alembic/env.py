@@ -10,6 +10,7 @@ from app.modules.organizations import models as org_models  # noqa: F401
 from app.modules.properties import models as property_models  # noqa: F401
 from app.modules.owners import models as owner_models  # noqa: F401
 from app.modules.units import models as unit_models  # noqa: F401
+from app.modules.finance import models as finance_models  # noqa: F401
 
 config = context.config
 config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)

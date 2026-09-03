@@ -15,6 +15,8 @@ from app.modules.owners import models as owner_models  # noqa: F401 — registra
 from app.modules.owners.router import router as owners_router
 from app.modules.units import models as unit_models  # noqa: F401 — registra Unit
 from app.modules.units.router import router as units_router
+from app.modules.finance import models as finance_models  # noqa: F401 — registra Charge/Payment
+from app.modules.finance.router import router as finance_router
 
 logger = logging.getLogger(__name__)
 
@@ -41,6 +43,7 @@ app.include_router(organizations_router, prefix=api_router_prefix)
 app.include_router(properties_router, prefix=api_router_prefix)
 app.include_router(units_router, prefix=api_router_prefix)
 app.include_router(owners_router, prefix=api_router_prefix)
+app.include_router(finance_router, prefix=api_router_prefix)
 
 
 @app.get("/health")

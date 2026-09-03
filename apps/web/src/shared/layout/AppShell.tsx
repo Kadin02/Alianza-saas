@@ -30,7 +30,7 @@ const navItems: NavItem[] = [
   { label: "Propiedades", to: "/app/properties", icon: Building2 },
   { label: "Unidades", to: "/app/units", icon: Grid2x2 },
   { label: "Propietarios", to: "/app/owners", icon: Users },
-  { label: "Finanzas", icon: Banknote },
+  { label: "Finanzas", to: "/app/finance", icon: Banknote },
   { label: "Proveedores", icon: Handshake },
   { label: "Agenda", icon: CalendarDays },
   { label: "Garita", icon: ShieldCheck },

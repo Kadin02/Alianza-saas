@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { Navigate, Route, BrowserRouter, Routes } from "react-router-dom"
 
 import LoginPage from "@/modules/auth/LoginPage"
+import FinancePage from "@/modules/finance/FinancePage"
 import OnboardingPage from "@/modules/organizations/OnboardingPage"
 import OrgHomePlaceholder from "@/modules/organizations/OrgHomePlaceholder"
 import SelectOrganizationPage from "@/modules/organizations/SelectOrganizationPage"
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="properties" element={<PropertiesPage />} />
             <Route path="units" element={<UnitsPage />} />
             <Route path="owners" element={<OwnersPage />} />
+            <Route path="finance" element={<FinancePage />} />
           </Route>
 
           <Route path="*" element={<Navigate to="/login" replace />} />

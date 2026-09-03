@@ -59,6 +59,14 @@ def get_active_unit_link(db: Session, *, owner_id: int) -> UnitOwner | None:
     )
 
 
+def get_active_unit_link_for_unit(db: Session, *, unit_id: int) -> UnitOwner | None:
+    return (
+        db.query(UnitOwner)
+        .filter(UnitOwner.unit_id == unit_id, UnitOwner.is_active.is_(True))
+        .first()
+    )
+
+
 def update_owner(
     db: Session, *, owner: Owner, full_name: str, email: str | None,
     phone: str | None, identification: str | None,
