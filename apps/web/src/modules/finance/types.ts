@@ -28,6 +28,20 @@ export interface ChargeCreatePayload {
   due_date: string
 }
 
+export interface GenerateMonthlyChargesPayload {
+  property_id?: number
+  month: number
+  year: number
+}
+
+export interface GenerateMonthlyChargesResult {
+  created: number
+  skipped: number
+  month: number
+  year: number
+  charges: ChargeRead[]
+}
+
 export interface PaymentRead {
   id: number
   unit_id: number

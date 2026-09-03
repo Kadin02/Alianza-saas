@@ -36,6 +36,20 @@ class LateFeeCreateRequest(BaseModel):
     amount: Decimal = Field(gt=0)
 
 
+class GenerateMonthlyChargesRequest(BaseModel):
+    property_id: int | None = None
+    month: int = Field(ge=1, le=12)
+    year: int = Field(ge=2020, le=2100)
+
+
+class GenerateMonthlyChargesResult(BaseModel):
+    created: int
+    skipped: int
+    month: int
+    year: int
+    charges: list[ChargeRead]
+
+
 class PaymentCreateRequest(BaseModel):
     unit_id: int
     owner_id: int | None = None

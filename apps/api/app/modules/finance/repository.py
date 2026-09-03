@@ -20,6 +20,18 @@ def get_charge(db: Session, *, organization_id: int, charge_id: int) -> Charge |
     )
 
 
+def get_charge_by_unit_and_description(db: Session, *, organization_id: int, unit_id: int, description: str) -> Charge | None:
+    return (
+        db.query(Charge)
+        .filter(
+            Charge.organization_id == organization_id,
+            Charge.unit_id == unit_id,
+            Charge.description == description,
+        )
+        .first()
+    )
+
+
 def create_charge(
     db: Session, *, organization_id: int, unit_id: int, description: str,
     amount, date_created: date, due_date: date,

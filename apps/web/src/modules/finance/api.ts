@@ -3,6 +3,8 @@ import { apiClient } from "@/shared/api/client"
 import type {
   ChargeCreatePayload,
   ChargeRead,
+  GenerateMonthlyChargesPayload,
+  GenerateMonthlyChargesResult,
   LateFeeCreatePayload,
   PaymentCreatePayload,
   PaymentRead,
@@ -18,6 +20,11 @@ export async function listCharges(unitId?: number): Promise<ChargeRead[]> {
 
 export async function createCharge(payload: ChargeCreatePayload): Promise<ChargeRead> {
   const { data } = await apiClient.post<ChargeRead>("/finance/charges", payload)
+  return data
+}
+
+export async function generateMonthlyCharges(payload: GenerateMonthlyChargesPayload): Promise<GenerateMonthlyChargesResult> {
+  const { data } = await apiClient.post<GenerateMonthlyChargesResult>("/finance/charges/generate-monthly", payload)
   return data
 }
 

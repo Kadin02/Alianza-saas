@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query"
-import { AlertTriangle, Banknote, FileText, Plus, Receipt } from "lucide-react"
+import { AlertTriangle, Banknote, CalendarClock, FileText, Plus, Receipt } from "lucide-react"
 import { useState } from "react"
 
 import { Button } from "@/shared/ui/button"
@@ -7,6 +7,7 @@ import { cn } from "@/shared/lib/utils"
 
 import { listCharges, listPayments } from "./api"
 import { ChargeFormDialog } from "./ChargeFormDialog"
+import { GenerateMonthlyChargesDialog } from "./GenerateMonthlyChargesDialog"
 import { chargeStatusLabels, chargeStatusStyles, formatCurrency, formatDate } from "./labels"
 import { LateFeeDialog } from "./LateFeeDialog"
 import { PaymentFormDialog } from "./PaymentFormDialog"
@@ -21,6 +22,7 @@ export default function FinancePage() {
   const [tab, setTab] = useState<Tab>("charges")
   const [chargeDialogOpen, setChargeDialogOpen] = useState(false)
   const [paymentDialogOpen, setPaymentDialogOpen] = useState(false)
+  const [generateDialogOpen, setGenerateDialogOpen] = useState(false)
   const [statementUnitId, setStatementUnitId] = useState<number | null>(null)
   const [lateFeeCharge, setLateFeeCharge] = useState<ChargeRead | null>(null)
 
@@ -35,6 +37,10 @@ export default function FinancePage() {
           <p className="mt-0.5 text-body-sm text-on-surface-variant">Cargos, pagos y estado de cuenta por unidad</p>
         </div>
         <div className="flex gap-2">
+          <Button variant="ghost" onClick={() => setGenerateDialogOpen(true)}>
+            <CalendarClock className="h-4 w-4" />
+            Generar Cuotas del Mes
+          </Button>
           <Button variant="ghost" onClick={() => setChargeDialogOpen(true)}>
             <Plus className="h-4 w-4" />
             Nuevo Cargo
@@ -229,6 +235,7 @@ export default function FinancePage() {
       <PaymentFormDialog open={paymentDialogOpen} onOpenChange={setPaymentDialogOpen} />
       <StatementDialog unitId={statementUnitId} onOpenChange={(open) => !open && setStatementUnitId(null)} />
       <LateFeeDialog charge={lateFeeCharge} onOpenChange={(open) => !open && setLateFeeCharge(null)} />
+      <GenerateMonthlyChargesDialog open={generateDialogOpen} onOpenChange={setGenerateDialogOpen} />
     </div>
   )
 }

@@ -9,6 +9,8 @@ from app.modules.finance.models import Charge, ChargeStatus, Payment
 from app.modules.finance.schemas import (
     ChargeCreateRequest,
     ChargeRead,
+    GenerateMonthlyChargesRequest,
+    GenerateMonthlyChargesResult,
     LateFeeCreateRequest,
     LedgerRow,
     PaymentCreateRequest,
@@ -89,28 +91,93 @@ def list_charges(db: Session, *, organization_id: int, unit_id: int | None = Non
     return [_to_charge_read(c) for c in charges]
 
 
+def _create_charge_core(
+    db: Session, *, organization_id: int, unit_id: int, description: str, amount, date_created: date_, due_date: date_,
+) -> Charge:
+    charge = finance_repo.create_charge(
+        db,
+        organization_id=organization_id,
+        unit_id=unit_id,
+        description=description,
+        amount=_to_dec(amount),
+        date_created=date_created,
+        due_date=due_date,
+    )
+    owner_id, _ = _get_active_owner_name(db, unit_id=unit_id)
+    if owner_id is not None:
+        _apply_available_credits(db, organization_id=organization_id, owner_id=owner_id, charge=charge)
+    return charge
+
+
 def create_charge(db: Session, *, organization_id: int, payload: ChargeCreateRequest) -> ChargeRead:
     unit = units_repo.get_unit(db, organization_id=organization_id, unit_id=payload.unit_id)
     if not unit:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "La unidad no pertenece a esta organización")
 
-    charge = finance_repo.create_charge(
+    charge = _create_charge_core(
         db,
         organization_id=organization_id,
         unit_id=payload.unit_id,
         description=payload.description,
-        amount=_to_dec(payload.amount),
+        amount=payload.amount,
         date_created=payload.date_created,
         due_date=payload.due_date,
     )
 
-    owner_id, _ = _get_active_owner_name(db, unit_id=payload.unit_id)
-    if owner_id is not None:
-        _apply_available_credits(db, organization_id=organization_id, owner_id=owner_id, charge=charge)
-
     db.commit()
     db.refresh(charge)
     return _to_charge_read(charge)
+
+
+def generate_monthly_charges(
+    db: Session, *, organization_id: int, payload: GenerateMonthlyChargesRequest,
+) -> GenerateMonthlyChargesResult:
+    units = units_repo.list_units(db, organization_id=organization_id)
+    if payload.property_id is not None:
+        units = [u for u in units if u.property_id == payload.property_id]
+    units = [u for u in units if u.monthly_fee is not None and u.monthly_fee > 0]
+
+    if not units:
+        raise HTTPException(
+            status.HTTP_400_BAD_REQUEST,
+            "No hay unidades con cuota mensual configurada para generar cargos",
+        )
+
+    description = f"Cuota mensual {payload.month:02d}/{payload.year}"
+    due_date = date_(payload.year, payload.month, 5)
+    today = date_.today()
+
+    created: list[Charge] = []
+    skipped = 0
+    for unit in units:
+        existing = finance_repo.get_charge_by_unit_and_description(
+            db, organization_id=organization_id, unit_id=unit.id, description=description
+        )
+        if existing:
+            skipped += 1
+            continue
+        charge = _create_charge_core(
+            db,
+            organization_id=organization_id,
+            unit_id=unit.id,
+            description=description,
+            amount=unit.monthly_fee,
+            date_created=today,
+            due_date=due_date,
+        )
+        created.append(charge)
+
+    db.commit()
+    for charge in created:
+        db.refresh(charge)
+
+    return GenerateMonthlyChargesResult(
+        created=len(created),
+        skipped=skipped,
+        month=payload.month,
+        year=payload.year,
+        charges=[_to_charge_read(c) for c in created],
+    )
 
 
 def create_late_fee(db: Session, *, organization_id: int, charge_id: int, payload: LateFeeCreateRequest) -> ChargeRead:
