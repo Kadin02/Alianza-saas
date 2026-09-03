@@ -33,7 +33,7 @@ const navItems: NavItem[] = [
   { label: "Propietarios", to: "/app/owners", icon: Users },
   { label: "Finanzas", to: "/app/finance", icon: Banknote },
   { label: "Reportes", to: "/app/reports", icon: BarChart3 },
-  { label: "Proveedores", icon: Handshake },
+  { label: "Proveedores", to: "/app/vendors", icon: Handshake },
   { label: "Agenda", icon: CalendarDays },
   { label: "Garita", icon: ShieldCheck },
   { label: "Administración", icon: Settings },

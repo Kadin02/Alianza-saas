@@ -2,15 +2,16 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { Navigate, Route, BrowserRouter, Routes } from "react-router-dom"
 
 import LoginPage from "@/modules/auth/LoginPage"
+import DashboardPage from "@/modules/dashboard/DashboardPage"
 import FinancePage from "@/modules/finance/FinancePage"
 import ReceiptPage from "@/modules/finance/ReceiptPage"
 import ReportsPage from "@/modules/finance/ReportsPage"
 import OnboardingPage from "@/modules/organizations/OnboardingPage"
-import OrgHomePlaceholder from "@/modules/organizations/OrgHomePlaceholder"
 import SelectOrganizationPage from "@/modules/organizations/SelectOrganizationPage"
 import OwnersPage from "@/modules/owners/OwnersPage"
 import PropertiesPage from "@/modules/properties/PropertiesPage"
 import UnitsPage from "@/modules/units/UnitsPage"
+import VendorsPage from "@/modules/vendors/VendorsPage"
 import AppShell from "@/shared/layout/AppShell"
 
 const queryClient = new QueryClient()
@@ -26,12 +27,13 @@ export default function App() {
           <Route path="/print/receipts/:paymentId" element={<ReceiptPage />} />
 
           <Route path="/app" element={<AppShell />}>
-            <Route index element={<OrgHomePlaceholder />} />
+            <Route index element={<DashboardPage />} />
             <Route path="properties" element={<PropertiesPage />} />
             <Route path="units" element={<UnitsPage />} />
             <Route path="owners" element={<OwnersPage />} />
             <Route path="finance" element={<FinancePage />} />
             <Route path="reports" element={<ReportsPage />} />
+            <Route path="vendors" element={<VendorsPage />} />
           </Route>
 
           <Route path="*" element={<Navigate to="/login" replace />} />
